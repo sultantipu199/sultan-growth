@@ -33,4 +33,4 @@ Major feature and intelligence release for **Tipu Sultan | AI-Driven & Data-Driv
 ### 📞 Contact & Teardown Requests
 - **Lead Architect**: Tipu Sultan
 - **WhatsApp**: [+966 56 648 2865](https://wa.me/966566482865)
-- **Email**: [tipusultan.growth@gmail.com](mailto:tipusultan.growth@gmail.com)
+- **Email**: [freelancersultan143@gmail.com](mailto:freelancersultan143@gmail.com)

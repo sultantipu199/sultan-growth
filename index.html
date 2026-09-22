@@ -891,9 +891,12 @@
     </div>
   </footer>
 
-  <!-- Floating Sticky Action Button on Mobile -->
-  <div class="fixed bottom-4 right-4 z-40 flex flex-col gap-2">
-    <button onclick="triggerGlobalWhatsApp()" class="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-500/40 flex items-center justify-center text-xl transition-transform hover:scale-110">
+  <!-- Floating Sticky Action Buttons -->
+  <div class="fixed bottom-4 right-4 z-40 flex flex-col gap-2.5">
+    <button onclick="triggerGlobalEmail()" title="Email Tipu Sultan (freelancersultan143@gmail.com)" class="w-12 h-12 rounded-full bg-slate-900/90 hover:bg-slate-800 text-blue-400 hover:text-blue-300 border border-slate-700 shadow-xl shadow-blue-500/20 flex items-center justify-center text-lg transition-transform hover:scale-110">
+      <i class="fa-solid fa-envelope"></i>
+    </button>
+    <button onclick="triggerGlobalWhatsApp()" title="WhatsApp Tipu Sultan" class="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-500/40 flex items-center justify-center text-xl transition-transform hover:scale-110">
       <i class="fa-brands fa-whatsapp"></i>
     </button>
   </div>
@@ -975,12 +978,90 @@
     </div>
   </div>
 
+  <!-- Direct Contact & Email Modal (Multi-Channel Fail-Safe) -->
+  <div id="emailModal" class="fixed inset-0 z-50 glass bg-slate-950/85 backdrop-blur-xl hidden flex items-center justify-center p-4 overflow-y-auto" onclick="closeEmailModal()">
+    <div class="glass-card border border-slate-700/80 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative" onclick="event.stopPropagation()">
+      <!-- Close Button -->
+      <button onclick="closeEmailModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-14 h-14 rounded-2xl p-0.5 bg-gradient-to-tr from-blue-500 via-indigo-500 to-emerald-400 overflow-hidden shadow-lg shadow-blue-500/20 flex-shrink-0">
+          <img src="assets/tipu-sultan-profile.png" alt="Tipu Sultan" class="w-full h-full object-cover object-top rounded-[14px]" />
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h3 class="font-display font-bold text-lg text-white">Contact Tipu Sultan</h3>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold">Verified</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-0.5">AI-Driven & Data-Driven Growth Architect</p>
+        </div>
+      </div>
+
+      <!-- Verified Email Display & Auto-Copy Box -->
+      <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 mb-5">
+        <div class="text-[11px] text-slate-400 font-semibold mb-1.5 flex items-center justify-between">
+          <span class="uppercase tracking-wider">Direct Verified Gmail Address</span>
+          <span id="copyFeedback" class="text-emerald-400 font-bold hidden text-[11px] flex items-center gap-1">
+            <i class="fa-solid fa-circle-check"></i> Copied to clipboard!
+          </span>
+        </div>
+        <div class="flex items-center justify-between gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800">
+          <div class="flex items-center gap-2.5 overflow-hidden">
+            <i class="fa-solid fa-envelope text-blue-400 text-sm"></i>
+            <span id="emailAddressDisplay" class="font-mono text-xs sm:text-sm text-slate-200 font-medium truncate select-all">freelancersultan143@gmail.com</span>
+          </div>
+          <button onclick="copyEmailToClipboard(true)" class="px-3.5 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 hover:text-blue-300 text-xs font-semibold border border-blue-500/30 flex items-center gap-1.5 transition-all flex-shrink-0">
+            <i id="copyIcon" class="fa-regular fa-clone"></i>
+            <span id="copyBtnText">Copy</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Action Choices -->
+      <div class="space-y-2.5 mb-5">
+        <!-- 1: Direct Gmail Web Compose -->
+        <button onclick="openGmailWeb()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-xs flex items-center justify-center gap-2.5 shadow-lg shadow-rose-600/20 transition-all group">
+          <i class="fa-brands fa-google text-sm"></i>
+          <span>Open Direct in Gmail Web</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-75 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        </button>
+
+        <!-- 2: Native Mail Client (Outlook, Apple Mail, Thunderbird) -->
+        <button onclick="openNativeMail()" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs border border-slate-700 flex items-center justify-center gap-2 transition-all">
+          <i class="fa-solid fa-paper-plane text-xs text-slate-400"></i>
+          <span>Open in Default Mail Client (Outlook / Apple Mail)</span>
+        </button>
+
+        <!-- 3: WhatsApp Direct Line -->
+        <button onclick="triggerGlobalWhatsApp(); closeEmailModal();" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-400 font-semibold text-xs border border-emerald-500/30 flex items-center justify-center gap-2 transition-all">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>Prefer Direct Chat? WhatsApp (+966 56 648 2865)</span>
+        </button>
+      </div>
+
+      <!-- Context Note -->
+      <div class="text-[11px] text-slate-500 text-center leading-relaxed">
+        Send your brand URL & ad budget directly to <br />
+        <span class="text-slate-300 font-mono font-medium select-all">freelancersultan143@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Floating Toast -->
+  <div id="toastNotification" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl glass-card border border-emerald-500/40 text-white text-xs font-semibold shadow-2xl flex items-center gap-2 pointer-events-none transition-all duration-300 opacity-0 translate-y-4">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
   <!-- JavaScript Application Logic -->
   <script>
     const CONFIG = {
       name: "Tipu Sultan",
       phone: "966566482865", // Saudi Arabia (+966 56 648 2865)
-      email: "tipusultan.growth@gmail.com"
+      email: "freelancersultan143@gmail.com"
     };
 
     // Verified Comprehensive Case Studies Data
@@ -1281,16 +1362,94 @@
     let currentSearchTerm = '';
     let currentModalProject = null;
 
-    // Contact Triggers
-    function triggerGlobalWhatsApp() {
-      const msg = encodeURIComponent(`Hi ${CONFIG.name}, I reviewed your Growth Portfolio and want to discuss scaling our paid advertising campaigns.`);
-      window.open(`https://wa.me/${CONFIG.phone}?text=${msg}`, '_blank');
+    // Contact Triggers & Fail-Safe Email System
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      if (!toast || !toastMsg) return;
+      toastMsg.innerText = msg;
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(window._toastTimeout);
+      window._toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 3000);
+    }
+
+    function openEmailModal() {
+      const modal = document.getElementById('emailModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      copyEmailToClipboard(false);
+    }
+
+    function closeEmailModal() {
+      const modal = document.getElementById('emailModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function copyEmailToClipboard(triggerToast = true) {
+      const email = CONFIG.email || 'freelancersultan143@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          const feedback = document.getElementById('copyFeedback');
+          const btnText = document.getElementById('copyBtnText');
+          const icon = document.getElementById('copyIcon');
+          if (feedback) feedback.classList.remove('hidden');
+          if (btnText) btnText.innerText = 'Copied!';
+          if (icon) icon.className = 'fa-solid fa-check text-emerald-400';
+          if (triggerToast) showToast('Email copied to clipboard!');
+          setTimeout(() => {
+            if (feedback) feedback.classList.add('hidden');
+            if (btnText) btnText.innerText = 'Copy';
+            if (icon) icon.className = 'fa-regular fa-clone';
+          }, 2500);
+        }).catch(() => {
+          if (triggerToast) showToast(email);
+        });
+      } else {
+        try {
+          const temp = document.createElement('textarea');
+          temp.value = email;
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand('copy');
+          document.body.removeChild(temp);
+          if (triggerToast) showToast('Email copied to clipboard!');
+        } catch(e) {
+          if (triggerToast) showToast(email);
+        }
+      }
+    }
+
+    function openGmailWeb() {
+      const subject = encodeURIComponent(`Growth Strategy & Meta Audit Inquiry - ${CONFIG.name}`);
+      const body = encodeURIComponent(`Hi ${CONFIG.name},\n\nI reviewed your portfolio and would like to arrange an audit call for our ad campaigns.\n\nBrand URL:\nMonthly Ad Spend:\nPrimary Growth Challenge:`);
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONFIG.email}&su=${subject}&body=${body}`;
+      window.open(gmailUrl, '_blank');
+      showToast('Opening Gmail Web Compose...');
+    }
+
+    function openNativeMail() {
+      const subject = encodeURIComponent(`Growth Strategy & Meta Audit Inquiry - ${CONFIG.name}`);
+      const body = encodeURIComponent(`Hi ${CONFIG.name},\n\nI reviewed your portfolio and would like to arrange an audit call for our ad campaigns.\n\nBrand URL:\nMonthly Ad Spend:\nPrimary Growth Challenge:`);
+      window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+      showToast('Opening Default Mail Client...');
     }
 
     function triggerGlobalEmail() {
-      const subject = encodeURIComponent(`Growth Strategy Inquiry for ${CONFIG.name}`);
-      const body = encodeURIComponent(`Hi ${CONFIG.name},\n\nI reviewed your case studies and would like to arrange an audit call for our brand.\n\nBrand URL:\nMonthly Ad Budget:`);
-      window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+      openEmailModal();
+    }
+
+    function triggerGlobalWhatsApp() {
+      const msg = encodeURIComponent(`Hi ${CONFIG.name}, I reviewed your Growth Portfolio and want to discuss scaling our paid advertising campaigns.`);
+      window.open(`https://wa.me/${CONFIG.phone}?text=${msg}`, '_blank');
     }
 
     let currentCurrency = 'USD'; // 'USD' or 'SAR'
@@ -1623,6 +1782,7 @@
       if (e.key === 'Escape') {
         closeModal();
         closeLightbox();
+        closeEmailModal();
       }
     });
 

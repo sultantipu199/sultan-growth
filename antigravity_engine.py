@@ -13,7 +13,7 @@ HTML_FILE = "index.html"
 SCREENSHOT_DIR = "audit_artifacts"
 
 class AntigravityGrowthEngine:
-    def __init__(self, target_url="https://www.fabrik.ae/products/altura-meta-ads-case-study", phone="966566482865", email="tipusultan.growth@gmail.com"):
+    def __init__(self, target_url="https://www.fabrik.ae/products/altura-meta-ads-case-study", phone="966566482865", email="freelancersultan143@gmail.com"):
         self.target_url = target_url
         self.phone = phone
         self.email = email
@@ -90,6 +90,8 @@ class AntigravityGrowthEngine:
         assert "stat-revenue" in content, "Validation Failed: Revenue aggregator element missing!"
         assert "caseStudyModal" in content, "Validation Failed: Case study modal markup missing!"
         assert "vault-grid" in content, "Validation Failed: Proof vault element missing!"
+        assert "emailModal" in content, "Validation Failed: Email modal markup missing!"
+        assert "freelancersultan143@gmail.com" in content, "Validation Failed: Verified email missing!"
 
         # 2. Check if playwright is available for headless browser test
         try:
@@ -141,7 +143,7 @@ class AntigravityGrowthEngine:
 if __name__ == "__main__":
     url = sys.argv[1] if len(sys.argv) > 1 else "https://www.fabrik.ae/products/altura-meta-ads-case-study"
     phone_input = sys.argv[2] if len(sys.argv) > 2 else "966566482865"
-    email_input = sys.argv[3] if len(sys.argv) > 3 else "tipusultan.growth@gmail.com"
+    email_input = sys.argv[3] if len(sys.argv) > 3 else "freelancersultan143@gmail.com"
 
     engine = AntigravityGrowthEngine(url, phone_input, email_input)
     engine.phase_1_scrape_and_adapt()

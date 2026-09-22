@@ -549,7 +549,7 @@ def make_card_36():
     
     draw_button(draw, 80, 820, 920, 100, "REQUEST YOUR FREE 10-MIN TEARDOWN  ➤", get_font(FONT_BOLD, 30), (16, 185, 129), (255, 255, 255), radius=20)
     
-    draw.text((350, 950), "WhatsApp: +966 56 648 2865  •  tipusultan.growth@gmail.com", font=get_font(FONT_REGULAR, 20), fill=(148, 163, 184))
+    draw.text((350, 950), "WhatsApp: +966 56 648 2865  •  freelancersultan143@gmail.com", font=get_font(FONT_REGULAR, 20), fill=(148, 163, 184))
     
     img.save(os.path.join(OUTPUT_DIR, "meta-creative-hook-angle-36.jpg"), quality=95)
     print("Created Angle #36")
