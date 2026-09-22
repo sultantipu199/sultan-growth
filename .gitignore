@@ -1,0 +1,11 @@
+# OS and environment files
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+*.pyc
+
+# Local scratch and audit temp files
+audit_artifacts/
+scratch/
+test_*.py
