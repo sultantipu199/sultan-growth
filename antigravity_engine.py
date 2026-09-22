@@ -13,7 +13,7 @@ HTML_FILE = "index.html"
 SCREENSHOT_DIR = "audit_artifacts"
 
 class AntigravityGrowthEngine:
-    def __init__(self, target_url="https://www.fabrik.ae/products/altura-meta-ads-case-study", phone="8801700000000", email="tipusultan.growth@gmail.com"):
+    def __init__(self, target_url="https://www.fabrik.ae/products/altura-meta-ads-case-study", phone="966566482865", email="tipusultan.growth@gmail.com"):
         self.target_url = target_url
         self.phone = phone
         self.email = email
@@ -30,7 +30,7 @@ class AntigravityGrowthEngine:
         self.payload = {
             "id": int(time.time()),
             "category": "ecommerce",
-            "title": "DTC Cycling Performance: Scaled to 5.9x Peak ROAS Architecture",
+            "title": "DTC Cycling & Sports Gear: 1.2x to 5.9x Peak ROAS Performance Architecture",
             "tag": "Meta Performance",
             "metric": "5.9x Peak ROAS",
             "spendNum": 18500,
@@ -139,7 +139,7 @@ class AntigravityGrowthEngine:
 
 if __name__ == "__main__":
     url = sys.argv[1] if len(sys.argv) > 1 else "https://www.fabrik.ae/products/altura-meta-ads-case-study"
-    phone_input = sys.argv[2] if len(sys.argv) > 2 else "8801700000000"
+    phone_input = sys.argv[2] if len(sys.argv) > 2 else "966566482865"
     email_input = sys.argv[3] if len(sys.argv) > 3 else "tipusultan.growth@gmail.com"
 
     engine = AntigravityGrowthEngine(url, phone_input, email_input)

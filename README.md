@@ -103,7 +103,7 @@ Open [http://localhost:3000](http://localhost:3000) in any modern browser.
 ## 📞 Contact & Inquiries
 
 - **Lead Architect**: Tipu Sultan
-- **WhatsApp**: [+880 1700-000000](https://wa.me/8801700000000)
+- **WhatsApp**: [+966 56 648 2865](https://wa.me/966566482865)
 - **Email**: [tipusultan.growth@gmail.com](mailto:tipusultan.growth@gmail.com)
 
 ---
