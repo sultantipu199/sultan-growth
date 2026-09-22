@@ -91,6 +91,7 @@ class AntigravityGrowthEngine:
         assert "caseStudyModal" in content, "Validation Failed: Case study modal markup missing!"
         assert "vault-grid" in content, "Validation Failed: Proof vault element missing!"
         assert "emailModal" in content, "Validation Failed: Email modal markup missing!"
+        assert "mobileMenu" in content, "Validation Failed: Mobile menu markup missing!"
         assert "freelancersultan143@gmail.com" in content, "Validation Failed: Verified email missing!"
 
         # 2. Check if playwright is available for headless browser test

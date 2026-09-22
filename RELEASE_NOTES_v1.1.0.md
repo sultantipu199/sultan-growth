@@ -25,6 +25,15 @@ Major feature and intelligence release for **Tipu Sultan | AI-Driven & Data-Driv
    - Currency toggle button supporting international clients in USD ($) and Middle East / GCC clients in Saudi Riyals (SAR ﷼).
    - Dynamic budget scaling up to 400,000 SAR.
 
+5. **Full Mobile Navigation Drawer & Hamburger Menu**:
+   - Complete mobile menu bar with animated hamburger toggle button.
+   - Direct access to all 7 platform sections (AI Engine, Playbooks, Case Studies, Proof Vault, Ad Creatives, ROI Calculator, and Audit Tool).
+   - Embedded 1-click WhatsApp and Email modal triggers.
+
+6. **Responsive Mobile Header & Anti-Duplication Architecture**:
+   - Resolved redundant duplicate profile cards stacking together on mobile viewports.
+   - Sleek pulsing Verified Growth Architect badge on mobile transitioning seamlessly into the value proposition headline.
+
 ### 🌐 Live Platform & Access Links
 - **Official GitHub Repo**: [github.com/sultantipu199/sultan-growth](https://github.com/sultantipu199/sultan-growth)
 - **Live GitHub Pages**: [sultantipu199.github.io/sultan-growth/](https://sultantipu199.github.io/sultan-growth/)
