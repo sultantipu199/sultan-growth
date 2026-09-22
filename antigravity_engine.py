@@ -128,7 +128,8 @@ class AntigravityGrowthEngine:
         print(f"* Client Identity       : Tipu Sultan | High-Ticket Performance Marketer")
         print(f"* Verified Case Studies : 8 Active In-Depth Studies")
         print(f"* Raw Proof Gallery     : 59 High-Resolution Screenshots Categorized")
-        print(f"* Creative Angle Matrix : 36 Campaign Creative Hooks (FB A to Z)")
+        creative_count = len([f for f in os.listdir("assets/creatives/facebook-campaigns") if f.endswith(".jpg")]) if os.path.exists("assets/creatives/facebook-campaigns") else 27
+        print(f"* Creative Angle Matrix : {creative_count} Curated Campaign Creative Hooks (FB A to Z)")
         print(f"* Presentation Decks    : 3 Complete Pitch & Strategy Decks (.pptx)")
         print(f"* Ingested Study        : {self.payload['title'] if self.payload else 'Integrated'}")
         print(f"* Highlight Metric      : {self.payload['metric'] if self.payload else '5.9x ROAS'}")
