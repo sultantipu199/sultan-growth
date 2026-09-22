@@ -63,7 +63,7 @@ Sultan Grouth/
     │   ├── video-youtube/                            # 9 YouTube & Video Ads Retention Proofs
     │   └── brand-reach/                              # 22 Viral Organic Reach & Page Engagement Proofs
     ├── creatives/
-    │   └── facebook-campaigns/                       # 36 Curated Ad Creative Deliverables (FB A to Z & Angle Matrix)
+    │   └── facebook-campaigns/                       # 48 Curated Ad Creative Deliverables (FB A to Z & High-Converting Angle Matrix)
     └── documents/                                    # 3 Pitch & Strategy Slide Decks (.pptx)
         ├── google-ads-performance-portfolio-deck.pptx
         ├── growth-marketing-case-studies-deck-vol1.pptx
@@ -75,9 +75,12 @@ Sultan Grouth/
 ## 🛠️ Features & Interactive Modules
 
 - **Dynamic Aggregation Engine**: Computes real-time client spend, revenue, and blended ROAS.
+- **Algorithmic Growth Playbooks**: 6 deep strategic frameworks covering Meta Advantage+ ASC, Server-Side CAPI 9.4 EMQ, 3:2:2 Creative Testing, GCC/Saudi Tamara & COD Funnels, Cohort LTV modeling, and Google Performance Max Search dominance.
 - **Filterable Performance Case Studies**: Filter by *All, AI & Data-Driven, Meta/FB Ads, Google PPC, E-Commerce, Lead Gen, Direct DM, YouTube/Video*.
 - **Empirical Evidence Vault**: Categorized gallery of 59 proof screenshots with a full-screen Lightbox zoom modal.
-- **Interactive Funnel ROI Simulator**: Dual sliders for Monthly Ad Budget ($1K–$100K) and Current Blended ROAS (1.0x–5.0x) with real-time monthly net lift projections.
+- **Ad Creative Sandbox & Angle Matrix**: 48 high-converting performance marketing campaign hooks and ad deliverables.
+- **Interactive Funnel ROI Simulator**: Dual sliders for Monthly Ad Budget with **USD ($)** and **SAR (﷼)** currency switching, plus real-time monthly net lift projections.
+- **Interactive Ad Account Health Score Diagnostic Tool**: 5-question audit calculating live readiness score out of 100 with immediate WhatsApp dispatch.
 - **10-Minute Ad Account Teardown**: Fast prospect submission form connected directly to WhatsApp.
 - **Direct High-Intent Conversion Channels**: Integrated WhatsApp and Email action triggers.
 
