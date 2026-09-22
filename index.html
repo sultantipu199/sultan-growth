@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipu Sultan | High-Ticket Performance Marketer & Growth Architect</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: { 500: '#2563eb', 600: '#1d4ed8', glow: 'rgba(37, 99, 235, 0.35)' },
+            accent: { 400: '#34d399', 500: '#10b981', glow: 'rgba(16, 185, 129, 0.35)' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #070b14;
+      color: #f1f5f9;
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display { font-family: 'Outfit', sans-serif; }
+    .glass {
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: radial-gradient(100% 100% at 50% 0%, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card:hover {
+      border-color: rgba(59, 130, 246, 0.35);
+      box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.2);
+    }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
+    .glow-pill {
+      box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.3);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-40 glass border-b border-slate-800/80 px-4 sm:px-8 py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-emerald-400 p-0.5 shadow-lg shadow-blue-500/20 flex items-center justify-center">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-display font-black text-sm text-emerald-400">
+            TS
+          </div>
+        </div>
+        <div>
+          <span class="font-display font-bold text-sm tracking-wide text-white block group-hover:text-blue-400 transition-colors">
+            Tipu Sultan
+          </span>
+          <span class="text-[11px] text-slate-400 font-medium block leading-none">
+            Growth Architect & Media Buyer
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#proofs" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-trophy text-[10px] text-emerald-400"></i> Case Studies
+        </a>
+        <a href="#vault" class="hover:text-blue-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-images text-[10px] text-blue-400"></i> Proof Vault (59)
+        </a>
+        <a href="#creatives" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-wand-magic-sparkles text-[10px] text-indigo-400"></i> Ad Creatives
+        </a>
+        <a href="#calculator" class="hover:text-teal-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-calculator text-[10px] text-teal-400"></i> ROI Engine
+        </a>
+        <a href="#audit" class="text-emerald-400 hover:text-emerald-300 transition-colors font-bold px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5">
+          <i class="fa-solid fa-bolt text-xs"></i> Free Audit
+        </a>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="triggerGlobalWhatsApp()" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-lg shadow-emerald-600/30 flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </button>
+        <button onclick="triggerGlobalEmail()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3.5 py-2 rounded-xl transition-all border border-slate-700 flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-xs"></i>
+          <span class="hidden sm:inline">Email</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header & Auto Metrics Aggregator -->
+  <header class="max-w-6xl mx-auto pt-16 pb-12 px-4 sm:px-6 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass border border-emerald-500/30 text-emerald-300 text-xs font-semibold tracking-wide mb-6 glow-pill">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span>Empirically Validated Performance Marketing & Paid Acquisition</span>
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-tight max-w-5xl mx-auto">
+      Scale Predictable Revenue with <br />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-emerald-300 to-teal-300">
+        Engineering-Grade Ad Architecture
+      </span>
+    </h1>
+
+    <p class="mt-5 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+      I architect full-funnel paid media campaigns across <strong>Meta Ads</strong>, <strong>Google Search/PPC</strong>, <strong>High-Ticket Lead Gen</strong>, and <strong>Direct Response Funnels</strong> — turning erratic ad spend into measurable pipeline growth.
+    </p>
+
+    <!-- Real-time Live Metrics Dashboard -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+      <div class="glass-card p-5 rounded-2xl text-center">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-center gap-1.5 mb-1">
+          <i class="fa-solid fa-funnel-dollar text-blue-400"></i> Managed Spend
+        </div>
+        <div id="stat-spend" class="text-2xl sm:text-3xl font-display font-black text-white">$0K+</div>
+        <div class="text-[10px] text-emerald-400 font-semibold mt-1">Across Verified Accounts</div>
+      </div>
+
+      <div class="glass-card p-5 rounded-2xl text-center">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-center gap-1.5 mb-1">
+          <i class="fa-solid fa-chart-line text-emerald-400"></i> Tracked Revenue
+        </div>
+        <div id="stat-revenue" class="text-2xl sm:text-3xl font-display font-black text-white">$0K+</div>
+        <div class="text-[10px] text-emerald-400 font-semibold mt-1">Attributed Purchases</div>
+      </div>
+
+      <div class="glass-card p-5 rounded-2xl text-center">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-center gap-1.5 mb-1">
+          <i class="fa-solid fa-gauge-high text-teal-400"></i> Blended ROAS
+        </div>
+        <div id="stat-roas" class="text-2xl sm:text-3xl font-display font-black text-emerald-400">0.0x</div>
+        <div class="text-[10px] text-slate-400 font-semibold mt-1">Average Multiplier</div>
+      </div>
+
+      <div class="glass-card p-5 rounded-2xl text-center">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-center gap-1.5 mb-1">
+          <i class="fa-solid fa-shield-check text-indigo-400"></i> Verified Proofs
+        </div>
+        <div id="stat-count" class="text-2xl sm:text-3xl font-display font-black text-white">59+</div>
+        <div class="text-[10px] text-blue-400 font-semibold mt-1">Screenshots & Case Studies</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive ROI & Revenue Lift Engine -->
+  <section id="calculator" class="max-w-5xl mx-auto my-10 px-4 sm:px-6 w-full">
+    <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-col md:flex-row gap-8 items-center justify-between relative z-10">
+        <div class="flex-1 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider border border-blue-500/20">
+            <i class="fa-solid fa-calculator"></i> Interactive Funnel Simulator
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-display font-black text-white leading-tight">
+            Calculate Your Projected Revenue Lift with Optimized Ad Architecture
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Move the sliders to model how restructuring your paid media campaigns, eliminating wasted broad clicks, and deploying high-LTV retargeting directly scales net revenue.
+          </p>
+
+          <!-- Sliders -->
+          <div class="space-y-4 pt-2">
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-300 mb-1.5">
+                <span>Monthly Ad Budget</span>
+                <span id="budgetLabel" class="text-blue-400 font-display font-extrabold text-sm">$10,000</span>
+              </div>
+              <input id="budgetRange" type="range" min="1000" max="100000" step="1000" value="10000" oninput="runRoiCalculator()" class="w-full accent-blue-500 h-2 bg-slate-800 rounded-lg cursor-pointer" />
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-300 mb-1.5">
+                <span>Current Blended ROAS</span>
+                <span id="currentRoasLabel" class="text-emerald-400 font-display font-extrabold text-sm">1.8x</span>
+              </div>
+              <input id="currentRoasRange" type="range" min="1.0" max="5.0" step="0.1" value="1.8" oninput="runRoiCalculator()" class="w-full accent-emerald-500 h-2 bg-slate-800 rounded-lg cursor-pointer" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div class="w-full md:w-80 glass p-6 rounded-2xl border border-slate-700/80 text-center flex flex-col justify-between shadow-xl">
+          <span class="text-[11px] uppercase tracking-wider text-slate-400 font-bold block">Estimated Monthly Net Lift</span>
+          <div id="projectedRevenue" class="text-3xl sm:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 my-4">
+            +$18,000 / mo
+          </div>
+          <p class="text-[11px] text-slate-400 mb-5 leading-snug">
+            Based on average account turnaround metrics: +1.8x to 3.6x ROAS lift via creative sandboxing and intent-match negative filtering.
+          </p>
+          <button onclick="triggerCalculatorWhatsApp()" class="w-full py-3 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-500 hover:to-emerald-500 text-white font-bold text-xs rounded-xl transition-all shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Discuss This Projection
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Case Studies Section -->
+  <section id="proofs" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-800/80 pb-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-400 mb-2">
+          <i class="fa-solid fa-layer-group"></i> Performance Case Studies
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Verified Client Campaign Teardowns
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-xl">
+          Real accounts, real ad spend, real revenue. Click any study for the 3-layer architecture, CPA drops, and actual screenshots.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-1.5" id="filter-buttons">
+        <button onclick="filterCategory('all', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30">
+          All Case Studies
+        </button>
+        <button onclick="filterCategory('meta', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Meta / FB Ads
+        </button>
+        <button onclick="filterCategory('google', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Google PPC
+        </button>
+        <button onclick="filterCategory('ecommerce', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          E-Commerce
+        </button>
+        <button onclick="filterCategory('leadgen', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Lead Gen
+        </button>
+        <button onclick="filterCategory('messaging', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Direct DM
+        </button>
+        <button onclick="filterCategory('video', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          YouTube / Video
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-8 max-w-md">
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+        <input id="searchInput" type="text" placeholder="Search by keyword (e.g. ROAS, CPA, SaaS, DTC)..." oninput="handleSearch(this.value)" class="w-full bg-slate-900 border border-slate-800 text-xs rounded-xl pl-9 pr-4 py-2.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Proof Vault / 59 Campaign Screenshots Gallery -->
+  <section id="vault" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
+          <i class="fa-solid fa-shield-halved"></i> Empirical Evidence Vault
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Raw Proof Gallery (59 Verified Screenshots)
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
+          Uncut dashboard screenshots across Meta Ads Manager, Google Ads conversion metrics, Shopify purchase receipts, Messenger closes, and video retention.
+        </p>
+      </div>
+
+      <!-- Vault Category Filter -->
+      <div class="flex flex-wrap gap-1.5" id="vault-filter-buttons">
+        <button onclick="filterVault('all', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-md shadow-emerald-600/30">
+          All Proofs (59)
+        </button>
+        <button onclick="filterVault('meta', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Meta Ads (6)
+        </button>
+        <button onclick="filterVault('google', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Google PPC (5)
+        </button>
+        <button onclick="filterVault('ecommerce', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          DTC Purchases (5)
+        </button>
+        <button onclick="filterVault('leadgen', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Lead Gen (2)
+        </button>
+        <button onclick="filterVault('messaging', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Direct Chat (7)
+        </button>
+        <button onclick="filterVault('video', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          YouTube / Video (9)
+        </button>
+        <button onclick="filterVault('reach', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Viral Reach (22)
+        </button>
+      </div>
+    </div>
+
+    <!-- Vault Grid -->
+    <div id="vault-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Creative Deliverables Showcase (Project Facebook A to Z) -->
+  <section id="creatives" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2">
+          <i class="fa-solid fa-paintbrush"></i> Creative Testing Engine
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Ad Creative Sandbox & Angle Matrix
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
+          Sample high-converting creatives engineered for thumb-stopping feed disruption, social proof reinforcement, and objection resolution.
+        </p>
+      </div>
+      <div class="text-xs text-slate-400 font-semibold">
+        Showing 36 Top Performing Campaign Hooks
+      </div>
+    </div>
+
+    <div id="creatives-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Downloadable Presentation Decks -->
+  <section class="max-w-5xl mx-auto my-12 px-4 sm:px-6 w-full">
+    <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-teal-400 mb-1.5">
+          <i class="fa-solid fa-file-powerpoint"></i> Growth Strategy Presentations
+        </div>
+        <h3 class="text-xl sm:text-2xl font-display font-bold text-white">
+          Download Detailed Strategy & Portfolio Slide Decks
+        </h3>
+        <p class="text-xs text-slate-400 mt-1 max-w-xl">
+          In-depth architectural breakdowns ready for internal review or stakeholder presentations.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-2.5">
+        <a href="assets/documents/google-ads-performance-portfolio-deck.pptx" download class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-download text-teal-400"></i> Google Ads Deck (.pptx)
+        </a>
+        <a href="assets/documents/growth-marketing-case-studies-deck-vol1.pptx" download class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-download text-blue-400"></i> Case Studies Vol 1 (.pptx)
+        </a>
+        <a href="assets/documents/growth-marketing-case-studies-deck-vol2.pptx" download class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-download text-emerald-400"></i> Case Studies Vol 2 (.pptx)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free 10-Minute Ad Account Teardown Form -->
+  <section id="audit" class="max-w-4xl mx-auto my-12 px-4 sm:px-6 w-full">
+    <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/20 mb-4">
+        <i class="fa-solid fa-magnifying-glass-chart"></i> Zero-Cost Opportunity Analysis
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+        Request a 10-Minute Ad Account Teardown
+      </h2>
+      <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto mt-2">
+        Enter your store or website URL below. I will personally record a confidential video auditing your pixel attribution, creative fatigue, and wasted search budget.
+      </p>
+
+      <div class="mt-8 max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+        <input id="auditUrlInput" type="url" placeholder="https://yourbrand.com or your store link..." class="flex-1 bg-slate-900 border border-slate-700 text-xs rounded-xl px-4 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-emerald-500 transition-colors" />
+        <button onclick="triggerAuditSubmit()" class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Request Audit
+        </button>
+      </div>
+      <div class="text-[11px] text-slate-500 mt-3">
+        100% Free &bull; No obligation &bull; Directly connects to WhatsApp with your URL
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 py-10 px-4 sm:px-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span class="font-bold text-slate-300">Tipu Sultan</span> | High-Ticket Performance Marketer & Growth Architect
+      </div>
+      <div>
+        Built with Engineering Precision &bull; All Metrics Empirically Verified
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="javascript:void(0)" onclick="triggerGlobalWhatsApp()" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+        <a href="javascript:void(0)" onclick="triggerGlobalEmail()" class="hover:text-blue-400 transition-colors"><i class="fa-solid fa-envelope text-sm"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Action Button on Mobile -->
+  <div class="fixed bottom-4 right-4 z-40 flex flex-col gap-2">
+    <button onclick="triggerGlobalWhatsApp()" class="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-500/40 flex items-center justify-center text-xl transition-transform hover:scale-110">
+      <i class="fa-brands fa-whatsapp"></i>
+    </button>
+  </div>
+
+  <!-- Deep Teardown Modal with Full Lightbox Support -->
+  <div id="caseStudyModal" class="fixed inset-0 z-50 glass bg-slate-950/85 backdrop-blur-xl hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="glass-card border border-slate-700/80 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl relative" onclick="event.stopPropagation()">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-700">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Image Header -->
+      <div class="relative h-56 sm:h-72 w-full bg-slate-900 overflow-hidden cursor-zoom-in group" onclick="zoomModalImage()">
+        <img id="modalImg" src="" alt="" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" />
+        <span id="modalTag" class="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md border border-slate-700 text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-lg text-slate-200"></span>
+        <div class="absolute bottom-3 right-3 bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-[10px] text-slate-300 px-2.5 py-1 rounded-md flex items-center gap-1.5">
+          <i class="fa-solid fa-magnifying-glass-plus text-blue-400"></i> Click to Zoom High-Res
+        </div>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="p-6 sm:p-8 space-y-6">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span id="modalMetric" class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-extrabold px-3 py-1 rounded-lg"></span>
+            <span id="modalSpendRev" class="text-xs text-slate-400 font-medium"></span>
+          </div>
+          <h3 id="modalTitle" class="text-xl sm:text-2xl font-display font-bold text-white leading-tight"></h3>
+        </div>
+
+        <!-- Before & After Comparison Grid -->
+        <div id="modalBeforeAfterSlot"></div>
+
+        <!-- Challenge -->
+        <div class="space-y-1.5">
+          <div class="text-xs font-bold uppercase tracking-wider text-rose-400 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation"></i> Initial Bottleneck & Challenge:
+          </div>
+          <p id="modalChallenge" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <!-- Growth Strategy -->
+        <div class="space-y-1.5">
+          <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+            <i class="fa-solid fa-chess-knight"></i> Tipu Sultan's 3-Layer Growth Architecture:
+          </div>
+          <div id="modalStrategy" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></div>
+        </div>
+
+        <!-- Modal CTA -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-[11px] text-slate-400">
+            Want to implement this exact system for your ad account?
+          </div>
+          <a id="modalWhatsAppAction" href="#" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Replicate This Strategy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Lightbox Zoom Modal -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 text-white flex items-center justify-center text-lg transition-colors">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-5xl max-h-[90vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[82vh] object-contain rounded-xl border border-slate-800 shadow-2xl" />
+      <div id="lightboxCaption" class="text-xs text-slate-300 mt-3 text-center max-w-xl font-medium"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script>
+    const CONFIG = {
+      name: "Tipu Sultan",
+      phone: "8801700000000", // Bangladesh format, update to your actual phone number
+      email: "tipusultan.growth@gmail.com"
+    };
+
+    // Verified Comprehensive Case Studies Data
+    const projectsData = [
+      {
+      "id": 1790069187,
+      "category": "ecommerce",
+      "title": "DTC Cycling Performance: Scaled to 5.9x Peak ROAS Architecture",
+      "tag": "Meta Performance",
+      "metric": "5.9x Peak ROAS",
+      "spendNum": 18500,
+      "revenueNum": 92500,
+      "beforeAfter": {
+            "beforeROAS": "1.2x",
+            "afterROAS": "5.9x Peak / 3.4x Blended",
+            "beforeCPA": "$64.50",
+            "afterCPA": "$21.80"
+      },
+      "challenge": "ব্র্যান্ডটির নিজস্ব কোনো স্কেলেবল পারফরম্যান্স অ্যাকুইজিশন আর্কিটেকচার ছিল না। ক্রিয়েটিভ ফ্যাটিগ এবং হাই CAC-এর কারণে অ্যাড স্পেন্ড স্কেল করা অসম্ভব হয়ে পড়েছিল।",
+      "strategy": "টিপু সুলতানের ৩-লেয়ার মেটা অ্যাড ফ্রেমওয়ার্ক: ১) ক্রিয়েটিভ স্যান্ডবক্স ম্যাট্রিক্স (Hook Angle Testing), ২) ডায়নামিক প্রোডাক্ট অ্যাডস (DPA) ক্যাটালগ রিমার্কেটিং, ৩) এন্ড-অফ-সিজন সেলসের জন্য হাই-LTV লিকুইডেশন ফানেল।",
+      "executionSteps": [
+            "Phase 1: UGC & Problem-Aware Creative Angle Sandbox Matrix",
+            "Phase 2: Advantage+ Shopping Campaigns (ASC) with Dynamic Feeds",
+            "Phase 3: High-LTV Retargeting Funnel & Bundle Offer Architecture"
+      ],
+      "image": "assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-03.png",
+      "keywords": "meta ads cycling dtc roas performance marketing tipu sultan"
+},
+     
+      {
+        id: 101,
+        category: 'ecommerce',
+        title: 'DTC Cycling & Sports Gear: 1.2x to 5.9x Peak ROAS Performance Architecture',
+        tag: 'DTC E-Commerce',
+        metric: '5.9x Peak ROAS',
+        spendNum: 18500,
+        revenueNum: 92500,
+        beforeAfter: {
+          beforeROAS: '1.2x',
+          afterROAS: '5.9x Peak / 3.4x Blended',
+          beforeCPA: '$64.50',
+          afterCPA: '$21.80'
+        },
+        challenge: 'ব্র্যান্ডটির নিজস্ব কোনো স্কেলেবল পারফরম্যান্স অ্যাকুইজিশন আর্কিটেকচার ছিল না। ক্রিয়েটিভ ফ্যাটিগ এবং হাই CAC-এর কারণে অ্যাড স্পেন্ড স্কেল করা অসম্ভব হয়ে পড়েছিল।',
+        strategy: 'টিপু সুলতানের ৩-লেয়ার মেটা অ্যাড ফ্রেমওয়ার্ক: ১) ক্রিয়েটিভ স্যান্ডবক্স ম্যাট্রিক্স (Hook Angle Testing), ২) ডায়নামিক প্রোডাক্ট অ্যাডস (DPA) ক্যাটালগ রিমার্কেটিং, ৩) এন্ড-অফ-সিজন সেলসের জন্য হাই-LTV লিকুইডেশন ফানেল।',
+        executionSteps: [
+          'Phase 1: UGC & Problem-Aware Creative Angle Sandbox Matrix',
+          'Phase 2: Advantage+ Shopping Campaigns (ASC) with Dynamic Feeds',
+          'Phase 3: High-LTV Retargeting Funnel & Bundle Offer Architecture'
+        ],
+        image: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-03.png',
+        keywords: 'dtc ecommerce roas cycling sports meta ads scaling tipu sultan'
+      },
+      {
+        id: 102,
+        category: 'google',
+        title: 'B2B Enterprise SaaS Qualified Leads Pipeline & Cost Optimization',
+        tag: 'Google PPC',
+        metric: '$31 Cost/SQL (64% Reduction)',
+        spendNum: 32000,
+        revenueNum: 125000,
+        beforeAfter: {
+          beforeROAS: '1.5x',
+          afterROAS: '3.9x',
+          beforeCPA: '$88.00 / Lead',
+          afterCPA: '$31.00 / SQL'
+        },
+        challenge: 'লো-ইনটেন্ট ব্রড কিওয়ার্ডের কারণে অপ্রয়োজনীয় ক্লিকে প্রচুর অ্যাড বাজেট নষ্ট হচ্ছিল এবং সেলস পাইপলাইনে আনকোয়ালিফায়েড লিড আসছিল।',
+        strategy: 'হাই-ইনটেন্ট এক্স্যাক্ট ও ফ্রেজ ম্যাচ স্ট্রাকচার, সিঙ্গেল থিম কিওয়ার্ড গ্রুপ (STAGs), নেগেটিভ কিওয়ার্ড স্ক্রাবিং এবং ডেডিকেটেড ডায়নামিক ল্যান্ডিং পেজ।',
+        executionSteps: [
+          'High-Intent Exact Match Restructuring & Bid Clean-up',
+          'Automated Daily Negative Keyword Scrubbing Routine',
+          'Landing Page Interactive ROI Tool & Intent Pre-qualification'
+        ],
+        image: 'assets/proofs/google-ads/google-search-conversion-metrics-proof-01.png',
+        keywords: 'b2b saas lead generation google ads high ticket ppc search tipu sultan'
+      },
+      {
+        id: 103,
+        category: 'meta',
+        title: 'Direct Response Meta Ads: High-ROAS Omnichannel Scaling System',
+        tag: 'Meta Ads',
+        metric: '4.6x Verified ROAS',
+        spendNum: 24800,
+        revenueNum: 114080,
+        beforeAfter: {
+          beforeROAS: '1.8x',
+          afterROAS: '4.6x Verified',
+          beforeCPA: '$42.00',
+          afterCPA: '$16.50'
+        },
+        challenge: 'অ্যাড অ্যাকাউন্ট স্কেল করার চেষ্টা করলেই CPA দ্বিগুণ হয়ে যাচ্ছিল এবং অডিয়েন্স ফ্যাটিগ শুরু হয়েছিল।',
+        strategy: 'ব্রড সিগন্যালিং + ডায়নামিক ক্রিয়েটিভ অপটিমাইজেশন (DCO) টেস্ট, কাস্টম লুকেলাইক অডিয়েন্স ৩-টিয়ার ফানেল এবং এক্সক্লুসিভ রি-এনগেজমেন্ট।',
+        executionSteps: [
+          'Dynamic Creative Testing with 3 Hooks, 2 Bodies, 2 CTAs',
+          'High-Intent Retargeting on 7-Day & 14-Day Social Engagers',
+          'Budget Consolidation via Campaign Budget Optimization (CBO)'
+        ],
+        image: 'assets/proofs/meta-ads/meta-ads-campaign-results-proof-01.jpg',
+        keywords: 'meta ads facebook ads scaling roas direct response tipu sultan'
+      },
+      {
+        id: 104,
+        category: 'leadgen',
+        title: 'High-Ticket Consulting & Client Acquisition Qualified Pipeline',
+        tag: 'Lead Gen',
+        metric: '$4.20 Cost / Qualified Lead',
+        spendNum: 14200,
+        revenueNum: 78000,
+        beforeAfter: {
+          beforeROAS: '2.1x',
+          afterROAS: '5.5x Pipeline Return',
+          beforeCPA: '$18.50 CPL (Low Quality)',
+          afterCPA: '$4.20 CPL (76% Show Rate)'
+        },
+        challenge: 'অডিয়েন্সের কোয়ালিটি কম থাকায় সেলস কলের জন্য সঠিক ডিসিশন মেকার পাওয়া যাচ্ছিল না এবং নো-শো রেট বেশি ছিল।',
+        strategy: '২-স্টেপ কোয়ালিফায়ার ফানেল + ইনস্ট্যান্ট ক্যালেন্ডার বুকিং ইন্টিগ্রেশন + এসএমএস/হোয়াটসঅ্যাপ নোটিফিকেশন অটোমেশন।',
+        executionSteps: [
+          'Frictionless Instant Form with 3 Custom Qualifying Questions',
+          'Instant Calendar Auto-Redirect on Lead Submission',
+          'Contextual WhatsApp & Email Confirmation Flow'
+        ],
+        image: 'assets/proofs/lead-generation/high-ticket-lead-acquisition-proof-01.png',
+        keywords: 'lead generation high ticket consulting b2b cpl appointment booking tipu sultan'
+      },
+      {
+        id: 105,
+        category: 'messaging',
+        title: 'Conversational Commerce: High-Converting Messenger & WhatsApp Funnel',
+        tag: 'Direct DM',
+        metric: '82% Qualified Close Rate',
+        spendNum: 11600,
+        revenueNum: 54500,
+        beforeAfter: {
+          beforeROAS: '2.4x',
+          afterROAS: '4.7x',
+          beforeCPA: '$8.50 / Conversation',
+          afterCPA: '$1.90 / Qualified Chat'
+        },
+        challenge: 'ডিরেক্ট ওয়েবসাইট ভিজিটে কনভার্সন ড্রপ করছিল কারণ কাস্টমারদের ইনস্ট্যান্ট ট্রাস্ট ও কনসালটেশন দরকার ছিল।',
+        strategy: 'ক্লিক-টু-হোয়াটসঅ্যাপ এবং ক্লিক-টু-মেসেঞ্জার অ্যাড ক্যাম্পেইন + কাস্টম চ্যাটবট কোয়ালিফিকেশন + হিউম্যান ক্লোজিং স্ক্রিপ্ট।',
+        executionSteps: [
+          'Click-to-Message Campaign with Localized Hook',
+          'Automated FAQ & Lead Pre-Qualification Flow',
+          'Direct 1-on-1 Closing on Messenger & WhatsApp'
+        ],
+        image: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-01.png',
+        keywords: 'direct messaging messenger whatsapp conversions sales chat closing tipu sultan'
+      },
+      {
+        id: 106,
+        category: 'video',
+        title: 'YouTube Action Ads: High-Retention Video Funnel & View Acquisition',
+        tag: 'YouTube Ads',
+        metric: '$0.012 Cost / View & 3.8x ROI',
+        spendNum: 16400,
+        revenueNum: 62320,
+        beforeAfter: {
+          beforeROAS: '1.4x',
+          afterROAS: '3.8x',
+          beforeCPA: '$0.045 CPV (28% Retention)',
+          afterCPA: '$0.012 CPV (64% Retention)'
+        },
+        challenge: 'ভিডিও অ্যাড স্কিপ রেট অনেক বেশি ছিল এবং প্রথম ৫ সেকেন্ডের মধ্যে ভিউয়াররা ড্রপ করছিল।',
+        strategy: '৩-সেকেন্ড প্যাটার্ন ইন্টারাপ্ট হুক, স্টোরিটেলিং বডি এবং ডিরেক্ট কল-টু-অ্যাকশন ওভারলে স্ক্রিপ্ট।',
+        executionSteps: [
+          'Hook Testing across 4 High-Pacing Intro Variations',
+          'In-Feed & In-Stream Video Action Campaign Segmentation',
+          'RLSA Retargeting on Video Viewers with Search Ads'
+        ],
+        image: 'assets/proofs/video-youtube/youtube-video-ads-metrics-proof-01.png',
+        keywords: 'youtube video ads action views cpv video retention google ads tipu sultan'
+      },
+      {
+        id: 107,
+        category: 'ecommerce',
+        title: 'Multi-SKU E-Commerce Dynamic Product Catalog (DPA) Scaling',
+        tag: 'DTC E-Commerce',
+        metric: '4.8x Blended ROAS',
+        spendNum: 22000,
+        revenueNum: 105600,
+        beforeAfter: {
+          beforeROAS: '2.1x',
+          afterROAS: '4.8x Blended',
+          beforeCPA: '$38.00 CPA',
+          afterCPA: '$14.20 CPA'
+        },
+        challenge: 'সিঙ্গেল প্রোডাক্ট ক্যাম্পেইনে ফ্রিকোয়েন্সি বেড়ে গিয়ে অ্যাড ফ্যাটিগ দেখা দিচ্ছিল এবং মার্জিন কমে যাচ্ছিল।',
+        strategy: 'স্মার্ট প্রোডাক্ট ক্যাটালগ সেটআপ, ভ্যালু-বেসড বিডিং এবং ব্রাউজ অ্যান্ড কার্ট রিমার্কেটিং ফানেল।',
+        executionSteps: [
+          'Server-Side CAPI Tracking Fix with 9.2/10 Event Match Quality',
+          'Cross-Sell & Upsell DPA Campaigns with Custom Overlays',
+          'VIP Customer LTV Nurturing Funnel'
+        ],
+        image: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-01.png',
+        keywords: 'ecommerce dpa catalog meta ads shopify purchase roas scaling tipu sultan'
+      },
+      {
+        id: 108,
+        category: 'meta',
+        title: 'Viral Organic & Paid Hybrid Reach: 1.2M+ Reach & Follower Growth',
+        tag: 'Brand Growth',
+        metric: '1,200,000+ Verified Reach',
+        spendNum: 9500,
+        revenueNum: 41000,
+        beforeAfter: {
+          beforeROAS: '1.9x',
+          afterROAS: '4.3x Total Return',
+          beforeCPA: '35K Monthly Reach',
+          afterCPA: '1.2M+ Viral Reach & +48K Followers'
+        },
+        challenge: 'ব্র্যান্ডের সামাজিক বিশ্বাসযোগ্যতা (Social Proof) কম থাকায় পেইড অ্যাডের CAC বেশি আসছিল।',
+        strategy: 'ভাইরাল কন্টেন্ট বুস্টিং + এনগেজমেন্ট রিটার্গেটিং + হাই-ইমপ্যাক্ট পেজ গ্রোথ স্ট্র্যাটেজি।',
+        executionSteps: [
+          'High-Shareability Short Form Creative Production',
+          'Page Like & Engagement Campaign Optimization',
+          'Custom Warm-Audience Retargeting for Commercial Offers'
+        ],
+        image: 'assets/proofs/brand-reach/organic-viral-reach-proof-04.png',
+        keywords: 'viral reach brand growth followers engagement meta ads organic hybrid tipu sultan'
+      }
+    ];
+
+    // Raw Proof Files Registry (All 59 files categorized)
+    const vaultProofs = [
+      // Meta Ads
+      { cat: 'meta', title: 'Meta Ads Manager Results 01', file: 'assets/proofs/meta-ads/meta-ads-campaign-results-proof-01.jpg' },
+      { cat: 'meta', title: 'Meta Ads Campaign Results 02', file: 'assets/proofs/meta-ads/meta-ads-campaign-results-proof-02.jpg' },
+      { cat: 'meta', title: 'Meta Ads Manager Performance 03', file: 'assets/proofs/meta-ads/meta-ads-manager-performance-proof-03.png' },
+      { cat: 'meta', title: 'Meta Ads Trend Analytics 04', file: 'assets/proofs/meta-ads/meta-ads-trend-analytics-proof-04.png' },
+      { cat: 'meta', title: 'Meta Campaign Conversion Results 05', file: 'assets/proofs/meta-ads/meta-campaign-conversion-results-proof-05.png' },
+      { cat: 'meta', title: 'Meta Campaign High ROAS Results 06', file: 'assets/proofs/meta-ads/meta-campaign-high-roas-results-proof-06.png' },
+
+      // Google Ads
+      { cat: 'google', title: 'Google Search Conversion Metrics 01', file: 'assets/proofs/google-ads/google-search-conversion-metrics-proof-01.png' },
+      { cat: 'google', title: 'Google PPC Leadgen Analytics 02', file: 'assets/proofs/google-ads/google-ppc-leadgen-analytics-proof-02.png' },
+      { cat: 'google', title: 'Google Ads Dashboard ROAS 03', file: 'assets/proofs/google-ads/google-ads-dashboard-roas-proof-03.png' },
+      { cat: 'google', title: 'Google Search Campaign Overview 04', file: 'assets/proofs/google-ads/google-search-campaign-overview-proof-04.jpg' },
+      { cat: 'google', title: 'Google Ads Keywords Performance 05', file: 'assets/proofs/google-ads/google-ads-keywords-performance-proof-05.png' },
+
+      // DTC E-Commerce Purchases
+      { cat: 'ecommerce', title: 'DTC Website Purchases ROAS 01', file: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-01.png' },
+      { cat: 'ecommerce', title: 'DTC Website Purchases ROAS 02', file: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-02.png' },
+      { cat: 'ecommerce', title: 'DTC Website Purchases ROAS 03', file: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-03.png' },
+      { cat: 'ecommerce', title: 'DTC Website Purchases ROAS 04', file: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-04.png' },
+      { cat: 'ecommerce', title: 'DTC Website Purchases ROAS 05', file: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-05.png' },
+
+      // Lead Generation
+      { cat: 'leadgen', title: 'High-Ticket Lead Acquisition 01', file: 'assets/proofs/lead-generation/high-ticket-lead-acquisition-proof-01.png' },
+      { cat: 'leadgen', title: 'B2B Qualified Leads Funnel 02', file: 'assets/proofs/lead-generation/b2b-qualified-leads-funnel-proof-02.jpg' },
+
+      // Direct Messaging
+      { cat: 'messaging', title: 'Direct Messenger Sales Closing 01', file: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-01.png' },
+      { cat: 'messaging', title: 'Direct Messenger Sales Closing 02', file: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-02.png' },
+      { cat: 'messaging', title: 'Direct Messenger Sales Closing 03', file: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-03.png' },
+      { cat: 'messaging', title: 'Direct Messenger Sales Closing 04', file: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-04.png' },
+      { cat: 'messaging', title: 'Direct Messenger Sales Closing 05', file: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-05.png' },
+      { cat: 'messaging', title: 'Direct Page Inbox Conversion 06', file: 'assets/proofs/direct-messaging/page-direct-inbox-conversion-proof-06.png' },
+      { cat: 'messaging', title: 'Inbox Order Closing Proof 07', file: 'assets/proofs/direct-messaging/inbox-order-closing-proof-07.png' },
+
+      // YouTube & Video
+      { cat: 'video', title: 'YouTube Video Ads Metrics 01', file: 'assets/proofs/video-youtube/youtube-video-ads-metrics-proof-01.png' },
+      { cat: 'video', title: 'YouTube Video Ads Metrics 02', file: 'assets/proofs/video-youtube/youtube-video-ads-metrics-proof-02.jpg' },
+      { cat: 'video', title: 'YouTube Video Ads Metrics 03', file: 'assets/proofs/video-youtube/youtube-video-ads-metrics-proof-03.jpg' },
+      { cat: 'video', title: 'YouTube Channel Campaign Overview 04', file: 'assets/proofs/video-youtube/youtube-channel-campaign-overview-proof-04.jpg' },
+      { cat: 'video', title: 'High-Retention Video Views 05', file: 'assets/proofs/video-youtube/high-retention-video-views-proof-05.png' },
+      { cat: 'video', title: 'Video Ad Cost-Per-View 06', file: 'assets/proofs/video-youtube/video-ad-cost-per-view-proof-06.png' },
+      { cat: 'video', title: 'Video Ad Cost-Per-View 07', file: 'assets/proofs/video-youtube/video-ad-cost-per-view-proof-07.png' },
+      { cat: 'video', title: 'Video Ad Cost-Per-View 08', file: 'assets/proofs/video-youtube/video-ad-cost-per-view-proof-08.png' },
+      { cat: 'video', title: 'Video Ad Cost-Per-View 09', file: 'assets/proofs/video-youtube/video-ad-cost-per-view-proof-09.png' },
+
+      // Brand Reach & Viral
+      { cat: 'reach', title: 'Organic Viral Reach 01', file: 'assets/proofs/brand-reach/organic-viral-reach-proof-01.png' },
+      { cat: 'reach', title: 'Organic Viral Reach 02', file: 'assets/proofs/brand-reach/organic-viral-reach-proof-02.png' },
+      { cat: 'reach', title: 'Organic Viral Reach 03', file: 'assets/proofs/brand-reach/organic-viral-reach-proof-03.png' },
+      { cat: 'reach', title: 'Organic Viral Reach 04', file: 'assets/proofs/brand-reach/organic-viral-reach-proof-04.png' },
+      { cat: 'reach', title: 'Organic Viral Reach 05', file: 'assets/proofs/brand-reach/organic-viral-reach-proof-05.png' },
+      { cat: 'reach', title: 'Organic Viral Reach 06', file: 'assets/proofs/brand-reach/organic-viral-reach-proof-06.png' },
+      { cat: 'reach', title: 'Social Engagement Growth 07', file: 'assets/proofs/brand-reach/social-engagement-growth-proof-07.png' },
+      { cat: 'reach', title: 'Social Engagement Growth 08', file: 'assets/proofs/brand-reach/social-engagement-growth-proof-08.png' },
+      { cat: 'reach', title: 'Social Engagement Growth 09', file: 'assets/proofs/brand-reach/social-engagement-growth-proof-09.png' },
+      { cat: 'reach', title: 'Social Engagement Growth 10', file: 'assets/proofs/brand-reach/social-engagement-growth-proof-10.png' },
+      { cat: 'reach', title: 'Social Engagement Growth 11', file: 'assets/proofs/brand-reach/social-engagement-growth-proof-11.png' },
+      { cat: 'reach', title: 'Social Engagement Growth 12', file: 'assets/proofs/brand-reach/social-engagement-growth-proof-12.png' },
+      { cat: 'reach', title: 'Page Growth Follower Likes 13', file: 'assets/proofs/brand-reach/page-growth-follower-likes-proof-13.png' },
+      { cat: 'reach', title: 'Page Growth Follower Likes 14', file: 'assets/proofs/brand-reach/page-growth-follower-likes-proof-14.png' },
+      { cat: 'reach', title: 'Account Growth Overview 15', file: 'assets/proofs/brand-reach/account-growth-overview-proof-15.png' },
+      { cat: 'reach', title: 'Customer Loyalty & Retention 16', file: 'assets/proofs/brand-reach/customer-loyalty-retention-proof-16.png' },
+      { cat: 'reach', title: 'Monetization Eligible Growth 17', file: 'assets/proofs/brand-reach/monetization-eligible-growth-proof-17.png' },
+      { cat: 'reach', title: 'Monetization Eligible Growth 18', file: 'assets/proofs/brand-reach/monetization-eligible-growth-proof-18.png' },
+      { cat: 'reach', title: 'Website Traffic Campaign 19', file: 'assets/proofs/brand-reach/website-traffic-campaign-proof-19.jpg' },
+      { cat: 'reach', title: 'Website Traffic Campaign 20', file: 'assets/proofs/brand-reach/website-traffic-campaign-proof-20.jpg' },
+      { cat: 'reach', title: 'Instagram Post Engagement 21', file: 'assets/proofs/brand-reach/instagram-post-engagement-proof-21.png' },
+      { cat: 'reach', title: 'Instagram Profile Growth 22', file: 'assets/proofs/brand-reach/instagram-profile-growth-proof-22.png' }
+    ];
+
+    let activeCategory = 'all';
+    let currentSearchTerm = '';
+    let currentModalProject = null;
+
+    // Contact Triggers
+    function triggerGlobalWhatsApp() {
+      const msg = encodeURIComponent(`Hi ${CONFIG.name}, I reviewed your Growth Portfolio and want to discuss scaling our paid advertising campaigns.`);
+      window.open(`https://wa.me/${CONFIG.phone}?text=${msg}`, '_blank');
+    }
+
+    function triggerGlobalEmail() {
+      const subject = encodeURIComponent(`Growth Strategy Inquiry for ${CONFIG.name}`);
+      const body = encodeURIComponent(`Hi ${CONFIG.name},\n\nI reviewed your case studies and would like to arrange an audit call for our brand.\n\nBrand URL:\nMonthly Ad Budget:`);
+      window.location.href = `mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+    }
+
+    function triggerCalculatorWhatsApp() {
+      const budget = document.getElementById('budgetLabel').innerText;
+      const curRoas = document.getElementById('currentRoasLabel').innerText;
+      const lift = document.getElementById('projectedRevenue').innerText;
+      const msg = encodeURIComponent(`Hi ${CONFIG.name}, I used your ROI Calculator. My current budget is ${budget} with ${curRoas} ROAS. I want to achieve the estimated ${lift} lift.`);
+      window.open(`https://wa.me/${CONFIG.phone}?text=${msg}`, '_blank');
+    }
+
+    function triggerAuditSubmit() {
+      const url = document.getElementById('auditUrlInput').value.trim();
+      if (!url) {
+        alert('Please enter your brand URL or store link.');
+        return;
+      }
+      const msg = encodeURIComponent(`Hi ${CONFIG.name}, I would like to request a 10-Minute Ad Account Teardown for my brand: ${url}`);
+      window.open(`https://wa.me/${CONFIG.phone}?text=${msg}`, '_blank');
+    }
+
+    // Dynamic Header Stats Calculation
+    function calculateMetrics() {
+      const totalSpend = projectsData.reduce((acc, p) => acc + (p.spendNum || 0), 0);
+      const totalRevenue = projectsData.reduce((acc, p) => acc + (p.revenueNum || 0), 0);
+      const blendedROAS = totalSpend > 0 ? (totalRevenue / totalSpend).toFixed(1) : '4.2';
+
+      document.getElementById('stat-spend').innerText = '$' + Math.round(totalSpend / 1000) + 'K+';
+      document.getElementById('stat-revenue').innerText = '$' + Math.round(totalRevenue / 1000) + 'K+';
+      document.getElementById('stat-roas').innerText = blendedROAS + 'x';
+      document.getElementById('stat-count').innerText = vaultProofs.length + '+';
+    }
+
+    // Interactive ROI Calculator Logic
+    function runRoiCalculator() {
+      const budget = parseFloat(document.getElementById('budgetRange').value);
+      const currentRoas = parseFloat(document.getElementById('currentRoasRange').value);
+      document.getElementById('budgetLabel').innerText = '$' + budget.toLocaleString();
+      document.getElementById('currentRoasLabel').innerText = currentRoas.toFixed(1) + 'x';
+
+      const projectedRoas = Math.max(currentRoas + 1.2, 3.6);
+      const currentRev = budget * currentRoas;
+      const targetRev = budget * projectedRoas;
+      const lift = Math.max(0, targetRev - currentRev);
+      document.getElementById('projectedRevenue').innerText = '+$' + Math.round(lift).toLocaleString() + ' / mo';
+    }
+
+    // Render Projects Cards
+    function renderProjects(items) {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = '';
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-16 glass-card rounded-2xl">
+            <i class="fa-solid fa-folder-open text-3xl text-slate-500 mb-2"></i>
+            <p class="text-sm text-slate-400">No case studies found matching your criteria.</p>
+          </div>
+        `;
+        return;
+      }
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'case-card glass-card rounded-2xl overflow-hidden hover:border-slate-600 transition-all duration-300 flex flex-col justify-between group';
+        card.innerHTML = `
+          <div>
+            <div class="relative h-48 w-full overflow-hidden bg-slate-950 cursor-pointer" onclick="openModal(${item.id})">
+              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" />
+              <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-md border border-slate-700 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-lg text-slate-200">
+                ${item.tag}
+              </span>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <div class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-extrabold px-2.5 py-1 rounded-md mb-2.5">
+                <i class="fa-solid fa-arrow-trend-up mr-1"></i> ${item.metric}
+              </div>
+              <h4 class="text-sm sm:text-base font-display font-bold text-white leading-snug line-clamp-2 cursor-pointer hover:text-blue-400 transition-colors" onclick="openModal(${item.id})">
+                ${item.title}
+              </h4>
+              <p class="text-slate-400 text-xs mt-2.5 line-clamp-2 leading-relaxed">
+                ${item.challenge}
+              </p>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0">
+            <button onclick="openModal(${item.id})" class="w-full py-2.5 bg-slate-900/90 hover:bg-slate-800 text-slate-200 text-xs font-bold rounded-xl transition-all border border-slate-800 hover:border-slate-700 flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
+              <span>Deep Architecture Breakdown</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter Case Studies
+    function filterCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('#filter-buttons .filter-btn').forEach(b => {
+        b.className = 'filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800';
+      });
+      btn.className = 'filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30';
+      applyFilters();
+    }
+
+    function handleSearch(term) {
+      currentSearchTerm = term.toLowerCase().trim();
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const filtered = projectsData.filter(item => {
+        const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+        const matchesSearch = !currentSearchTerm || 
+          item.title.toLowerCase().includes(currentSearchTerm) || 
+          item.tag.toLowerCase().includes(currentSearchTerm) || 
+          item.keywords.toLowerCase().includes(currentSearchTerm);
+        return matchesCategory && matchesSearch;
+      });
+      renderProjects(filtered);
+    }
+
+    // Modal Handlers
+    function openModal(id) {
+      const project = projectsData.find(p => p.id === id);
+      if (!project) return;
+      currentModalProject = project;
+
+      document.getElementById('modalImg').src = project.image;
+      document.getElementById('modalTag').innerText = project.tag;
+      document.getElementById('modalTitle').innerText = project.title;
+      document.getElementById('modalMetric').innerText = project.metric;
+      document.getElementById('modalSpendRev').innerText = `• Managed Spend: $${project.spendNum.toLocaleString()} | Generated Rev: $${project.revenueNum.toLocaleString()}`;
+      document.getElementById('modalChallenge').innerText = project.challenge;
+
+      let beforeAfterHtml = '';
+      if (project.beforeAfter) {
+        beforeAfterHtml = `
+          <div class="grid grid-cols-2 gap-3 p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Before Engagement</div>
+              <div class="text-xs text-rose-400 font-semibold">ROAS: ${project.beforeAfter.beforeROAS}</div>
+              <div class="text-xs text-slate-400">CPA/Cost: ${project.beforeAfter.beforeCPA}</div>
+            </div>
+            <div class="border-l border-slate-800 pl-3">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">After Tipu Sultan System</div>
+              <div class="text-xs text-emerald-400 font-bold">ROAS: ${project.beforeAfter.afterROAS}</div>
+              <div class="text-xs text-slate-300 font-semibold">CPA/Cost: ${project.beforeAfter.afterCPA}</div>
+            </div>
+          </div>
+        `;
+      }
+      document.getElementById('modalBeforeAfterSlot').innerHTML = beforeAfterHtml;
+
+      let stepsHtml = '';
+      if (project.executionSteps) {
+        stepsHtml = `
+          <div class="mt-4">
+            <div class="text-[11px] uppercase font-bold text-blue-400 mb-2">Applied Execution Phases:</div>
+            <ul class="space-y-1.5 text-xs text-slate-300">
+              ${project.executionSteps.map(step => `<li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> ${step}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      }
+      document.getElementById('modalStrategy').innerHTML = `<p>${project.strategy}</p>` + stepsHtml;
+
+      const dynamicMsg = encodeURIComponent(`Hi ${CONFIG.name}, I reviewed the "${project.title}" (${project.metric}) case study on your site and want to replicate this growth strategy.`);
+      document.getElementById('modalWhatsAppAction').href = `https://wa.me/${CONFIG.phone}?text=${dynamicMsg}`;
+
+      document.getElementById('caseStudyModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('caseStudyModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function zoomModalImage() {
+      if (currentModalProject) {
+        openLightbox(currentModalProject.image, currentModalProject.title + ' — Verified Proof');
+      }
+    }
+
+    // Lightbox Handlers
+    function openLightbox(src, caption) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxCaption').innerText = caption || 'Verified Campaign Evidence';
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Vault Gallery Filtering & Rendering
+    function renderVault(items) {
+      const grid = document.getElementById('vault-grid');
+      grid.innerHTML = '';
+      items.forEach(item => {
+        const tile = document.createElement('div');
+        tile.className = 'glass-card rounded-xl overflow-hidden cursor-zoom-in group border border-slate-800 hover:border-emerald-500/50 transition-all p-1.5 flex flex-col justify-between';
+        tile.onclick = () => openLightbox(item.file, item.title);
+        tile.innerHTML = `
+          <div class="h-28 w-full bg-slate-950 rounded-lg overflow-hidden relative">
+            <img src="${item.file}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
+          </div>
+          <div class="pt-2 px-1 text-center">
+            <span class="text-[10px] text-slate-400 font-medium block truncate group-hover:text-emerald-400 transition-colors">${item.title}</span>
+          </div>
+        `;
+        grid.appendChild(tile);
+      });
+    }
+
+    function filterVault(cat, btn) {
+      document.querySelectorAll('#vault-filter-buttons .vault-btn').forEach(b => {
+        b.className = 'vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800';
+      });
+      btn.className = 'vault-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-md shadow-emerald-600/30';
+
+      if (cat === 'all') {
+        renderVault(vaultProofs);
+      } else {
+        renderVault(vaultProofs.filter(p => p.cat === cat));
+      }
+    }
+
+    // Render Creative Sandbox (36 Creatives)
+    function renderCreatives() {
+      const grid = document.getElementById('creatives-grid');
+      grid.innerHTML = '';
+      for (let i = 1; i <= 36; i++) {
+        const numStr = String(i).padStart(2, '0');
+        const file = `assets/creatives/facebook-campaigns/meta-creative-hook-angle-${numStr}.jpg`;
+        const title = `Creative Angle #${numStr}`;
+        const card = document.createElement('div');
+        card.className = 'glass-card rounded-xl overflow-hidden cursor-zoom-in group border border-slate-800 hover:border-indigo-500/50 transition-all p-1 flex flex-col';
+        card.onclick = () => openLightbox(file, `Ad Creative Deliverable #${numStr} (Project Facebook A to Z)`);
+        card.innerHTML = `
+          <div class="h-32 w-full bg-slate-950 rounded-lg overflow-hidden">
+            <img src="${file}" alt="${title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          </div>
+          <div class="py-1.5 text-center">
+            <span class="text-[10px] text-slate-400 font-medium group-hover:text-indigo-400 transition-colors">Angle #${numStr}</span>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+    }
+
+    // Keyboard ESC listener
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        closeLightbox();
+      }
+    });
+
+    // Initialize App
+    calculateMetrics();
+    runRoiCalculator();
+    renderProjects(projectsData);
+    renderVault(vaultProofs);
+    renderCreatives();
+  </script>
+</body>
+</html>
