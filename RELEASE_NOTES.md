@@ -29,3 +29,9 @@ Production release of the official Growth Marketing Platform for **Tipu Sultan |
   - Full-screen Lightbox zoom for all 59 proof screenshots.
 - **Engine Script & CI/CD**:
   - `antigravity_engine.py` automated ingestion, regex AST validation, and static DOM testing suite.
+
+### 📞 Contact & Inquiries
+- **Lead Growth Architect**: Tipu Sultan
+- **WhatsApp**: [+966 56 648 2865](https://wa.me/966566482865)
+- **Email**: [tipusultan.growth@gmail.com](mailto:tipusultan.growth@gmail.com)
+
