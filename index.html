@@ -89,6 +89,12 @@
 
       <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-5 text-xs font-semibold text-slate-300">
+        <a href="#executive-assets" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-300 font-bold px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/35 shadow-sm shadow-amber-500/15">
+          <i class="fa-solid fa-file-shield text-xs text-amber-400"></i>
+          <span>CV & Decks</span>
+          <span class="px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 text-[9px] font-black uppercase tracking-wider">New</span>
+        </a>
+
         <a href="#ai-engine" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 text-cyan-400 font-bold">
           <i class="fa-solid fa-microchip text-[10px]"></i> AI & Data Engine
         </a>
@@ -178,6 +184,16 @@
           <span class="px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-400 text-[10px] font-bold">59 Proofs</span>
         </a>
 
+        <a href="#executive-assets" onclick="closeMobileMenu()" class="flex items-center justify-between p-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-bold text-amber-300 transition-all">
+          <span class="flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">
+              <i class="fa-solid fa-file-shield"></i>
+            </span>
+            <span>Executive CV & Decks</span>
+          </span>
+          <span class="px-2 py-0.5 rounded-md bg-amber-400 text-slate-950 text-[10px] font-black">EN & AR</span>
+        </a>
+
         <a href="#creatives" onclick="closeMobileMenu()" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800/90 border border-slate-800 hover:border-indigo-500/40 text-xs font-semibold text-slate-200 hover:text-indigo-400 transition-all">
           <span class="flex items-center gap-2.5">
             <span class="w-7 h-7 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xs">
@@ -264,6 +280,32 @@
       I architect full-funnel paid media campaigns powered by <strong>Meta Advantage+ AI</strong>, <strong>Google Smart Bidding</strong>, <strong>Server-Side CAPI tracking</strong>, and <strong>Predictive Algorithmic Creative Testing</strong> — turning erratic ad spend into measurable, scalable pipeline revenue.
     </p>
 
+    <!-- High-Impact Executive CTAs & Availability Trust Pill -->
+    <div class="mt-7 flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
+      <button onclick="openCvModal('en', 1)" class="px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-blue-500/25 flex items-center gap-2.5 transition-all transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-file-pdf text-rose-300 text-sm"></i>
+        <span>Explore Executive CV (EN/AR)</span>
+      </button>
+
+      <button onclick="openDeckModal('en', 1)" class="px-5 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-cyan-300 border border-slate-700/80 font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2.5 transition-all transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-presentation-screen text-cyan-400 text-sm"></i>
+        <span>View 22-Slide Decks</span>
+      </button>
+
+      <a href="#audit" class="px-5 py-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 font-bold text-xs sm:text-sm flex items-center gap-2 transition-all">
+        <i class="fa-solid fa-bolt text-emerald-400"></i>
+        <span>Free Teardown Audit</span>
+      </a>
+    </div>
+
+    <!-- Gulf & Global Readiness Pill -->
+    <div class="mt-4 flex items-center justify-center gap-2 text-[11px] text-slate-400">
+      <i class="fa-solid fa-globe text-cyan-400 text-[10px]"></i>
+      <span>Available for GCC (Riyadh, KSA) & Global High-Ticket Engagements</span>
+      <span class="text-slate-600">&bull;</span>
+      <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-check text-[10px] mr-1"></i>Bilingual Strategy (English & العربية)</span>
+    </div>
+
     <!-- Real-time Live Metrics Dashboard -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
       <div class="glass-card p-5 rounded-2xl text-center">
@@ -299,6 +341,313 @@
       </div>
     </div>
   </header>
+
+  <!-- Executive Assets & Bilingual Presentation Vault -->
+  <section id="executive-assets" class="max-w-7xl mx-auto py-14 px-4 sm:px-6 w-full border-t border-slate-800/80">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider border border-amber-500/20 mb-3 shadow-sm shadow-amber-500/10">
+          <i class="fa-solid fa-file-shield text-amber-400"></i> Executive Assets & Bilingual Credentials
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Executive CV & Growth Architecture Slide Decks
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2 max-w-2xl leading-relaxed">
+          Directly inspect and download Tipu Sultan's verified Curriculum Vitae (in English & Arabic) and comprehensive 22-slide strategic presentation decks — engineered for high-ticket GCC brands, DTC founders, and venture-backed companies.
+        </p>
+      </div>
+
+      <!-- Filter Controls for Assets -->
+      <div class="flex flex-wrap items-center gap-2" id="asset-filter-buttons">
+        <button onclick="filterAssets('all', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30">
+          All Assets (4)
+        </button>
+        <button onclick="filterAssets('cv', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          <i class="fa-solid fa-id-card mr-1 text-blue-400"></i> Curriculum Vitae (EN & AR)
+        </button>
+        <button onclick="filterAssets('decks', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          <i class="fa-solid fa-presentation-screen mr-1 text-cyan-400"></i> 22-Slide Decks
+        </button>
+      </div>
+    </div>
+
+    <!-- 4 Featured Executive Asset Cards Grid -->
+    <div id="assets-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Asset 1: English Executive CV -->
+      <div class="asset-card glass-card rounded-2xl border border-slate-800 hover:border-blue-500/50 p-5 flex flex-col justify-between transition-all group relative overflow-hidden" data-category="cv">
+        <div class="absolute -right-16 -top-16 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <!-- Top Badges -->
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-black uppercase tracking-wider">
+              Official CV • 2 Pages
+            </span>
+            <span class="text-[10px] text-slate-400 font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-check-double text-emerald-400"></i> Verified
+            </span>
+          </div>
+
+          <!-- Preview Container -->
+          <div class="relative h-56 rounded-xl overflow-hidden bg-slate-950 border border-slate-800/80 group-hover:border-blue-500/30 transition-all cursor-pointer mb-4" onclick="openCvModal('en', 1)">
+            <img src="assets/documents/cv-card-preview-1.webp" alt="Tipu Sultan Growth Architect CV" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex items-end justify-center p-3">
+              <button class="px-3.5 py-1.5 rounded-lg bg-blue-600/90 hover:bg-blue-500 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 transform group-hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-eye text-[11px]"></i> Interactive Preview
+              </button>
+            </div>
+            <span class="absolute top-2 left-2 bg-slate-900/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold text-slate-300 border border-slate-700/60">
+              Page 1 of 2
+            </span>
+          </div>
+
+          <!-- Title & Subtitle -->
+          <h3 class="text-base font-display font-bold text-white group-hover:text-blue-400 transition-colors">
+            Tipu Sultan — Executive CV (EN)
+          </h3>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+            AI-Driven & Data-Driven Growth Architect | High-Ticket Performance Marketer
+          </p>
+
+          <!-- Metric Pills -->
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800/80">
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">Managed Spend</span>
+              <span class="text-xs font-bold text-white">$188K+</span>
+            </div>
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">Blended ROAS</span>
+              <span class="text-xs font-bold text-emerald-400">4.6x</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="mt-5 pt-3 border-t border-slate-800/80 flex flex-col gap-2">
+          <button onclick="openCvModal('en', 1)" class="w-full py-2 rounded-xl bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/40 text-xs font-bold flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-expand text-[10px]"></i> View Fullscreen CV
+          </button>
+          <div class="grid grid-cols-2 gap-2">
+            <a href="assets/documents/Tipu-Sultan-Growth-Architect-CV.pdf" download class="py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 transition-all">
+              <i class="fa-solid fa-file-pdf text-rose-400 text-xs"></i> PDF
+            </a>
+            <a href="assets/documents/Tipu-Sultan-Growth-Architect-CV.docx" download class="py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 transition-all">
+              <i class="fa-solid fa-file-word text-blue-400 text-xs"></i> Word (.docx)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asset 2: Arabic Executive CV -->
+      <div class="asset-card glass-card rounded-2xl border border-slate-800 hover:border-emerald-500/50 p-5 flex flex-col justify-between transition-all group relative overflow-hidden" data-category="cv">
+        <div class="absolute -right-16 -top-16 w-32 h-32 bg-emerald-600/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <!-- Top Badges -->
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-black uppercase tracking-wider">
+              النسخة العربية • 3 صفحات
+            </span>
+            <span class="text-[10px] text-slate-400 font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-certificate text-emerald-400"></i> موثقة تجريبياً
+            </span>
+          </div>
+
+          <!-- Preview Container -->
+          <div class="relative h-56 rounded-xl overflow-hidden bg-slate-950 border border-slate-800/80 group-hover:border-emerald-500/30 transition-all cursor-pointer mb-4" onclick="openCvModal('ar', 1)">
+            <img src="assets/documents/cv-ar-card-preview-1.webp" alt="السيرة الذاتية تيبو سلطان" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex items-end justify-center p-3">
+              <button class="px-3.5 py-1.5 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg flex items-center gap-1.5 transform group-hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-eye text-[11px]"></i> معاينة السيرة الذاتية
+              </button>
+            </div>
+            <span class="absolute top-2 left-2 bg-slate-900/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold text-slate-300 border border-slate-700/60">
+              الصفحة 1 من 3
+            </span>
+          </div>
+
+          <!-- Title & Subtitle -->
+          <h3 class="text-base font-display font-bold text-white group-hover:text-emerald-400 transition-colors">
+            تيبو سلطان — السيرة الذاتية (AR)
+          </h3>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+            مهندس نمو بالذكاء الاصطناعي والبيانات | مسوّق أداء عالي القيمة (السوق السعودي والخليج)
+          </p>
+
+          <!-- Metric Pills -->
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800/80">
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">إنفاق إعلاني</span>
+              <span class="text-xs font-bold text-white">$188K+</span>
+            </div>
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">عائد مدمج</span>
+              <span class="text-xs font-bold text-emerald-400">4.6x</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="mt-5 pt-3 border-t border-slate-800/80 flex flex-col gap-2">
+          <button onclick="openCvModal('ar', 1)" class="w-full py-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/40 text-xs font-bold flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-expand text-[10px]"></i> معاينة السيرة الذاتية كاملة
+          </button>
+          <a href="assets/documents/Tipu-Sultan-Growth-Architect-CV-AR.pdf" download class="w-full py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-pdf text-rose-400 text-xs"></i> تحميل السيرة الذاتية PDF (عربي)
+          </a>
+        </div>
+      </div>
+
+      <!-- Asset 3: Arabic Presentation Deck -->
+      <div class="asset-card glass-card rounded-2xl border border-slate-800 hover:border-amber-500/50 p-5 flex flex-col justify-between transition-all group relative overflow-hidden" data-category="decks">
+        <div class="absolute -right-16 -top-16 w-32 h-32 bg-amber-600/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <!-- Top Badges -->
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-black uppercase tracking-wider">
+              ARABIC / GCC • 22 SLIDES
+            </span>
+            <span class="text-[10px] text-amber-400 font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-bolt"></i> SAR 1.4M+
+            </span>
+          </div>
+
+          <!-- Preview Container -->
+          <div class="relative h-56 rounded-xl overflow-hidden bg-slate-950 border border-slate-800/80 group-hover:border-amber-500/30 transition-all cursor-pointer mb-4" onclick="openDeckModal('ar', 1)">
+            <img src="assets/documents/deck-cover-ar-preview.webp" alt="عروض محفظة الأعمال تيبو سلطان" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end justify-center p-3">
+              <button class="px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black shadow-lg flex items-center gap-1.5 transform group-hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-play text-[11px]"></i> استعراض 22 شريحة
+              </button>
+            </div>
+            <span class="absolute top-2 left-2 bg-slate-900/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold text-amber-300 border border-amber-500/40">
+              عروض الخليج والسعودية
+            </span>
+          </div>
+
+          <!-- Title & Subtitle -->
+          <h3 class="text-base font-display font-bold text-white group-hover:text-amber-400 transition-colors">
+            عروض محفظة الأعمال — 22 شريحة
+          </h3>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+            هندسة إعلانات بالذكاء الاصطناعي والتجارة الخليجية (Tabby، Tamara، واتساب COD)
+          </p>
+
+          <!-- Metric Pills -->
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800/80">
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">إيرادات موثقة</span>
+              <span class="text-xs font-bold text-amber-400">1.4M+ SAR</span>
+            </div>
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">ذروة العائد</span>
+              <span class="text-xs font-bold text-emerald-400">6.4x ROAS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="mt-5 pt-3 border-t border-slate-800/80 flex flex-col gap-2">
+          <button onclick="openDeckModal('ar', 1)" class="w-full py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-500/40 text-xs font-bold flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-presentation-screen text-[10px]"></i> عرض الشرائح التفاعلي
+          </button>
+          <a href="assets/documents/tipu-sultan-portfolio-ar.pptx" download class="w-full py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-powerpoint text-amber-400 text-xs"></i> تحميل العرض (.pptx 10.2 MB)
+          </a>
+        </div>
+      </div>
+
+      <!-- Asset 4: English Presentation Deck -->
+      <div class="asset-card glass-card rounded-2xl border border-slate-800 hover:border-cyan-500/50 p-5 flex flex-col justify-between transition-all group relative overflow-hidden" data-category="decks">
+        <div class="absolute -right-16 -top-16 w-32 h-32 bg-cyan-600/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <!-- Top Badges -->
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-black uppercase tracking-wider">
+              GLOBAL ENGLISH • 22 SLIDES
+            </span>
+            <span class="text-[10px] text-cyan-400 font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-microchip"></i> Full-Funnel
+            </span>
+          </div>
+
+          <!-- Preview Container -->
+          <div class="relative h-56 rounded-xl overflow-hidden bg-slate-950 border border-slate-800/80 group-hover:border-cyan-500/30 transition-all cursor-pointer mb-4" onclick="openDeckModal('en', 1)">
+            <img src="assets/documents/deck-cover-en-preview.webp" alt="Performance Architecture Deck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-end justify-center p-3">
+              <button class="px-3.5 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-slate-950 text-xs font-black shadow-lg flex items-center gap-1.5 transform group-hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-play text-[11px]"></i> Launch 22 Slides
+              </button>
+            </div>
+            <span class="absolute top-2 left-2 bg-slate-900/85 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold text-cyan-300 border border-cyan-500/40">
+              Global DTC & B2B
+            </span>
+          </div>
+
+          <!-- Title & Subtitle -->
+          <h3 class="text-base font-display font-bold text-white group-hover:text-cyan-400 transition-colors">
+            Performance Architecture Deck (EN)
+          </h3>
+          <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+            Next-Gen AI & Data-Engineered Paid Acquisition Systems across Meta, Google & YouTube
+          </p>
+
+          <!-- Metric Pills -->
+          <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800/80">
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">Search IS</span>
+              <span class="text-xs font-bold text-cyan-400">86.4%</span>
+            </div>
+            <div class="bg-slate-900/80 rounded-lg p-2 text-center border border-slate-800">
+              <span class="text-[10px] text-slate-400 block font-semibold">Cold CPA</span>
+              <span class="text-xs font-bold text-emerald-400">&lt;$15 CPA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="mt-5 pt-3 border-t border-slate-800/80 flex flex-col gap-2">
+          <button onclick="openDeckModal('en', 1)" class="w-full py-2 rounded-xl bg-cyan-600/20 hover:bg-cyan-600 text-cyan-300 hover:text-slate-950 border border-cyan-500/40 text-xs font-bold flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-presentation-screen text-[10px]"></i> Interactive Deck Viewer
+          </button>
+          <a href="assets/documents/tipu-sultan-portfolio-en.pptx" download class="w-full py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-[11px] font-bold text-slate-200 flex items-center justify-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-powerpoint text-cyan-400 text-xs"></i> Download PPTX (.pptx 10.3 MB)
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Supplementary Focused Strategy Decks Drawer -->
+    <div class="glass-card rounded-2xl p-5 sm:p-6 border border-slate-800/90 mt-8 flex flex-col md:flex-row items-center justify-between gap-5 bg-gradient-to-r from-slate-950/60 to-slate-900/60">
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center text-lg flex-shrink-0">
+          <i class="fa-solid fa-folder-open"></i>
+        </div>
+        <div>
+          <h4 class="text-sm sm:text-base font-display font-bold text-white flex items-center gap-2">
+            <span>Supplementary Deep-Dive Presentations</span>
+            <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full border border-slate-700 font-semibold">3 More Decks</span>
+          </h4>
+          <p class="text-xs text-slate-400 mt-0.5">
+            Download channel-specific architectural teardowns and campaign post-mortems for stakeholder review.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-2.5">
+        <a href="assets/documents/google-ads-performance-portfolio-deck.pptx" download class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-download text-teal-400"></i> Google Ads Deck (.pptx)
+        </a>
+        <a href="assets/documents/growth-marketing-case-studies-deck-vol1.pptx" download class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-download text-blue-400"></i> Case Studies Vol 1 (.pptx)
+        </a>
+        <a href="assets/documents/growth-marketing-case-studies-deck-vol2.pptx" download class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-download text-emerald-400"></i> Case Studies Vol 2 (.pptx)
+        </a>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Dedicated AI-Driven & Data-Driven Marketing Engine Section -->
   <section id="ai-engine" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full">
@@ -819,35 +1168,6 @@
 
     <div id="creatives-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
       <!-- Injected via JavaScript -->
-    </div>
-  </section>
-
-  <!-- Downloadable Presentation Decks -->
-  <section class="max-w-5xl mx-auto my-12 px-4 sm:px-6 w-full">
-    <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div>
-        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-teal-400 mb-1.5">
-          <i class="fa-solid fa-file-powerpoint"></i> Growth Strategy Presentations
-        </div>
-        <h3 class="text-xl sm:text-2xl font-display font-bold text-white">
-          Download Detailed Strategy & Portfolio Slide Decks
-        </h3>
-        <p class="text-xs text-slate-400 mt-1 max-w-xl">
-          In-depth architectural breakdowns ready for internal review or stakeholder presentations.
-        </p>
-      </div>
-
-      <div class="flex flex-wrap gap-2.5">
-        <a href="assets/documents/google-ads-performance-portfolio-deck.pptx" download class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
-          <i class="fa-solid fa-download text-teal-400"></i> Google Ads Deck (.pptx)
-        </a>
-        <a href="assets/documents/growth-marketing-case-studies-deck-vol1.pptx" download class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
-          <i class="fa-solid fa-download text-blue-400"></i> Case Studies Vol 1 (.pptx)
-        </a>
-        <a href="assets/documents/growth-marketing-case-studies-deck-vol2.pptx" download class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-2 transition-all">
-          <i class="fa-solid fa-download text-emerald-400"></i> Case Studies Vol 2 (.pptx)
-        </a>
-      </div>
     </div>
   </section>
 
@@ -1937,6 +2257,288 @@
       }
     });
 
+    
+    // ==========================================
+    // EXECUTIVE ASSETS, CV & DECK MODAL HANDLERS
+    // ==========================================
+
+    const presentationDecks = {
+      en: [{"num": 1, "category": "PORTFOLIO PRESENTATION", "title": "PORTFOLIO PRESENTATION", "subtitle": "Tipu Sultan", "points": ["AI-Driven & Data-Driven Growth Architect", "Verified Architect", "Riyadh, KSA • Paid Acquisition & AI Marketing", "sultantipu199.github.io/sultan-growth", "Tipu Sultan — AI-Driven & Data-Driven Growth Architect", "01 / 22"], "image": "assets/documents/deck-cover-en-preview.webp"}, {"num": 2, "category": "PERFORMANCE ARCHITECTURE", "title": "Scale Predictable Revenue with", "subtitle": "AI-Driven & Data-Engineered Ad Architecture", "points": ["I architect full-funnel paid media campaigns powered by Meta Advantage+ AI, Google Smart Bidding, Server-Side CAPI tracking, and Predictive Algorithmic Creative Testing — turning erratic ad spend into measurable, scalable pipeline revenue.", "MANAGED SPEND", "$188K+", "Across Verified Accounts", "TRACKED REVENUE", "$869K+", "Attributed Purchases", "BLENDED ROAS"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 3, "category": "PERFORMANCE ARCHITECTURE", "title": "NEXT-GEN PERFORMANCE ARCHITECTURE", "subtitle": "AI-Driven & Data-Engineered Acquisition Engine", "points": ["Meta Advantage+ ASC", "Google Smart Bidding", "Server-Side CAPI", "Unit Economics / LTV", "Moving beyond obsolete manual audience guessing into algorithm-led performance scaling. Leveraging machine learning bidding models, first-party server signals, and automated creative testing matrices.", "Predictive AI Bidding", "Meta Advantage+ Shopping & Google Performance Max algorithmic budget allocation that auto-optimizes to highest marginal ROAS.", "AI Creative Sandbox"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 4, "category": "GROWTH PLAYBOOK", "title": "ALGORITHMIC GROWTH INTELLIGENCE", "subtitle": "Strategic Performance Playbooks", "points": ["6 Scaled Protocols", "Proprietary media-buying playbooks and data frameworks engineered by Tipu Sultan to scale monthly spend systematically with mathematical certainty.", "AUCTION GAME THEORY · 4.6x - 6.4x ROAS", "SIGNAL RESILIENCE · 9.4/10 EMQ Score", "CREATIVE VELOCITY · Sub-$15 Cold CPA", "REGIONAL DOMINATION · 1.4M+ SAR Generated", "UNIT ECONOMICS · 4.2:1 LTV to CAC", "SEARCH ARBITRAGE · 86.4% Impression Share"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 5, "category": "GROWTH PLAYBOOK", "title": "AUCTION GAME THEORY", "subtitle": "4.6x - 6.4x ROAS", "points": ["Meta Advantage+ & Andromeda Auction Scaling", "Machine learning bidding distribution protocol that predicts marginal ROAS pockets across 3B+ user signals, eliminating manual audience cannibalization.", "Dynamic Asset Weighting: Auto-allocates 70% budget to top converting angles.", "Cost Cap Bidding: Protects margins during auction volatility.", "First-Party Exclusions: Zero budget wasted retargeting 7-day buyers.", "ACTION: Discuss Andromeda Setup", "Growth Playbooks — 6 Scaled Protocols", "05 / 22"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 6, "category": "GROWTH PLAYBOOK", "title": "SIGNAL RESILIENCE", "subtitle": "9.4/10 EMQ Score", "points": ["Server-Side CAPI Triple-Attribution Protocol", "Enterprise cloud-to-cloud tracking infrastructure recovering up to 35% under-reported iOS conversions with zero reliance on browser cookies.", "SHA-256 Hashing: 8 user parameter match keys (email, phone, fbp, fbc).", "Event Deduplication: Eliminates duplicate browser/server transaction claims.", "Faster Learning Phase: Feeds Meta AI 100% clean purchase signals.", "ACTION: Audit Your Signal Quality", "Growth Playbooks — 6 Scaled Protocols", "06 / 22"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 7, "category": "GROWTH PLAYBOOK", "title": "CREATIVE VELOCITY", "subtitle": "Sub-$15 Cold CPA", "points": ["3:2:2 Dynamic Hook & Creative Sandbox", "A disciplined mathematical testing matrix testing 3 pattern-interrupt hooks, 2 visual angle bodies, and 2 copy CTAs before scaling ad spend.", "Isolated Variable Testing: Pinpoint exact hook driving lowest cost per click.", "Graduated Budget Scaling: Only proven winners graduate to ASC campaigns.", "Zero Ad Fatigue: Weekly modular updates maintain consistent 4.0x+ ROAS.", "ACTION: Deploy 3:2:2 System", "Growth Playbooks — 6 Scaled Protocols", "07 / 22"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 8, "category": "GROWTH PLAYBOOK", "title": "REGIONAL DOMINATION", "subtitle": "1.4M+ SAR Generated", "points": ["GCC & Saudi Market Scaling Playbook", "Engineered specifically for high-AOV consumers across Riyadh, Jeddah, Dammam, and Dubai with tailored checkout and payment architectures.", "Tabby & Tamara Integration: BNPL lifts conversion by +44% on mobile.", "Automated WhatsApp COD Confirmation: Slashes refused delivery to 7%.", "Native Gulf Dialects: High-converting localized copy and video hooks.", "ACTION: Discuss Saudi Strategy", "Growth Playbooks — 6 Scaled Protocols", "08 / 22"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 9, "category": "GROWTH PLAYBOOK", "title": "UNIT ECONOMICS", "subtitle": "4.2:1 LTV to CAC", "points": ["Cohort Retention & 60-Day LTV Engine", "Mathematical modeling of customer lifetime value, transforming day-0 break-even customer acquisition into compound, bankable EBITDA profit.", "Day-0 CAC Break-Even: Self-funding customer acquisition model.", "Replenishment Pacing: Automated WhatsApp & Email triggers at 45 days.", "High-AOV Tiered Bundles: Boosts initial cart value by an average of 64%.", "ACTION: Model Your Store LTV", "Growth Playbooks — 6 Scaled Protocols", "09 / 22"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 10, "category": "GROWTH PLAYBOOK", "title": "SEARCH ARBITRAGE", "subtitle": "86.4% Impression Share", "points": ["Google Performance Max & Search Synergy", "Capturing high-intent bottom-funnel buyers with 1:1 message-matched search ads while shielding ad spend with negative keyword hygiene.", "Search Monopoly: 85%+ absolute top-of-page rank on buying queries.", "PMax Negative Shield: Blocks low-value placements and click waste.", "Cross-Channel Retargeting: High-retention YouTube bumper ads.", "ACTION: Request Search Audit", "Growth Playbooks — 6 Scaled Protocols", "10 / 22"], "image": "assets/documents/deck_media/image-4-1.png"}, {"num": 11, "category": "FUNNEL SIMULATOR", "title": "INTERACTIVE FUNNEL SIMULATOR", "subtitle": "Calculate Your Projected Revenue Lift with Optimized Ad Architecture", "points": ["USD ($)", "SAR (S.R.)", "Model how restructuring your paid media campaigns, eliminating wasted broad clicks, and deploying high-LTV retargeting directly scales net revenue.", "MONTHLY AD BUDGET", "$10,000", "slider: $1,000 → $100,000", "CURRENT BLENDED ROAS", "1.8x"], "image": "assets/documents/deck_media/image-12-1.png"}, {"num": 12, "category": "CASE STUDY", "title": "PERFORMANCE CASE STUDIES", "subtitle": "Verified Client Campaign Teardowns", "points": ["Real accounts, real ad spend, real revenue. Each study includes the 3-layer architecture, CPA drops, and actual screenshots.", "All Case Studies", "AI & Data-Driven", "Meta / FB Ads", "Google PPC", "E-Commerce", "Lead Gen", "Direct DM"], "image": "assets/documents/deck_media/image-12-1.png"}, {"num": 13, "category": "CASE STUDY", "title": "AI & DATA-DRIVEN SCALING", "subtitle": "6.4x Peak AI ROAS", "points": ["AI-Driven Meta Advantage+ & CAPI Architecture: Scaled to 6.4x Peak ROAS", "Ad account suffered bid spikes from manual targeting; after iOS14 the post-purchase data was missing due to signal loss, and returning-customer acquisition was eroding margin.", "ACTION: Deep Architecture Breakdown", "Case Studies — 1 of 9", "13 / 22"], "image": "assets/proofs/meta-ads/meta-campaign-high-roas-results-proof-06.png"}, {"num": 14, "category": "CASE STUDY", "title": "DTC E-COMMERCE", "subtitle": "5.9x Peak ROAS", "points": ["DTC Cycling & Sports Gear: 1.2x to 5.9x Peak ROAS Performance Architecture", "The brand had no scalable performance acquisition architecture. Creative fatigue and high CAC made it impossible to scale ad spend.", "ACTION: Deep Architecture Breakdown", "Case Studies — 2 of 9", "14 / 22"], "image": "assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-01.png"}, {"num": 15, "category": "CASE STUDY", "title": "PERFORMANCE CASE STUDIES", "subtitle": "GOOGLE PPC", "points": ["$31 Cost/SQL (64% Reduction)", "B2B Enterprise SaaS Qualified Leads Pipeline & Cost Optimization", "Low-intent broad keywords were wasting budget with unqualified leads flooding the sales pipeline.", "META ADS", "4.6x Verified ROAS", "Direct Response Meta Ads: High-ROAS Omnichannel Scaling System", "Scaling attempts doubled CPA and audience fatigue set in — rebuilt as a validated omnichannel system.", "Actions on live site: Deep Architecture Breakdown"], "image": "assets/proofs/google-ads/google-search-conversion-metrics-proof-01.png"}, {"num": 16, "category": "CASE STUDY", "title": "PERFORMANCE CASE STUDIES", "subtitle": "LEAD GEN", "points": ["$4.20 Cost / Qualified Lead", "High-Ticket Consulting & Client Acquisition Qualified Pipeline", "Low audience quality meant sales calls missed decision makers and no-show rates were high.", "DIRECT DM", "82% Qualified Close Rate", "Conversational Commerce: High-Converting Messenger & WhatsApp Funnel", "Direct site visits dropped conversion because customers needed instant trust and consultation.", "Actions on live site: Deep Architecture Breakdown"], "image": "assets/proofs/lead-generation/high-ticket-lead-acquisition-proof-01.png"}, {"num": 17, "category": "CASE STUDY", "title": "PERFORMANCE CASE STUDIES", "subtitle": "YOUTUBE ADS", "points": ["$0.012 Cost/View & 3.8x ROI", "YouTube Action Ads: High-Retention Video Funnel & View Acquisition", "High skip rates — viewers dropped within the first 5 seconds of video ads.", "DTC E-COMMERCE", "4.8x Blended ROAS", "Multi-SKU E-Commerce Dynamic Product Catalog (DPA) Scaling", "Single-product campaigns spiked frequency, causing ad fatigue and shrinking margin.", "BRAND GROWTH"], "image": "assets/proofs/video-youtube/youtube-video-ads-metrics-proof-01.png"}, {"num": 18, "category": "EVIDENCE VAULT", "title": "EMPIRICAL EVIDENCE VAULT", "subtitle": "Raw Proof Gallery (59 Verified Screenshots)", "points": ["All Proofs (59)", "Uncut dashboard screenshots across Meta Ads Manager, Google Ads conversion metrics, Shopify purchase receipts, Messenger closes, and video retention.", "6", "Meta Ads — Manager Results, Campaign Results, Manager Performance, Trend Analytics, Conversion Results, High ROAS Results", "5", "Google PPC — Search Conversion, PPC Leadgen Analytics, Dashboard ROAS, Search Campaign Overview, Keywords Performance", "5", "DTC Purchases — Website Purchases ROAS 01–05"], "image": "assets/documents/deck_media/image-18-1.png"}, {"num": 19, "category": "CREATIVE ENGINE", "title": "CREATIVE TESTING ENGINE", "subtitle": "Ad Creative Sandbox & Angle Matrix", "points": ["Showing 48 Top Performing Campaign Hooks", "Sample high-converting creatives engineered for thumb-stopping feed disruption, social proof reinforcement, and objection resolution.", "Angle #01", "Angle #02", "Angle #03", "Angle #04", "Angle #05", "Angle #06"], "image": "assets/creatives/facebook-campaigns/meta-creative-hook-angle-01.jpg"}, {"num": 20, "category": "AUDIT & ENGAGEMENT", "title": "GROWTH STRATEGY PRESENTATIONS & AUDIT & DIAGNOSIS", "subtitle": "Download Detailed Strategy & Portfolio Slide Decks", "points": ["In-depth architectural breakdowns ready for internal review or stakeholder presentations.", "Google Ads Deck (.pptx)", "DOWNLOAD", "Case Studies Vol 1 (.pptx)", "DOWNLOAD", "Case Studies Vol 2 (.pptx)", "DOWNLOAD", "Source repositories: assets/documents/*.pptx on sultantipu199.github.io/sultan-growth"], "image": "assets/documents/deck_media/image-21-1.png"}, {"num": 21, "category": "AUDIT & ENGAGEMENT", "title": "ZERO-COST OPPORTUNITY ANALYSIS", "subtitle": "Request Your 10-Minute Ad Account Teardown", "points": ["Submit your brand or store URL. I will personally review your tracking setup, identify ad fatigue, and pinpoint where your budget is leaking — delivered via a private video teardown.", "100% Confidential", "Direct WhatsApp Response", "teardown input: https://yourbrand.com or your store link → Request Teardown", "Tipu Sultan", "1-on-1 · Growth Architect", "WhatsApp", "Email"], "image": "assets/documents/deck_media/image-21-1.png"}, {"num": 22, "category": "FULL PORTFOLIO", "title": "FULL PORTFOLIO — 22 SLIDES", "subtitle": "Tipu Sultan", "points": ["High-Ticket Performance Marketer & Growth Architect", "Built with Engineering Precision • All Metrics Empirically Verified", "WhatsApp • Email — floating contact buttons on live site | Navigation: AI & Data Engine · Growth Playbooks · Case Studies · Proof Vault (59) · Ad Creatives (48) · ROI Engine · Audit & Diagnosis", "Tipu Sultan — AI-Driven & Data-Driven Growth Architect", "22 / 22"], "image": "assets/documents/deck_media/image-22-1.png"}],
+      ar: [{"num": 1, "category": "عروض محفظة الأعمال", "title": "عرض محفظة الأعمال", "subtitle": "Tipu Sultan", "points": ["مهندس نمو بالذكاء الاصطناعي ومنهجية البيانات", "معتمد بالبراهين", "الرياض، السعودية • إعلانات أداء ونمو بالذكاء الاصطناعي", "sultantipu199.github.io/sultan-growth", "تايبو سلطان — مهندس نمو بالذكاء الاصطناعي والبيانات", "01 / 22"], "image": "assets/documents/deck-cover-ar-preview.webp"}, {"num": 2, "category": "هندسة الأداء", "title": "دبل النمو المتوقع عبر هندسة إعلانات بالذكاء الاصطناعي والبيانات", "subtitle": "أبني حملات إعلانية متكاملة عبر قمع التسويق مدعومة بـ Meta Advantage+ AI ومزايدات Google الذكية وتتبع Server-Side CAPI والتسويق التنبؤي للإبداعات — محوّلاً الإنفاق الإعلاني الفوضوي إلى إيرادات قابلة للقياس والتحجيم.", "points": ["ميزانيات الإعلان المُدارة", "$188K+", "في حسابات موثقة", "الإيرادات المتتبعة", "$869K+", "مشتريات منسوبة", "العائد المدمج ROAS", "4.6x"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 3, "category": "هندسة الأداء", "title": "هندسة أداء من الجيل التالي", "subtitle": "محرك الاكتساب المدفوع بالذكاء الاصطناعي والبيانات", "points": ["Meta Advantage+ ASC", "Google Smart Bidding", "Server-Side CAPI", "LTV / اقتصاديات الوحدة", "انتقال من التخمين اليدوي للجماهير إلى التوسّع الخوارزمي: مزادات تعلم آلي، إشارات سيرفر من الطرف الأول، ومصفوفات اختبار إبداعي مؤتمتة.", "المزايدة التنبؤية بالذكاء الاصطناعي", "توزيع ميزانيات خوارزمي في Meta Advantage+ Shopping وGoogle Performance Max يت محسّن تلقائيًا نحو أعلى عائد هامشي على الإنفاق.", "صندوق الإبداع بالذكاء الاصطناعي"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 4, "category": "ملاعب النمو الاستراتيجية", "title": "ذكاء نمو خوارزمي", "subtitle": "ملاعب الأداء الاستراتيجية", "points": ["6 بروتوكولات مُوسّعة", "ملاعب شراء إعلامي وإطارات بيانات هندسها تايبو سلطان لتوسيع الإنفاق الشهري بشكل منهجي مع يقين رياضي.", "معركة المزادات · عائد 4.6x - 6.4x", "مرونة الإشارة · نقاط EMQ 9.4/10", "سرعة الإبداع · تكلفة اكتساب بارد أقل من $15", "الانتصار الإقليمي · أكثر من 1.4M ريال سعودي", "اقتصاديات الوحدة · نسبة 4.2:1 قيمة العميل/التكلفة", "مراجحة البحث · حصة ظهور 86.4%"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 5, "category": "ملاعب النمو الاستراتيجية", "title": "معركة المزادات", "subtitle": "4.6x - 6.4x ROAS", "points": ["Meta Advantage+ وتوسّع مزاد Andromeda", "بروتوكول تعلم آلي لتوزيع المزايدة يتنبأ بجيوب العائد الهامشي عبر +3 مليار إشارة مستخدم، ويلغي تهام الجماهير اليدوي.", "ترجيح الأصول الديناميكي: تخصيص تلقائي لـ70% من الميزانية لأفضل الزوايا المحوّلة.", "سقف تكلفة المزايدة: حماية الهوامش أثناء تقلب المزاد.", "استثناءات الطرف الأول: صفر ميزانية تُهدر على موائع المشترين الآينة قبل 7 أيام.", "الخطوة: ناقش إعداد Andromeda", "ملاعب النمو — 6 بروتوكولات مُوسّعة", "05 / 22"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 6, "category": "ملاعب النمو الاستراتيجية", "title": "مرونة الإشارة", "subtitle": "9.4/10 EMQ Score", "points": ["بروتوكول الإسناد الثلاثي عبر CAPI من السيرفر", "بنية تتبع من سحابة إلى سحابة على مستوى المؤسسات، تستعيد حتى 35% من تحويلات iOS غير المرصودة دون اعتماد على الكوكي.", "تجزئة SHA-256: مفاتيح مطابقة لـ8 معامِلثات مستخدم (البريد، الهاتف، fbp، fbc).", "إزالة تكرار الأحداث: تصفى مطالب المعاملات المكررة بين المتصفح والسيرفر.", "مرحلة تعلم أسرع: تغذية ذكاء Meta بمشتريات نظيفة 100%.", "الخطوة: قيّم جودة إشارتك", "ملاعب النمو — 6 بروتوكولات مُوسّعة", "06 / 22"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 7, "category": "ملاعب النمو الاستراتيجية", "title": "سرعة الإبداع", "subtitle": "Sub-$15 Cold CPA", "points": ["صندوق 3:2:2 للخطاطيف والإبداع الديناميكي", "مصفوفة اختبار رياضية منضبطة: 3 خطاطيف مقاطعة، 2 زاوية بصرية، وصياغتان CTA قبل أي توسيع في الإنفاق.", "اختبار متغير معزول: تحديد الخطاف الذي يحقق أدنى تكلفة للنقرة بدقة.", "توسيع متدرج للميزانية: الرابح المثبت فقط يرتقي إلى حملات ASC.", "صفر إرهاق إعلاني: تحديثات أسبوعية تحافظ على ROAS فوق 4.0x.", "الخطوة: نشر نظام 3:2:2", "ملاعب النمو — 6 بروتوكولات مُوسّعة", "07 / 22"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 8, "category": "ملاعب النمو الاستراتيجية", "title": "الانتصار الإقليمي", "subtitle": "1.4M+ SAR", "points": ["ملعب توسّع سوق السعودية والخليج", "هندسة مخصصة لعملاء عالي قيمة السلة في الرياض وجدة والدمام ودبي، مع هندسة دفع وتسجيل خروج مقترنة.", "تكامل Tabby وTamara: الدفع الآجل يرفع تحويل الموبايل بنسبة 44%+", "تأكيد توصيل عبر WhatsApp تلقائيًا: يخفض رفض الاستلام إلى 7% فقط.", "لهجات خليجية أصلية: صياغة وفيديوهات خطاطيف محلية عالية التحويل.", "الخطوة: ناقش الاستراتيجية السعودية", "ملاعب النمو — 6 بروتوكولات مُوسّعة", "08 / 22"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 9, "category": "ملاعب النمو الاستراتيجية", "title": "اقتصاديات الوحدة", "subtitle": "4.2:1 LTV:CAC", "points": ["مثابرة الأفواج ومحرك قيمة العميل خلال 60 يوماً", "نمذجة قيمة العميل مدى الحياة رياضياً: تحويل اكتساب العميل إلى نقطة التعادل نفسها إلى خلايا ربح مركّبة قابلة للبناء على مستوى البنك.", "نقطة تعادل تكلفة الاكتساب يوم صفر: تمويل مكتفي ذاتياً للاكتساب.", "إيقاع إعادة الشحن: مشغّلات WhatsApp وبريد تلقائية بعد 45 يوماً.", "حزم متدرجة عالية قيمة السلة: رفع السلة الأولى بما يصل إلى 64%.", "الخطوة: احسب قيمة عملتك", "ملاعب النمو — 6 بروتوكولات مُوسّعة", "09 / 22"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 10, "category": "ملاعب النمو الاستراتيجية", "title": "مراجحة البحث", "subtitle": "86.4% IS", "points": ["Google Performance Max وتآزر البحث", "اصطياد المشترين في أسفل القمع بنية عالية بإعلانات بحث متطابقة الرسالة، مع صدر أوامر (Negative Keywords) يحمي الإنفاق.", "احتكار البحث: 85%+ مركز مطلق أعلى الصفحة على استعلامات الشراء.", "درع النفايات في PMax: حجب المواضع منخفضة القيمة ونقرات الهدر.", "إعادة استهداف متعدد القنوات: إعلانات YouTube بشريط Conservative عالي الاحتفاظ.", "الخطوة: اطلب تدقيق البحث", "ملاعب النمو — 6 بروتوكولات مُوسّعة", "10 / 22"], "image": "assets/documents/deck_media_ar/image-4-1.png"}, {"num": 11, "category": "محاكاة القمع", "title": "محاكاة القمع التفاعلية", "subtitle": "احسب الإيراد الإضافي المتوقع مع هندسة إعلانات مُحسّنة", "points": ["دولار ($)", "ريال (‏S.R.)", "موديل كيف يعيد تنظيم حملاتك الإعلامية، واستبعاد نقرات العرض الشكلية، ونشر إعادة الاستهداف عالية LTV — كلها ترقي الإيرادات الصافية مباشرة.", "ميزانية الإعلان الشهرية", "$10,000", "محدد من البداية إلى النهاية: $1,000 → $100,000", "العائد المدمج الحالي", "1.8x"], "image": "assets/documents/deck_media_ar/image-12-1.png"}, {"num": 12, "category": "دراسة حالة الأداء", "title": "دراسات حالة الأداء", "subtitle": "تشريحات حملات موثقة من عملاء حقيقيين", "points": ["حسابات حقيقية، إنفاق حقيقي، عائدات حقيقية. كل دراسة تتضمن الهندسة ثلاثية الطبقات، هبوط تكلفة الاكتساب، ولقطات الشاشة الفعلية.", "كل دراسات الحالة", "ذكاء اصطناعي وبيانات", "Meta/FB Ads", "Google PPC", "تجارة إلكترونية", "توليد عملاء", "مراسلة مباشرة"], "image": "assets/documents/deck_media_ar/image-12-1.png"}, {"num": 13, "category": "دراسة حالة الأداء", "title": "توسيع بالذكاء الاصطناعي والبيانات", "subtitle": "6.4x Peak AI ROAS", "points": ["هندسة Meta Advantage+ وCAPI بالذكاء الاصطناعي: توسّع إلى ذروة 6.4x ROAS", "كان الحساب يعاني من قفزات مزايدة بسبب الاستهداف اليدوي؛ وبعد iOS14 فُقدت بيانات ما بعد الشراء نتيجة فقدان الإشارة، وكان اكتساب العملاء العائدين يلتهم الهوامش.", "الخطوة: التعمق في الهندسة المعمارية (Deep Architecture Breakdown)", "دراسات الحالة — 1 من 9", "13 / 22"], "image": "assets/proofs/meta-ads/meta-campaign-high-roas-results-proof-06.png"}, {"num": 14, "category": "دراسة حالة الأداء", "title": "تجارة إلكترونية DTC", "subtitle": "5.9x Peak ROAS", "points": ["DTC للدراجات والمعدات الرياضية: من 1.2x إلى ذروة 5.9x ROAS", "لم تكن لدى العلامة أي بنية اكتساب أداء قابلة للتوسع. الإرهاق الإبداعي وتكلفة الاكتساب المرتفعة جعلا توسيع الإنفاق مستحيلاً.", "الخطوة: التعمق في الهندسة المعمارية (Deep Architecture Breakdown)", "دراسات الحالة — 2 من 9", "14 / 22"], "image": "assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-01.png"}, {"num": 15, "category": "دراسة حالة الأداء", "title": "دراسات حالة الأداء", "subtitle": "Google PPC", "points": ["$31 Cost/SQL (64% Reduction)", "بنية عملاء مؤهلين لمنصة SaaS مؤسسية B2B وتخفيض التكلفة", "الكلمات المفتاحية الواسعة منخفضة النية كانت تهدر الميزانية وتغرق قمع المبيعات بعملاء غير مؤهلين.", "Meta Ads", "4.6x Verified ROAS", "إعلانات Meta استجابة مباشرة: نظام توسّع متعدد القنوات عالي العائد", "كل محاولة توسيع ضاعفت CPA وبدأ إرهاق الجمهور — أُعيد بناءه كنظام متعدد القنوات موثق.", "الإجراء في الموقع المباشر: Deep Architecture Breakdown"], "image": "assets/proofs/google-ads/google-search-conversion-metrics-proof-01.png"}, {"num": 16, "category": "دراسة حالة الأداء", "title": "دراسات حالة الأداء", "subtitle": "توليد العملاء", "points": ["$4.20 Cost / Qualified Lead", "استشارات عالية القيمة: بنية قمع عملاء مؤهلين", "جودة الجمهور المنخفضة كانت تُفوّت صناع القرار في مكالمات المبيعات وترفع معدل عدم الحضور.", "مراسلة مباشرة", "82% Qualified Close Rate", "تجارة محادثة: قمع Messenger وWhatsApp عالي التحويل", "الزيارات المباشرة كانت تُفقد التحويل لأن العميل يحتاج ثقة فورية واستشارة.", "الإجراء في الموقع المباشر: Deep Architecture Breakdown"], "image": "assets/proofs/lead-generation/high-ticket-lead-acquisition-proof-01.png"}, {"num": 17, "category": "دراسة حالة الأداء", "title": "دراسات حالة الأداء", "subtitle": "YouTube Ads", "points": ["$0.012 Cost/View & 3.8x ROI", "YouTube Action Ads: قمع فيديو عالي الاحتفاظ واكتساب مشاهدات", "معدل التخطي كان عالياً جداً — المشاهدون ينسحبون في أول 5 ثوان.", "تجارة DTC", "4.8x Blended ROAS", "كتالوج منتجات متعدد SKUs: توسيع DPA ديناميكي", "حملة المنتج الواحد رفعت التكرار وأدت إلى إرهاق إعلاني وتراجع الهوامش.", "نمو العلامة"], "image": "assets/proofs/video-youtube/youtube-video-ads-metrics-proof-01.png"}, {"num": 18, "category": "خزنة الأدلة والبراهين", "title": "خزنة الأدلة التجريبية", "subtitle": "معرض البراهين الخام (59 لقطة موثقة)", "points": ["كل البراهين (59)", "لقطات شاشة غير مقتطعة من Meta Ads Manager، ومقاييس تحويل Google Ads، وإيصالات شراء Shopify، وإتمام الرسائل، واحتفاظ الفيديو.", "6", "Meta Ads — نتائج المدير، نتائج الحملة، أداء المدير، تحليلات الاتجاه، نتائج التحويل، نتائج ROAS عالية", "5", "Google PPC — تحويلات البحث، تحليلات Leadgen، لوحة ROAS، نظرة الحملة، أداء الكلمات المفتاحية", "5", "مشتريات DTC — ROAS مشتريات الموقع 01–05"], "image": "assets/documents/deck_media_ar/image-18-1.png"}, {"num": 19, "category": "محرك اختبار الإبداع", "title": "محرك الاختبار الإبداعي", "subtitle": "صندوق الإبداع الإعلاني ومصفوفة الزوايا", "points": ["48 خطاف حملة من الأفضل أداءً", "عيّنة من الإبداعات عالية التحويل، هندستها لتوقف الإبهام في الخلاصة، وتعزيز الدليل الاجتماعي، ومعالجة الاعتراضات.", "Angle #01", "Angle #02", "Angle #03", "Angle #04", "Angle #05", "Angle #06"], "image": "assets/creatives/facebook-campaigns/meta-creative-hook-angle-01.jpg"}, {"num": 20, "category": "التدقيق والتشخيص", "title": "عروض استراتيجية النمو، التدقيق والتشخيص", "subtitle": "تحميل عروض الاستراتيجية التفصيلية ومحفظة الأعمال", "points": ["تشريحات معمارية معمقة جاهزة للمراجعة الداخلية أو عروض أصحاب المصلحة.", "Google Ads Deck (.pptx)", "تحميل", "Case Studies Vol 1 (.pptx)", "تحميل", "Case Studies Vol 2 (.pptx)", "تحميل", "المصدر: sultantipu199.github.io/sultan-growth/assets/documents/*.pptx"], "image": "assets/documents/deck_media_ar/image-21-1.png"}, {"num": 21, "category": "التدقيق والتشخيص", "title": "تحليل الفرص بلا مقابل", "subtitle": "اطلب تشريح حسابك الإعلاني في 10 دقائق", "points": ["أرسل رابط علامتك أو متاجرك. سأراجع بنفسي إعداد التتبع، وأكتشف الإرهاق الإبداعي، وأحدد أين تتسرب ميزانيتك — عبر فيديو تشريح خاص.", "100% سرية", "رد مباشر عبر WhatsApp", "teardown input: https://yourbrand.com → Request Teardown", "Tipu Sultan", "فردي (1-on-1) · مهندس نمو", "واتساب", "بريد إلكتروروني"], "image": "assets/documents/deck_media_ar/image-21-1.png"}, {"num": 22, "category": "المحفظة الكاملة", "title": "المحفظة الكاملة — 22 سلوَد", "subtitle": "Tipu Sultan", "points": ["مسوّق أداء عالي القيمة ومهندس نمو", "مبني بدقة هندسية • كل المقاييس موثقة تجريبياً", "واتساب • بريد إلكتروني — أزرار التوصل العائمة في الموقع المباشر | التنقل: محرك الذكاء الاصطناعي والبيانات · ملاعب النمو · دراسات الحالة · خزنة البراهين (59) · الإبداعات (48) · محرك ROI · التدقيق والتشخيص", "تايبو سلطان — مهندس نمو بالذكاء الاصطناعي والبيانات", "22 / 22"], "image": "assets/documents/deck_media_ar/image-22-1.png"}]
+    };
+    
+
+    // Current State for CV Viewer
+    let currentCvLang = 'en';
+    let currentCvPage = 1;
+    const cvMaxPages = { en: 2, ar: 3 };
+
+    function openCvModal(lang = 'en', page = 1) {
+      currentCvLang = lang;
+      currentCvPage = page;
+      updateCvModalUI();
+      document.getElementById('cvModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCvModal() {
+      document.getElementById('cvModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function switchCvLang(lang) {
+      currentCvLang = lang;
+      currentCvPage = 1;
+      updateCvModalUI();
+    }
+
+    function setCvPage(page) {
+      const maxP = cvMaxPages[currentCvLang] || 2;
+      if (page >= 1 && page <= maxP) {
+        currentCvPage = page;
+        updateCvModalUI();
+      }
+    }
+
+    function nextCvPage() {
+      const maxP = cvMaxPages[currentCvLang] || 2;
+      if (currentCvPage < maxP) {
+        currentCvPage++;
+        updateCvModalUI();
+      }
+    }
+
+    function prevCvPage() {
+      if (currentCvPage > 1) {
+        currentCvPage--;
+        updateCvModalUI();
+      }
+    }
+
+    function updateCvModalUI() {
+      const maxP = cvMaxPages[currentCvLang];
+      const enBtn = document.getElementById('cvLangEnBtn');
+      const arBtn = document.getElementById('cvLangArBtn');
+      const badge = document.getElementById('cvLangBadge');
+      const title = document.getElementById('cvModalTitle');
+      const subtitle = document.getElementById('cvModalSubtitle');
+      const img = document.getElementById('cvViewerImg');
+      const indicator = document.getElementById('cvPageIndicator');
+      const pageTabs = document.getElementById('cvPageTabs');
+      const actions = document.getElementById('cvDownloadActions');
+
+      if (currentCvLang === 'en') {
+        enBtn.className = 'px-3 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all shadow-md';
+        arBtn.className = 'px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+        badge.className = 'px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 text-[10px] font-black uppercase';
+        badge.innerText = 'English';
+        title.innerText = 'Tipu Sultan — Executive CV (EN)';
+        subtitle.innerText = 'AI-Driven & Data-Driven Growth Architect | High-Ticket Performance Marketer';
+        img.src = `assets/documents/cv-preview-page-${currentCvPage}.webp`;
+        indicator.innerText = `Page ${currentCvPage} of ${maxP}`;
+
+        // Page tabs
+        pageTabs.innerHTML = `
+          <button onclick="setCvPage(1)" class="px-2.5 py-1 rounded-lg text-xs font-bold ${currentCvPage === 1 ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}">P1: Summary</button>
+          <button onclick="setCvPage(2)" class="px-2.5 py-1 rounded-lg text-xs font-bold ${currentCvPage === 2 ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}">P2: Experience</button>
+        `;
+
+        // Downloads
+        actions.innerHTML = `
+          <a href="assets/documents/Tipu-Sultan-Growth-Architect-CV.pdf" download class="px-3 py-1.5 rounded-lg bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white border border-rose-500/40 text-xs font-bold flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-pdf"></i> Download PDF
+          </a>
+          <a href="assets/documents/Tipu-Sultan-Growth-Architect-CV.docx" download class="px-3 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/40 text-xs font-bold flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-word"></i> Word (.docx)
+          </a>
+        `;
+      } else {
+        arBtn.className = 'px-3 py-1 rounded-lg text-xs font-bold bg-emerald-600 text-white transition-all shadow-md';
+        enBtn.className = 'px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+        badge.className = 'px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-black uppercase';
+        badge.innerText = 'العربية';
+        title.innerText = 'تيبو سلطان — السيرة الذاتية التنفيذية (AR)';
+        subtitle.innerText = 'مهندس نمو بالذكاء الاصطناعي والبيانات | مسوّق أداء عالي القيمة (الرياض، السعودية)';
+        img.src = `assets/documents/cv-ar-preview-page-${currentCvPage}.webp`;
+        indicator.innerText = `الصفحة ${currentCvPage} من ${maxP}`;
+
+        // Page tabs
+        pageTabs.innerHTML = `
+          <button onclick="setCvPage(1)" class="px-2.5 py-1 rounded-lg text-xs font-bold ${currentCvPage === 1 ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}">ص 1: الملخص</button>
+          <button onclick="setCvPage(2)" class="px-2.5 py-1 rounded-lg text-xs font-bold ${currentCvPage === 2 ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}">ص 2: الخبرة</button>
+          <button onclick="setCvPage(3)" class="px-2.5 py-1 rounded-lg text-xs font-bold ${currentCvPage === 3 ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}">ص 3: الأدلة</button>
+        `;
+
+        // Downloads
+        actions.innerHTML = `
+          <a href="assets/documents/Tipu-Sultan-Growth-Architect-CV-AR.pdf" download class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-lg">
+            <i class="fa-solid fa-file-pdf"></i> تحميل السيرة الذاتية PDF (عربي)
+          </a>
+        `;
+      }
+    }
+
+    // Current State for Presentation Deck Viewer
+    let currentDeckLang = 'en';
+    let currentDeckSlide = 1;
+
+    function openDeckModal(lang = 'en', slideNum = 1) {
+      currentDeckLang = lang;
+      currentDeckSlide = slideNum;
+      renderDeckSlide();
+      renderDeckThumbStrip();
+      document.getElementById('deckModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDeckModal() {
+      document.getElementById('deckModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function switchDeckLang(lang) {
+      currentDeckLang = lang;
+      renderDeckSlide();
+      renderDeckThumbStrip();
+    }
+
+    function setDeckSlide(slideNum) {
+      if (slideNum >= 1 && slideNum <= 22) {
+        currentDeckSlide = slideNum;
+        renderDeckSlide();
+        renderDeckThumbStrip();
+      }
+    }
+
+    function nextDeckSlide() {
+      if (currentDeckSlide < 22) {
+        currentDeckSlide++;
+        renderDeckSlide();
+        renderDeckThumbStrip();
+      }
+    }
+
+    function prevDeckSlide() {
+      if (currentDeckSlide > 1) {
+        currentDeckSlide--;
+        renderDeckSlide();
+        renderDeckThumbStrip();
+      }
+    }
+
+    function renderDeckSlide() {
+      const slides = presentationDecks[currentDeckLang] || presentationDecks.en;
+      const slide = slides.find(s => s.num === currentDeckSlide) || slides[0];
+
+      // UI elements
+      const enBtn = document.getElementById('deckLangEnBtn');
+      const arBtn = document.getElementById('deckLangArBtn');
+      const downloadBtn = document.getElementById('deckDownloadBtn');
+      const headerTitle = document.getElementById('deckHeaderTitle');
+      const headerSubtitle = document.getElementById('deckHeaderSubtitle');
+      const counterBadge = document.getElementById('deckSlideCounterBadge');
+      
+      const slideCategory = document.getElementById('deckSlideCategory');
+      const slideNumberText = document.getElementById('deckSlideNumberText');
+      const slideTitle = document.getElementById('deckSlideTitle');
+      const slideSubtitle = document.getElementById('deckSlideSubtitle');
+      const slideBullets = document.getElementById('deckSlideBullets');
+      const slideImgContainer = document.getElementById('deckSlideImageContainer');
+      const slideImg = document.getElementById('deckSlideImage');
+
+      // Update Top Bar
+      if (currentDeckLang === 'en') {
+        enBtn.className = 'px-3 py-1 rounded-lg text-xs font-bold bg-cyan-600 text-slate-950 transition-all shadow-md';
+        arBtn.className = 'px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+        downloadBtn.href = 'assets/documents/tipu-sultan-portfolio-en.pptx';
+        downloadBtn.innerHTML = '<i class="fa-solid fa-file-powerpoint text-cyan-400"></i> <span class="hidden sm:inline">Download Deck (.pptx 10.3 MB)</span>';
+        headerTitle.innerText = 'Next-Gen Performance Architecture Deck (EN)';
+        headerSubtitle.innerText = 'Tipu Sultan • AI-Driven & Data-Driven Growth Architect';
+      } else {
+        arBtn.className = 'px-3 py-1 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 transition-all shadow-md';
+        enBtn.className = 'px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+        downloadBtn.href = 'assets/documents/tipu-sultan-portfolio-ar.pptx';
+        downloadBtn.innerHTML = '<i class="fa-solid fa-file-powerpoint text-amber-400"></i> <span class="hidden sm:inline">تحميل العرض (.pptx 10.2 MB)</span>';
+        headerTitle.innerText = 'عروض محفظة الأعمال الاستراتيجية — 22 شريحة (AR)';
+        headerSubtitle.innerText = 'تيبو سلطان • هندسة نمو بالذكاء الاصطناعي والتجارة الخليجية';
+      }
+
+      counterBadge.innerText = `Slide ${String(currentDeckSlide).padStart(2, '0')} / 22`;
+      slideNumberText.innerText = `${String(currentDeckSlide).padStart(2, '0')} / 22`;
+      slideCategory.innerText = slide.category;
+      slideTitle.innerText = slide.title;
+      slideSubtitle.innerText = slide.subtitle;
+
+      // Render points
+      slideBullets.innerHTML = '';
+      if (slide.points && slide.points.length > 0) {
+        slide.points.forEach(pt => {
+          const item = document.createElement('div');
+          item.className = 'flex items-start gap-2 p-2 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300';
+          item.innerHTML = `<i class="fa-solid fa-chevron-right text-cyan-400 text-[10px] mt-1 flex-shrink-0"></i> <span>${pt}</span>`;
+          slideBullets.appendChild(item);
+        });
+      }
+
+      // Check if image available
+      if (slide.image) {
+        slideImg.src = slide.image;
+        slideImgContainer.classList.remove('hidden');
+      } else {
+        slideImgContainer.classList.add('hidden');
+      }
+    }
+
+    function renderDeckThumbStrip() {
+      const strip = document.getElementById('deckSlideSelectorStrip');
+      strip.innerHTML = '';
+      for (let i = 1; i <= 22; i++) {
+        const btn = document.createElement('button');
+        const isActive = i === currentDeckSlide;
+        btn.onclick = () => setDeckSlide(i);
+        btn.className = `w-7 h-7 rounded-lg text-[11px] font-bold flex items-center justify-center transition-all flex-shrink-0 ${
+          isActive
+            ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/30 ring-2 ring-cyan-400'
+            : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
+        }`;
+        btn.innerText = i;
+        btn.title = `Slide ${i}`;
+        strip.appendChild(btn);
+      }
+    }
+
+    // Filter executive assets
+    function filterAssets(cat, btn) {
+      document.querySelectorAll('#asset-filter-buttons .asset-btn').forEach(b => {
+        b.className = 'asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800';
+      });
+      btn.className = 'asset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30';
+
+      const cards = document.querySelectorAll('#assets-grid .asset-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Update Keyboard Listener to handle Deck Left/Right and CV Esc
+    document.addEventListener('keydown', (e) => {
+      const isDeckOpen = !document.getElementById('deckModal').classList.contains('hidden');
+      const isCvOpen = !document.getElementById('cvModal').classList.contains('hidden');
+
+      if (e.key === 'ArrowRight' && isDeckOpen) {
+        nextDeckSlide();
+      } else if (e.key === 'ArrowLeft' && isDeckOpen) {
+        prevDeckSlide();
+      } else if (e.key === 'Escape') {
+        if (isDeckOpen) closeDeckModal();
+        if (isCvOpen) closeCvModal();
+      }
+    });
+
     // Initialize App
     calculateMetrics();
     calculateHealthScore();
@@ -1945,5 +2547,264 @@
     renderVault(vaultProofs);
     renderCreatives();
   </script>
+  <!-- Interactive CV Viewer Modal (Bilingual: English 2 Pages & Arabic 3 Pages) -->
+  <div id="cvModal" class="fixed inset-0 z-50 glass bg-slate-950/90 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="relative w-full max-w-6xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-auto flex flex-col max-h-[95vh]">
+      
+      <!-- Modal Top Header -->
+      <div class="px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4 bg-slate-950/80">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-base">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-bold text-sm text-white" id="cvModalTitle">Tipu Sultan — Executive CV</span>
+              <span id="cvLangBadge" class="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 text-[10px] font-black uppercase">English</span>
+            </div>
+            <p class="text-[11px] text-slate-400" id="cvModalSubtitle">AI-Driven & Data-Driven Growth Architect | Riyadh, KSA</p>
+          </div>
+        </div>
+
+        <!-- Controls: Language Toggle & Page Selector -->
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Language Switcher -->
+          <div class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
+            <button id="cvLangEnBtn" onclick="switchCvLang('en')" class="px-3 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all">
+              English (2P)
+            </button>
+            <button id="cvLangArBtn" onclick="switchCvLang('ar')" class="px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+              العربية (3 صفحات)
+            </button>
+          </div>
+
+          <!-- Page Navigation Tabs -->
+          <div id="cvPageTabs" class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
+            <!-- Dynamically injected -->
+          </div>
+
+          <!-- Download Action Dropdown/Buttons -->
+          <div class="flex items-center gap-1.5" id="cvDownloadActions">
+            <!-- Dynamically populated according to active language -->
+          </div>
+
+          <!-- Close Button -->
+          <button onclick="closeCvModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all ml-1">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Two-Column on Desktop: Viewer + Executive Snapshot) -->
+      <div class="flex-1 overflow-y-auto flex flex-col lg:flex-row">
+        <!-- Main Document Visual Viewer -->
+        <div class="flex-1 bg-slate-950 p-4 sm:p-6 flex flex-col items-center justify-start overflow-auto min-h-[500px]">
+          <div class="relative max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-white group">
+            <img id="cvViewerImg" src="assets/documents/cv-preview-page-1.webp" alt="CV Page Preview" class="w-full h-auto object-contain transition-transform duration-200" />
+          </div>
+          <!-- Bottom Page Controls inside Viewer -->
+          <div class="flex items-center gap-3 mt-4">
+            <button onclick="prevCvPage()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition-all">
+              <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous Page
+            </button>
+            <span id="cvPageIndicator" class="text-xs font-bold text-slate-400 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">
+              Page 1 of 2
+            </span>
+            <button onclick="nextCvPage()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition-all">
+              Next Page <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar Snapshot & Verified Highlights -->
+        <div class="w-full lg:w-80 border-t lg:border-t-0 lg:border-l border-slate-800 bg-slate-900/90 p-5 flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-emerald-400"></i> Executive Highlights
+            </div>
+
+            <!-- Stats Mini Grid -->
+            <div class="grid grid-cols-2 gap-2 mb-4">
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Managed Spend</span>
+                <span class="text-sm font-bold text-white">$188K+</span>
+              </div>
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Tracked Revenue</span>
+                <span class="text-sm font-bold text-white">$869K+</span>
+              </div>
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Blended ROAS</span>
+                <span class="text-sm font-bold text-emerald-400">4.6x</span>
+              </div>
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Verified Proofs</span>
+                <span class="text-sm font-bold text-blue-400">59 Proofs</span>
+              </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="space-y-2 mb-4">
+              <div class="text-[11px] font-bold text-slate-300">Core Architecture:</div>
+              <ul class="text-[11px] text-slate-400 space-y-1.5">
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>Predictive AI Bidding:</strong> Meta Advantage+ Shopping (ASC) & Google Smart Bidding</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-cyan-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>Signal Engineering:</strong> Server-Side CAPI Gateway with 9.0+ EMQ & SHA-256</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-purple-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>3:2:2 Creative Sandbox:</strong> 48-Angle dynamic testing before scaling</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-amber-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>GCC Specialization:</strong> Tabby/Tamara BNPL & WhatsApp COD automation</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Location & Availability -->
+            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-slate-400 mb-4">
+              <div class="font-bold text-slate-300 mb-1 flex items-center gap-1.5">
+                <i class="fa-solid fa-location-dot text-cyan-400"></i> Riyadh, Saudi Arabia
+              </div>
+              <p>Available for 10-minute video audits, full-funnel buildouts, and scaling retainers worldwide.</p>
+            </div>
+          </div>
+
+          <!-- Direct Inquiries CTA -->
+          <div class="pt-3 border-t border-slate-800 space-y-2">
+            <button onclick="triggerGlobalWhatsApp()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Inquire via WhatsApp
+            </button>
+            <button onclick="closeCvModal(); document.getElementById('audit').scrollIntoView({behavior: 'smooth'});" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs border border-slate-700 flex items-center justify-center gap-1.5 transition-all">
+              <i class="fa-solid fa-bolt text-emerald-400 text-[10px]"></i> Request Ad Account Audit
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive Presentation Deck Viewer Modal (22 Slides Bilingual: EN & AR) -->
+  <div id="deckModal" class="fixed inset-0 z-50 glass bg-slate-950/95 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="relative w-full max-w-6xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-auto flex flex-col max-h-[96vh]">
+      
+      <!-- Deck Modal Top Bar -->
+      <div class="px-5 py-3.5 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4 bg-slate-950/90">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-base">
+            <i class="fa-solid fa-presentation-screen"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-bold text-sm text-white" id="deckHeaderTitle">Growth Architecture Deck</span>
+              <span id="deckSlideCounterBadge" class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-black">Slide 01 / 22</span>
+            </div>
+            <p class="text-[11px] text-slate-400" id="deckHeaderSubtitle">Tipu Sultan • Next-Gen AI & Data Performance Architecture</p>
+          </div>
+        </div>
+
+        <!-- Controls: Language Toggle, Download PPTX, Fullscreen, Close -->
+        <div class="flex items-center gap-2">
+          <!-- Language Switcher -->
+          <div class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
+            <button id="deckLangEnBtn" onclick="switchDeckLang('en')" class="px-3 py-1 rounded-lg text-xs font-bold bg-cyan-600 text-slate-950 transition-all">
+              English [EN]
+            </button>
+            <button id="deckLangArBtn" onclick="switchDeckLang('ar')" class="px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+              العربية [AR]
+            </button>
+          </div>
+
+          <!-- Download PPTX button -->
+          <a id="deckDownloadBtn" href="assets/documents/tipu-sultan-portfolio-en.pptx" download class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-powerpoint text-amber-400"></i>
+            <span class="hidden sm:inline">Download Deck</span>
+          </a>
+
+          <!-- Close Modal -->
+          <button onclick="closeDeckModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all ml-1">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide Presentation Stage Canvas (16:9 ratio) -->
+      <div class="flex-1 bg-slate-950 p-4 sm:p-8 flex items-center justify-center overflow-y-auto min-h-[460px]">
+        <div id="deckSlideCard" class="relative w-full max-w-4xl aspect-[16/9] min-h-[400px] rounded-3xl p-6 sm:p-10 border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-2xl flex flex-col justify-between overflow-hidden">
+          
+          <!-- Decorative Background Blur -->
+          <div class="absolute -right-20 -top-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-60 h-60 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Slide Category & Counter -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span id="deckSlideCategory" class="px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold uppercase tracking-wider">
+              PORTFOLIO PRESENTATION
+            </span>
+            <span id="deckSlideNumberText" class="text-xs font-display font-bold text-slate-500">
+              01 / 22
+            </span>
+          </div>
+
+          <!-- Slide Core Content Area -->
+          <div class="relative z-10 my-auto py-4">
+            <h2 id="deckSlideTitle" class="text-xl sm:text-3xl lg:text-4xl font-display font-black text-white tracking-tight leading-tight">
+              Scale Predictable Revenue with AI-Driven & Data-Engineered Ad Architecture
+            </h2>
+            <div id="deckSlideSubtitle" class="text-sm sm:text-base text-cyan-400 font-semibold mt-2">
+              Next-Gen Growth Architecture
+            </div>
+
+            <!-- Bullet Points / Breakdown List -->
+            <div id="deckSlideBullets" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-5">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Optional Slide Image Thumbnail -->
+            <div id="deckSlideImageContainer" class="mt-4 hidden">
+              <img id="deckSlideImage" src="" alt="Slide Evidence" class="h-28 rounded-xl object-contain border border-slate-800 bg-slate-950 p-1" />
+            </div>
+          </div>
+
+          <!-- Slide Footer inside Card -->
+          <div class="relative z-10 flex items-center justify-between pt-3 border-t border-slate-800/80 text-[11px] text-slate-400">
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i> Tipu Sultan • Empirical Evidence Vault
+            </span>
+            <span class="text-slate-500">Riyadh, KSA • sultantipu199.github.io/sultan-growth</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide Navigation Bottom Controller -->
+      <div class="px-5 py-3 border-t border-slate-800 bg-slate-950 flex flex-wrap items-center justify-between gap-4">
+        <!-- Prev Slide Button -->
+        <button onclick="prevDeckSlide()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-chevron-left text-[10px]"></i>
+          <span>Previous</span>
+        </button>
+
+        <!-- Slide Number Quick Selector Strip -->
+        <div id="deckSlideSelectorStrip" class="flex items-center gap-1 overflow-x-auto max-w-md py-1 custom-scrollbar">
+          <!-- 22 buttons injected by JS -->
+        </div>
+
+        <!-- Next Slide Button -->
+        <button onclick="nextDeckSlide()" class="px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-black text-xs flex items-center gap-2 shadow-lg shadow-cyan-600/20 transition-all">
+          <span>Next</span>
+          <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
