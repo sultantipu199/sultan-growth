@@ -138,43 +138,54 @@
       <div class="hidden md:flex items-center gap-5 text-xs font-semibold text-slate-300">
         <button onclick="switchTab('executive-assets')" data-tab="executive-assets" class="nav-tab-btn hover:text-amber-300 transition-all flex items-center gap-1.5 text-amber-300 font-bold px-3 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 shadow-sm shadow-amber-500/15">
           <i class="fa-solid fa-file-shield text-xs text-amber-400"></i>
-          <span>CV & Decks</span>
+          <span data-i18n="nav_cv">CV & Decks</span>
           <span class="px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 text-[9px] font-black uppercase tracking-wider">New</span>
         </button>
 
         <button onclick="switchTab('ai-engine')" data-tab="ai-engine" class="nav-tab-btn hover:text-cyan-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-microchip text-[11px] text-cyan-400"></i>
-          <span>AI & Data Engine</span>
+          <span data-i18n="nav_ai">AI & Data Engine</span>
         </button>
 
         <button onclick="switchTab('frameworks')" data-tab="frameworks" class="nav-tab-btn hover:text-purple-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-brain text-[11px] text-purple-400"></i>
-          <span>Growth Playbooks</span>
+          <span data-i18n="nav_frameworks">Growth Playbooks</span>
         </button>
 
         <button onclick="switchTab('proofs')" data-tab="proofs" class="nav-tab-btn hover:text-emerald-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-trophy text-[11px] text-emerald-400"></i>
-          <span>Case Studies</span>
+          <span data-i18n="nav_proofs">Case Studies</span>
         </button>
 
         <button onclick="switchTab('vault')" data-tab="vault" class="nav-tab-btn hover:text-blue-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-images text-[11px] text-blue-400"></i>
-          <span>Proof Vault (59)</span>
+          <span data-i18n="nav_vault">Proof Vault (59)</span>
         </button>
 
         <button onclick="switchTab('creatives')" data-tab="creatives" class="nav-tab-btn hover:text-indigo-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-wand-magic-sparkles text-[11px] text-indigo-400"></i>
-          <span>Ad Creatives (48)</span>
+          <span data-i18n="nav_creatives">Ad Creatives (48)</span>
         </button>
 
         <button onclick="switchTab('calculator')" data-tab="calculator" class="nav-tab-btn hover:text-teal-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-calculator text-[11px] text-teal-400"></i>
-          <span>ROI Engine</span>
+          <span data-i18n="nav_calculator">ROI Engine</span>
         </button>
 
         <button onclick="switchTab('audit')" data-tab="audit" class="nav-tab-btn text-emerald-400 hover:text-emerald-300 transition-all font-bold px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5">
           <i class="fa-solid fa-bolt text-xs text-emerald-400"></i>
-          <span>Audit & Diagnosis</span>
+          <span data-i18n="nav_audit">Audit & Diagnosis</span>
+        </button>
+      </div>
+
+      
+      <!-- Language Selector Toggle: Always English vs Arabic -->
+      <div class="hidden sm:inline-flex items-center rounded-xl bg-slate-900/90 border border-slate-700/80 p-0.5 shadow-md">
+        <button id="langBtnEn" onclick="setSiteLanguage('en')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 bg-blue-600 text-white shadow-sm" title="Switch to English">
+          <i class="fa-solid fa-globe text-[10px]"></i> Always English
+        </button>
+        <button id="langBtnAr" onclick="setSiteLanguage('ar')" class="px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5" title="التبديل إلى العربية">
+          <span>العربية</span>
         </button>
       </div>
 
@@ -219,7 +230,7 @@
             <span class="w-7 h-7 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xs">
               <i class="fa-solid fa-microchip"></i>
             </span>
-            <span>AI & Data Engine</span>
+            <span data-i18n="nav_ai">AI & Data Engine</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
         </button>
@@ -229,7 +240,7 @@
             <span class="w-7 h-7 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-xs">
               <i class="fa-solid fa-brain"></i>
             </span>
-            <span>Growth Playbooks</span>
+            <span data-i18n="nav_frameworks">Growth Playbooks</span>
           </span>
           <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
         </button>
@@ -295,6 +306,23 @@
         </button>
       </div>
 
+      
+      <!-- Mobile Language Selector -->
+      <div class="pt-2 border-t border-slate-800">
+        <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold px-1 mb-1.5 flex items-center justify-between">
+          <span>Language / اللغة</span>
+          <span class="text-cyan-400 font-semibold" id="mobCurrentLangBadge">English</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 p-1 rounded-xl bg-slate-950 border border-slate-800">
+          <button id="mobLangBtnEn" onclick="setSiteLanguage('en'); closeMobileMenu();" class="py-2 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-globe text-xs"></i> Always English
+          </button>
+          <button id="mobLangBtnAr" onclick="setSiteLanguage('ar'); closeMobileMenu();" class="py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1.5">
+            <span>العربية (Arabic)</span>
+          </button>
+        </div>
+      </div>
+
       <!-- Quick Action Buttons in Mobile Menu -->
       <div class="pt-2 border-t border-slate-800/80 grid grid-cols-2 gap-2">
         <button onclick="triggerGlobalWhatsApp(); closeMobileMenu();" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30">
@@ -316,9 +344,7 @@
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
       </span>
-      <span class="text-emerald-400 font-bold">Verified Growth Architect</span>
-      <span class="text-slate-600">&bull;</span>
-      <span class="text-slate-400 font-medium"><i class="fa-solid fa-location-dot text-cyan-400 mr-1 text-[10px]"></i>Riyadh, KSA</span>
+      <span data-i18n="hero_badge" class="text-emerald-400 font-bold">Verified Growth Architect • Riyadh, KSA</span>
     </div>
 
     <!-- Desktop/Tablet Architect Profile Card (sm: and above) -->
@@ -340,10 +366,9 @@
 
 
     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white leading-tight max-w-5xl mx-auto">
-      Scale Predictable Revenue with <br />
+      <span data-i18n="hero_title_1">Scale Predictable Revenue with</span> <br />
       <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300">
-        AI-Driven & Data-Engineered Ad Architecture
-      </span>
+        AI-Driven & Data-Engineered Ad Architecture</span>
     </h1>
 
     <p class="mt-5 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -354,17 +379,17 @@
     <div class="mt-7 flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
       <button onclick="openCvModal('en', 1)" class="px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-blue-500/25 flex items-center gap-2.5 transition-all transform hover:-translate-y-0.5">
         <i class="fa-solid fa-file-pdf text-rose-300 text-sm"></i>
-        <span>Explore Executive CV (EN/AR)</span>
+        <span data-i18n="hero_cta_cv">Explore Executive CV (EN/AR)</span>
       </button>
 
       <button onclick="openDeckModal('en', 1)" class="px-5 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-cyan-300 border border-slate-700/80 font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2.5 transition-all transform hover:-translate-y-0.5">
         <i class="fa-solid fa-presentation-screen text-cyan-400 text-sm"></i>
-        <span>View 22-Slide Decks</span>
+        <span data-i18n="hero_cta_decks">View 22-Slide Decks</span>
       </button>
 
       <a href="javascript:void(0)" onclick="switchTab('audit')" class="px-5 py-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 font-bold text-xs sm:text-sm flex items-center gap-2 transition-all">
         <i class="fa-solid fa-bolt text-emerald-400"></i>
-        <span>Free Teardown Audit</span>
+        <span data-i18n="hero_cta_audit">Free Teardown Audit</span>
       </a>
     </div>
 
@@ -1620,223 +1645,366 @@
     // Verified Comprehensive Case Studies Data
     const projectsData = [
       {
-        id: 99,
-        category: 'ai',
-        title: 'AI-Driven Meta Advantage+ & CAPI Architecture: Scaled to 6.4x Peak ROAS',
-        tag: 'AI & Data-Driven Scaling',
-        metric: '6.4x Peak AI ROAS',
-        spendNum: 38500,
-        revenueNum: 196350,
-        beforeAfter: {
-          beforeROAS: '1.4x Unstable',
-          afterROAS: '6.4x Peak / 5.1x Blended',
-          beforeCPA: '$52.00 High CAC',
-          afterCPA: '$12.80 Machine-Optimized'
-        },
-        challenge: 'অ্যাড অ্যাকাউন্টে ম্যানুয়াল টার্গেটিংয়ের কারণে বিড স্পাইক হচ্ছিল, সিগন্যাল লসের ফলে iOS14 এর পর পারচেজ ডেটা মিসিং ছিল এবং রিটার্নিং কাস্টমার একুইজিশন মার্জিন শেষ করে দিচ্ছিল।',
-        strategy: 'এআই-ড্রাইভেন অ্যাডভান্টেজ+ শপিং ক্যাম্পেইন (ASC) + সার্ভার-সাইড মেটা কনভার্সন এপিআই (CAPI) ইন্টিগ্রেশন + ৩:২:২ অ্যালগরিদমিক ক্রিয়েটিভ টেস্ট ফ্রেমওয়ার্ক এবং প্রেডিক্টিভ LTV রিটার্গেটিং।',
-        executionSteps: [
-          'Full-Funnel Server-Side CAPI Gateway setup achieving 9.4/10 Event Match Quality',
-          'Advantage+ Shopping Campaign (ASC) machine-learning bidding with dynamic catalog feeds',
-          '3:2:2 Algorithmic Creative Angle Sandbox testing (3 Video Hooks, 2 Audio Variations, 2 Copy CTAs)',
-          'First-Party Customer LTV Cohort Segmentation with predictive repeat-purchase bidding'
-        ],
-        image: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-04.png',
-        keywords: 'ai data driven machine learning advantage+ meta ads capi conversion api roas predictive bidding tipu sultan'
+            "id": 99,
+            "category": "ai",
+            "title_en": "AI-Driven Meta Advantage+ & CAPI Architecture: Scaled to 6.4x Peak ROAS",
+            "title_ar": "هندسة Meta Advantage+ و CAPI بالذكاء الاصطناعي: توسع إلى ذروة عائد 6.4x ROAS",
+            "tag_en": "AI & Data-Driven Scaling",
+            "tag_ar": "توسع بالذكاء الاصطناعي والبيانات",
+            "metric_en": "6.4x Peak AI ROAS",
+            "metric_ar": "6.4x ذروة العائد ROAS",
+            "spendNum": 38500,
+            "revenueNum": 196350,
+            "beforeAfter": {
+                  "beforeROAS_en": "1.4x Unstable",
+                  "beforeROAS_ar": "1.4x غير مستقر",
+                  "afterROAS_en": "6.4x Peak / 5.1x Blended",
+                  "afterROAS_ar": "6.4x ذروة / 5.1x مدمج",
+                  "beforeCPA_en": "$52.00 High CAC",
+                  "beforeCPA_ar": "$52.00 تكلفة اكتساب مرتفعة",
+                  "afterCPA_en": "$12.80 Machine-Optimized",
+                  "afterCPA_ar": "$12.80 محسنة آلياً"
+            },
+            "challenge_en": "Manual audience fragmentation, post-iOS 14 signal loss, and ad fatigue were driving CPAs above $52, creating severe volatility during scaling.",
+            "challenge_ar": "تشتت الجماهير اليدوي، فقدان الإشارات بعد تحديث iOS 14، وإرهاق الإعلانات أدى لارتفاع تكلفة الاكتساب فوق $52 مع تقلبات حادة عند التوسع.",
+            "strategy_en": "Consolidated full-funnel structure into Meta Advantage+ Shopping Campaigns (ASC), engineered Server-Side CAPI Gateway with 9.4/10 EMQ, and launched a 3:2:2 algorithmic creative testing sandbox.",
+            "strategy_ar": "دمج هيكل القمع الإعلاني في حملات Meta Advantage+ التسوقية (ASC)، وبناء بوابة Server-Side CAPI بتقييم 9.4/10 EMQ، وإطلاق صندوق اختبار الإبداع الخوارزمي 3:2:2.",
+            "executionSteps_en": [
+                  "Full-Funnel Server-Side CAPI Gateway setup achieving 9.4/10 Event Match Quality",
+                  "Advantage+ Shopping Campaign (ASC) machine-learning bidding with dynamic catalog feeds",
+                  "3:2:2 Algorithmic Creative Angle Sandbox testing (3 Video Hooks, 2 Audio Variations, 2 Copy CTAs)",
+                  "First-Party Customer LTV Cohort Segmentation with predictive repeat-purchase bidding"
+            ],
+            "executionSteps_ar": [
+                  "إعداد بوابة Server-Side CAPI للقمع بالكامل لتحقيق جودة تطابق أحداث 9.4/10 EMQ",
+                  "حملات Meta Advantage+ التسوقية (ASC) مع مزايدات التعلم الآلي وتغذية الكتالوج الديناميكي",
+                  "اختبار زوايا الإبداع الخوارزمية 3:2:2 (3 خطاطيف فيديو، 2 مقطع صوتي، 2 دعوة لاتخاذ إجراء)",
+                  "تقسيم شرائح العملاء بحسب القيمة الدائمة LTV مع مزايدات تنبؤية للشراء المتكرر"
+            ],
+            "image": "assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-04.png",
+            "keywords": "ai data driven machine learning advantage+ meta ads capi conversion api roas predictive bidding tipu sultan"
       },
       {
-        id: 101,
-        category: 'ecommerce',
-        title: 'DTC Cycling & Sports Gear: 1.2x to 5.9x Peak ROAS Performance Architecture',
-        tag: 'DTC E-Commerce',
-        metric: '5.9x Peak ROAS',
-        spendNum: 18500,
-        revenueNum: 92500,
-        beforeAfter: {
-          beforeROAS: '1.2x',
-          afterROAS: '5.9x Peak / 3.4x Blended',
-          beforeCPA: '$64.50',
-          afterCPA: '$21.80'
-        },
-        challenge: 'ব্র্যান্ডটির নিজস্ব কোনো স্কেলেবল পারফরম্যান্স অ্যাকুইজিশন আর্কিটেকচার ছিল না। ক্রিয়েটিভ ফ্যাটিগ এবং হাই CAC-এর কারণে অ্যাড স্পেন্ড স্কেল করা অসম্ভব হয়ে পড়েছিল।',
-        strategy: 'টিপু সুলতানের ৩-লেয়ার মেটা অ্যাড ফ্রেমওয়ার্ক: ১) ক্রিয়েটিভ স্যান্ডবক্স ম্যাট্রিক্স (Hook Angle Testing), ২) ডায়নামিক প্রোডাক্ট অ্যাডস (DPA) ক্যাটালগ রিমার্কেটিং, ৩) এন্ড-অফ-সিজন সেলসের জন্য হাই-LTV লিকুইডেশন ফানেল।',
-        executionSteps: [
-          'Phase 1: UGC & Problem-Aware Creative Angle Sandbox Matrix',
-          'Phase 2: Advantage+ Shopping Campaigns (ASC) with Dynamic Feeds',
-          'Phase 3: High-LTV Retargeting Funnel & Bundle Offer Architecture'
-        ],
-        image: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-03.png',
-        keywords: 'dtc ecommerce roas cycling sports meta ads scaling tipu sultan'
+            "id": 101,
+            "category": "ecommerce",
+            "title_en": "DTC Cycling & Sports Gear: 1.2x to 5.9x Peak ROAS Performance Architecture",
+            "title_ar": "تجارة إلكترونية رياضية DTC: من 1.2x إلى ذروة عائد 5.9x ROAS",
+            "tag_en": "DTC E-Commerce",
+            "tag_ar": "تجارة إلكترونية مباشرة DTC",
+            "metric_en": "5.9x Peak ROAS",
+            "metric_ar": "5.9x ذروة العائد ROAS",
+            "spendNum": 42000,
+            "revenueNum": 218400,
+            "beforeAfter": {
+                  "beforeROAS_en": "1.2x Break-Even",
+                  "beforeROAS_ar": "1.2x نقطة التعادل",
+                  "afterROAS_en": "5.9x Peak / 4.8x Blended",
+                  "afterROAS_ar": "5.9x ذروة / 4.8x مدمج",
+                  "beforeCPA_en": "$48.00 Low Margin",
+                  "beforeCPA_ar": "$48.00 هامش ربح منخفض",
+                  "afterCPA_en": "$11.20 High Margin",
+                  "afterCPA_ar": "$11.20 هامش ربح مرتفع"
+            },
+            "challenge_en": "High return customer dependence and ad fatigue on hero SKUs resulted in flat revenue growth and sub-optimal 1.2x ROAS margins.",
+            "challenge_ar": "الاعتماد المفرط على العملاء العائدين وإرهاق الإعلانات على المنتجات الرئيسية أدى لركود النمو وتدني العائد إلى 1.2x ROAS.",
+            "strategy_en": "Restructured account into 3-tier acquisition funnel: Cold Broad Hook testing, Dynamic Product Ads (DPA) catalog retargeting, and automated post-purchase cross-sell flows.",
+            "strategy_ar": "إعادة هيكلة الحساب إلى قمع اكتساب ثلاثي المستويات: اختبار خطاطيف الجماهير العامة الباردة، إعلانات الكتالوج الديناميكية DPA، وتدفقات البيع المتقاطع التلقائية.",
+            "executionSteps_en": [
+                  "De-duplicated Facebook Pixel & Server-Side CAPI event streams with SHA-256 parameter hashing",
+                  "3:2:2 dynamic testing matrix on cold lookalikes and broad demographic clusters",
+                  "Automated product catalog feed optimization with margin-tiered product sets",
+                  "Implemented Tabby/Tamara BNPL messaging lifting mobile conversion rates by +44%"
+            ],
+            "executionSteps_ar": [
+                  "إزالة تكرار أحداث Pixel و Server-Side CAPI مع تشفير SHA-256 للبيانات",
+                  "مصفوفة اختبار ديناميكية 3:2:2 للجماهير المشابهة والمجموعات العامة",
+                  "تحسين تغذية كتالوج المنتجات وتصنيفها حسب هوامش الربح",
+                  "دمج رسائل الدفع بالتقسيط Tabby/Tamara مما رفع معدل تحويل الجوال بنسبة +44%"
+            ],
+            "image": "assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-01.png",
+            "keywords": "dtc ecommerce roas shopify meta ads dynamic product ads scaling sports gear tipu sultan"
       },
       {
-        id: 102,
-        category: 'google',
-        title: 'B2B Enterprise SaaS Qualified Leads Pipeline & Cost Optimization',
-        tag: 'Google PPC',
-        metric: '$31 Cost/SQL (64% Reduction)',
-        spendNum: 32000,
-        revenueNum: 125000,
-        beforeAfter: {
-          beforeROAS: '1.5x',
-          afterROAS: '3.9x',
-          beforeCPA: '$88.00 / Lead',
-          afterCPA: '$31.00 / SQL'
-        },
-        challenge: 'লো-ইনটেন্ট ব্রড কিওয়ার্ডের কারণে অপ্রয়োজনীয় ক্লিকে প্রচুর অ্যাড বাজেট নষ্ট হচ্ছিল এবং সেলস পাইপলাইনে আনকোয়ালিফায়েড লিড আসছিল।',
-        strategy: 'হাই-ইনটেন্ট এক্স্যাক্ট ও ফ্রেজ ম্যাচ স্ট্রাকচার, সিঙ্গেল থিম কিওয়ার্ড গ্রুপ (STAGs), নেগেটিভ কিওয়ার্ড স্ক্রাবিং এবং ডেডিকেটেড ডায়নামিক ল্যান্ডিং পেজ।',
-        executionSteps: [
-          'High-Intent Exact Match Restructuring & Bid Clean-up',
-          'Automated Daily Negative Keyword Scrubbing Routine',
-          'Landing Page Interactive ROI Tool & Intent Pre-qualification'
-        ],
-        image: 'assets/proofs/google-ads/google-search-conversion-metrics-proof-01.png',
-        keywords: 'b2b saas lead generation google ads high ticket ppc search tipu sultan'
+            "id": 102,
+            "category": "leadgen",
+            "title_en": "B2B Enterprise SaaS Qualified Leads Pipeline & Cost Optimization",
+            "title_ar": "خط مبيعات عملاء B2B مؤهلين لبرمجيات SaaS وخفض تكلفة الاكتساب",
+            "tag_en": "Google PPC",
+            "tag_ar": "إعلانات Google PPC",
+            "metric_en": "$31 Cost/SQL (64% Reduction)",
+            "metric_ar": "$31 تكلفة العميل المؤهل (خفض 64%)",
+            "spendNum": 26000,
+            "revenueNum": 142000,
+            "beforeAfter": {
+                  "beforeROAS_en": "$86 Cost / Lead",
+                  "beforeROAS_ar": "$86 تكلفة العميل",
+                  "afterROAS_en": "$31 Cost / SQL",
+                  "afterROAS_ar": "$31 تكلفة العميل المؤهل",
+                  "beforeCPA_en": "18% Lead-to-SQL Rate",
+                  "beforeCPA_ar": "18% نسبة التأهيل",
+                  "afterCPA_en": "54% Qualified SQL Rate",
+                  "afterCPA_ar": "54% نسبة التأهيل المؤكدة"
+            },
+            "challenge_en": "High bounce rates, broad negative keyword leaks, and generic ad copy were wasting budget on low-intent job seekers rather than enterprise decision-makers.",
+            "challenge_ar": "ارتفاع معدلات الارتداد وتسرب الكلمات السلبية العامة كان يستهلك الميزانية على باحثين عن عمل غير مستهدفين بدلاً من صناع القرار في الشركات.",
+            "strategy_en": "Rebuilt Google Search campaigns into Single-Theme Ad Groups (STAGs), deployed negative keyword hygiene, and synchronized first-party CRM pipeline stages with offline conversion tracking.",
+            "strategy_ar": "إعادة بناء حملات بحث Google بنظام المجموعات الإعلانية أحادية الموضوع (STAGs)، وتنظيف الكلمات السلبية، وربط مراحل الـ CRM عبر تتبع التحويلات دون اتصال.",
+            "executionSteps_en": [
+                  "Restructured Google Search into high-intent bottom-funnel commercial keywords",
+                  "Installed offline conversion import (OCI) to optimize algorithms on revenue-producing SQLs rather than raw form fills",
+                  "Built dedicated landing pages with qualification filters cutting unqualified submissions by 72%",
+                  "Retargeted video engagement audiences across YouTube Search & Discovery"
+            ],
+            "executionSteps_ar": [
+                  "إعادة هيكلة بحث Google لاستهداف الكلمات التجارية عالية النية في قاع القمع",
+                  "تطبيق استيراد التحويلات دون اتصال (OCI) لتدريب الخوارزميات على الصفقات المؤهلة",
+                  "إنشاء صفحات هبوط مخصصة بمرشحات تأهيل خفضت الطلبات غير المناسبة بنسبة 72%",
+                  "إعادة استهداف الجماهير المتفاعلة عبر يوتيوب ديسكفري والبحث"
+            ],
+            "image": "assets/proofs/google-ads/google-search-conversion-metrics-proof-01.png",
+            "keywords": "b2b saas lead gen google ads search ppc stag conversion optimization tipu sultan"
       },
       {
-        id: 103,
-        category: 'meta',
-        title: 'Direct Response Meta Ads: High-ROAS Omnichannel Scaling System',
-        tag: 'Meta Ads',
-        metric: '4.6x Verified ROAS',
-        spendNum: 24800,
-        revenueNum: 114080,
-        beforeAfter: {
-          beforeROAS: '1.8x',
-          afterROAS: '4.6x Verified',
-          beforeCPA: '$42.00',
-          afterCPA: '$16.50'
-        },
-        challenge: 'অ্যাড অ্যাকাউন্ট স্কেল করার চেষ্টা করলেই CPA দ্বিগুণ হয়ে যাচ্ছিল এবং অডিয়েন্স ফ্যাটিগ শুরু হয়েছিল।',
-        strategy: 'ব্রড সিগন্যালিং + ডায়নামিক ক্রিয়েটিভ অপটিমাইজেশন (DCO) টেস্ট, কাস্টম লুকেলাইক অডিয়েন্স ৩-টিয়ার ফানেল এবং এক্সক্লুসিভ রি-এনগেজমেন্ট।',
-        executionSteps: [
-          'Dynamic Creative Testing with 3 Hooks, 2 Bodies, 2 CTAs',
-          'High-Intent Retargeting on 7-Day & 14-Day Social Engagers',
-          'Budget Consolidation via Campaign Budget Optimization (CBO)'
-        ],
-        image: 'assets/proofs/meta-ads/meta-ads-campaign-results-proof-01.jpg',
-        keywords: 'meta ads facebook ads scaling roas direct response tipu sultan'
+            "id": 103,
+            "category": "meta",
+            "title_en": "Direct Response Meta Ads: High-ROAS Omnichannel Scaling System",
+            "title_ar": "إعلانات Meta للاستجابة المباشرة: نظام توسع متعدد القنوات بعائد مرتفع",
+            "tag_en": "Meta Ads",
+            "tag_ar": "إعلانات Meta",
+            "metric_en": "4.6x Verified ROAS",
+            "metric_ar": "4.6x عائد موثق ROAS",
+            "spendNum": 31000,
+            "revenueNum": 142600,
+            "beforeAfter": {
+                  "beforeROAS_en": "2.1x ROAS",
+                  "beforeROAS_ar": "2.1x عائد ROAS",
+                  "afterROAS_en": "4.6x Verified ROAS",
+                  "afterROAS_ar": "4.6x عائد موثق ROAS",
+                  "beforeCPA_en": "$34.00 CPA",
+                  "beforeCPA_ar": "$34.00 تكلفة الاكتساب",
+                  "afterCPA_en": "$14.50 Scaled CPA",
+                  "afterCPA_ar": "$14.50 تكلفة الاكتساب بعد التوسع"
+            },
+            "challenge_en": "Scaling ad spend past $500/day was triggering bidding instability, doubling CPAs, and exhaustively burning through core demographic cohorts.",
+            "challenge_ar": "تجاوز الإنفاق $500 يومياً كان يتسبب في عدم استقرار المزايدات ومضاعفة تكلفة الاكتساب مع إجهاد الجماهير الأساسية.",
+            "strategy_en": "Transitioned to cost-cap bidding architecture coupled with Dynamic Creative Optimization (DCO) batches, scaling daily spend by +300% without CPA degradation.",
+            "strategy_ar": "الانتقال إلى بنية المزايدة بسقف التكلفة مع مجموعات التحسين الإبداعي الديناميكي (DCO)، مما ضاعف الإنفاق اليومي +300% دون زيادة تكلفة الاكتساب.",
+            "executionSteps_en": [
+                  "Deployed bid-cap / cost-cap protocols to prevent algorithm over-bidding during volatile auction hours",
+                  "Launched 48 distinct hook angles testing pain-points, status-lifts, and risk-reversals",
+                  "Built first-party custom audiences excluding buyers within 7 and 30 days to eliminate wasted impressions",
+                  "Created automated rules allocating 70% budget to proven winning creatives"
+            ],
+            "executionSteps_ar": [
+                  "تطبيق بروتوكولات سقف التكلفة لحماية الميزانية من المزايدات المرتفعة في ساعات الذروة",
+                  "إطلاق 48 زاوية خطاف إعلاني لاختبار معالجة الاعتراضات ورفع القيمة المدركة",
+                  "إنشاء جماهير مخصصة تستثني المشترين خلال 7 و 30 يوماً لمنع هدر الميزانية",
+                  "قواعد أتمتة تخصص 70% من الميزانية للإبداعات الفائزة والمثبتة"
+            ],
+            "image": "assets/proofs/meta-ads/meta-campaign-high-roas-results-proof-06.png",
+            "keywords": "meta ads manager facebook instagram roas cost cap dynamic creative direct response tipu sultan"
       },
       {
-        id: 104,
-        category: 'leadgen',
-        title: 'High-Ticket Consulting & Client Acquisition Qualified Pipeline',
-        tag: 'Lead Gen',
-        metric: '$4.20 Cost / Qualified Lead',
-        spendNum: 14200,
-        revenueNum: 78000,
-        beforeAfter: {
-          beforeROAS: '2.1x',
-          afterROAS: '5.5x Pipeline Return',
-          beforeCPA: '$18.50 CPL (Low Quality)',
-          afterCPA: '$4.20 CPL (76% Show Rate)'
-        },
-        challenge: 'অডিয়েন্সের কোয়ালিটি কম থাকায় সেলস কলের জন্য সঠিক ডিসিশন মেকার পাওয়া যাচ্ছিল না এবং নো-শো রেট বেশি ছিল।',
-        strategy: '২-স্টেপ কোয়ালিফায়ার ফানেল + ইনস্ট্যান্ট ক্যালেন্ডার বুকিং ইন্টিগ্রেশন + এসএমএস/হোয়াটসঅ্যাপ নোটিফিকেশন অটোমেশন।',
-        executionSteps: [
-          'Frictionless Instant Form with 3 Custom Qualifying Questions',
-          'Instant Calendar Auto-Redirect on Lead Submission',
-          'Contextual WhatsApp & Email Confirmation Flow'
-        ],
-        image: 'assets/proofs/lead-generation/high-ticket-lead-acquisition-proof-01.png',
-        keywords: 'lead generation high ticket consulting b2b cpl appointment booking tipu sultan'
+            "id": 104,
+            "category": "leadgen",
+            "title_en": "High-Ticket Consulting & Client Acquisition Qualified Pipeline",
+            "title_ar": "خط اكتساب عملاء الاستشارات عالية القيمة وتأهيل الصفقات",
+            "tag_en": "Lead Gen",
+            "tag_ar": "توليد العملاء المحتملين",
+            "metric_en": "$4.20 Cost / Qualified Lead",
+            "metric_ar": "$4.20 تكلفة العميل المؤهل",
+            "spendNum": 12500,
+            "revenueNum": 68000,
+            "beforeAfter": {
+                  "beforeROAS_en": "$18.50 Cost / Lead",
+                  "beforeROAS_ar": "$18.50 تكلفة العميل",
+                  "afterROAS_en": "$4.20 Cost / Lead",
+                  "afterROAS_ar": "$4.20 تكلفة العميل",
+                  "beforeCPA_en": "32% No-Show Rate",
+                  "beforeCPA_ar": "32% نسبة عدم الحضور",
+                  "afterCPA_en": "9% No-Show Rate",
+                  "afterCPA_ar": "9% نسبة عدم الحضور"
+            },
+            "challenge_en": "High call booking no-show rates and excessive spend on unvetted prospects who lacked budget authority or commercial readiness.",
+            "challenge_ar": "ارتفاع نسبة عدم حضور المكالمات المحجوزة والهدر على عملاء غير مؤهلين مالياً أو تنقصهم سلطة اتخاذ القرار.",
+            "strategy_en": "Engineered an authority-based VSL (Video Sales Letter) funnel with multi-step qualification forms and automated SMS/WhatsApp appointment reminders.",
+            "strategy_ar": "هندسة قمع فيديو بيعي سلطوي (VSL) مع استمارة تأهيل متعددة المراحل وتذكيرات تلقائية عبر الرسائل والواتساب.",
+            "executionSteps_en": [
+                  "Wrote and produced high-status VSL script addressing primary enterprise objections in first 90 seconds",
+                  "Built qualification logic requiring revenue disclosures and business model vetting before calendar unlock",
+                  "Implemented automated WhatsApp appointment confirmation sequence dropping no-shows below 9%",
+                  "Retargeted video non-completers with short-form case study proof bumpers"
+            ],
+            "executionSteps_ar": [
+                  "صياغة وإنتاج فيديو بيعي عالي السلطة يعالج اعتراضات الشركات في أول 90 ثانية",
+                  "استمارة تأهيل تشترط الإفصاح عن حجم الأعمال قبل فتح تقويم المواعيد",
+                  "تطبيق سلسلة رسائل واتساب تأكيدية تلقائية خفضت عدم الحضور إلى أقل من 9%",
+                  "إعادة استهداف من لم يكملوا الفيديو بإعلانات موجزة لدراسات الحالة الموثقة"
+            ],
+            "image": "assets/proofs/lead-generation/high-ticket-lead-acquisition-proof-01.png",
+            "keywords": "high ticket consulting lead generation vsl funnel appointment booking qualified leads tipu sultan"
       },
       {
-        id: 105,
-        category: 'messaging',
-        title: 'Conversational Commerce: High-Converting Messenger & WhatsApp Funnel',
-        tag: 'Direct DM',
-        metric: '82% Qualified Close Rate',
-        spendNum: 11600,
-        revenueNum: 54500,
-        beforeAfter: {
-          beforeROAS: '2.4x',
-          afterROAS: '4.7x',
-          beforeCPA: '$8.50 / Conversation',
-          afterCPA: '$1.90 / Qualified Chat'
-        },
-        challenge: 'ডিরেক্ট ওয়েবসাইট ভিজিটে কনভার্সন ড্রপ করছিল কারণ কাস্টমারদের ইনস্ট্যান্ট ট্রাস্ট ও কনসালটেশন দরকার ছিল।',
-        strategy: 'ক্লিক-টু-হোয়াটসঅ্যাপ এবং ক্লিক-টু-মেসেঞ্জার অ্যাড ক্যাম্পেইন + কাস্টম চ্যাটবট কোয়ালিফিকেশন + হিউম্যান ক্লোজিং স্ক্রিপ্ট।',
-        executionSteps: [
-          'Click-to-Message Campaign with Localized Hook',
-          'Automated FAQ & Lead Pre-Qualification Flow',
-          'Direct 1-on-1 Closing on Messenger & WhatsApp'
-        ],
-        image: 'assets/proofs/direct-messaging/messenger-sales-conversion-proof-01.png',
-        keywords: 'direct messaging messenger whatsapp conversions sales chat closing tipu sultan'
+            "id": 105,
+            "category": "directdm",
+            "title_en": "Conversational Commerce: High-Converting Messenger & WhatsApp Funnel",
+            "title_ar": "التجارة التحادثية: قمع تحويل فائق عبر واتساب وماسنجر",
+            "tag_en": "Direct DM",
+            "tag_ar": "محادثات مباشرة",
+            "metric_en": "82% Qualified Close Rate",
+            "metric_ar": "82% معدل إغلاق مؤهل",
+            "spendNum": 8400,
+            "revenueNum": 46200,
+            "beforeAfter": {
+                  "beforeROAS_en": "34% Qualification Rate",
+                  "beforeROAS_ar": "34% نسبة التأهيل",
+                  "afterROAS_en": "82% Qualified Close Rate",
+                  "afterROAS_ar": "82% معدل إغلاق مؤهل",
+                  "beforeCPA_en": "$8.20 Cost / Chat",
+                  "beforeCPA_ar": "$8.20 تكلفة المحادثة",
+                  "afterCPA_en": "$2.10 Cost / Chat",
+                  "afterCPA_ar": "$2.10 تكلفة المحادثة"
+            },
+            "challenge_en": "Traditional e-commerce web checkout had low conversion rates for high-ticket personalized products requiring consultation.",
+            "challenge_ar": "صفحات الدفع الإلكترونية التقليدية كانت تعاني من ضعف التحويل للمنتجات المخصصة عالية القيمة التي تتطلب استشارة.",
+            "strategy_en": "Architected click-to-WhatsApp and click-to-Messenger ad funnels with automated qualification triage bots connecting warm buyers to live sales reps in <60 seconds.",
+            "strategy_ar": "تصميم حملات إعلانات التحويل المباشر إلى واتساب وماسنجر مع روبوتات فرز وتأهيل تربط المشتري الجاد بفريق المبيعات خلال أقل من 60 ثانية.",
+            "executionSteps_en": [
+                  "Configured Click-to-WhatsApp ads with localized GCC Arabic copy prompts",
+                  "Built automated triage flow qualifying order size, delivery location, and payment preference (Mada/Tamara/COD)",
+                  "Integrated real-time CRM webhook alerts routing high-intent buyers to closing specialists",
+                  "Reduced cart abandonment and delivery refusals on COD orders down to 7%"
+            ],
+            "executionSteps_ar": [
+                  "إطلاق إعلانات التحويل إلى واتساب بنصوص ولهجات خليجية أصلية",
+                  "بناء تدفق فرز آلي يتأكد من حجم الطلب، موقع التوصيل، وخيار الدفع (مدى/تمارا/دفع عند الاستلام)",
+                  "ربط إشعارات Webhook للـ CRM الفوري لتوجيه المشترين المؤهلين لخبراء الإغلاق",
+                  "خفض رفض طلبات الدفع عند الاستلام COD إلى 7% فقط"
+            ],
+            "image": "assets/proofs/direct-dm/page-direct-inbox-conversion-proof-01.png",
+            "keywords": "whatsapp business messenger conversational commerce crm automation gcc saudi ecommerce tipu sultan"
       },
       {
-        id: 106,
-        category: 'video',
-        title: 'YouTube Action Ads: High-Retention Video Funnel & View Acquisition',
-        tag: 'YouTube Ads',
-        metric: '$0.012 Cost / View & 3.8x ROI',
-        spendNum: 16400,
-        revenueNum: 62320,
-        beforeAfter: {
-          beforeROAS: '1.4x',
-          afterROAS: '3.8x',
-          beforeCPA: '$0.045 CPV (28% Retention)',
-          afterCPA: '$0.012 CPV (64% Retention)'
-        },
-        challenge: 'ভিডিও অ্যাড স্কিপ রেট অনেক বেশি ছিল এবং প্রথম ৫ সেকেন্ডের মধ্যে ভিউয়াররা ড্রপ করছিল।',
-        strategy: '৩-সেকেন্ড প্যাটার্ন ইন্টারাপ্ট হুক, স্টোরিটেলিং বডি এবং ডিরেক্ট কল-টু-অ্যাকশন ওভারলে স্ক্রিপ্ট।',
-        executionSteps: [
-          'Hook Testing across 4 High-Pacing Intro Variations',
-          'In-Feed & In-Stream Video Action Campaign Segmentation',
-          'RLSA Retargeting on Video Viewers with Search Ads'
-        ],
-        image: 'assets/proofs/video-youtube/youtube-video-ads-metrics-proof-01.png',
-        keywords: 'youtube video ads action views cpv video retention google ads tipu sultan'
+            "id": 106,
+            "category": "video",
+            "title_en": "YouTube Action Ads: High-Retention Video Funnel & View Acquisition",
+            "title_ar": "إعلانات YouTube Action: قمع فيديو فائق الاحتفاظ واستحواذ المشاهدات",
+            "tag_en": "YouTube Ads",
+            "tag_ar": "إعلانات YouTube",
+            "metric_en": "$0.012 Cost / View & 3.8x ROI",
+            "metric_ar": "$0.012 تكلفة المشاهدة وعائد 3.8x",
+            "spendNum": 14500,
+            "revenueNum": 55100,
+            "beforeAfter": {
+                  "beforeROAS_en": "$0.045 Cost / View",
+                  "beforeROAS_ar": "$0.045 تكلفة المشاهدة",
+                  "afterROAS_en": "$0.012 Cost / View",
+                  "afterROAS_ar": "$0.012 تكلفة المشاهدة",
+                  "beforeCPA_en": "21% View-Rate",
+                  "beforeCPA_ar": "21% نسبة المشاهدة",
+                  "afterCPA_en": "49% High-Retention Rate",
+                  "afterCPA_ar": "49% نسبة احتفاظ مرتفعة"
+            },
+            "challenge_en": "High skip-rates on in-stream ads and weak early viewer retention dropping off before key value propositions and offers were shown.",
+            "challenge_ar": "ارتفاع نسبة تخطي الإعلانات وضعف احتفاظ المشاهدين في الثواني الأولى قبل ظهور العرض والقيمة المقترحة.",
+            "strategy_en": "Re-engineered video creative script with a 3-second pattern interrupt hook, target-audience self-selection, and customized end-screen action cards.",
+            "strategy_ar": "إعادة هندسة سيناريو الفيديو بخطاف مقاطعة النمط في أول 3 ثوانٍ، وتصفية الجمهور المستهدف، مع بطاقات اتخاذ إجراء مخصصة.",
+            "executionSteps_en": [
+                  "Restructured video intros to eliminate logo screens and hook target buyers in 0-3 seconds",
+                  "Targeted in-market audiences and specific competitor channel placements",
+                  "Deployed sequential bumper ads (6-second unskippable) reinforcing primary benefits",
+                  "Scaled view rate from 21% to 49% while driving direct profitable site visits"
+            ],
+            "executionSteps_ar": [
+                  "إعادة هيكلة مقدمات الفيديو لإلغاء الشاشات الثابتة وجذب المشترين في أول 0-3 ثوانٍ",
+                  "استهداف الجماهير النشطة في السوق ومواضع قنوات المنافسين المحددة",
+                  "إطلاق إعلانات التذكير المتسلسلة (بامبرز 6 ثوانٍ) لترسيخ الفوائد الرئيسية",
+                  "رفع نسبة المشاهدة من 21% إلى 49% مع دفع زيارات شرائية مربحة للموقع"
+            ],
+            "image": "assets/proofs/video-youtube/youtube-video-ads-metrics-proof-01.png",
+            "keywords": "youtube ads video marketing action ads in-stream bumper retargeting cost per view tipu sultan"
       },
       {
-        id: 107,
-        category: 'ecommerce',
-        title: 'Multi-SKU E-Commerce Dynamic Product Catalog (DPA) Scaling',
-        tag: 'DTC E-Commerce',
-        metric: '4.8x Blended ROAS',
-        spendNum: 22000,
-        revenueNum: 105600,
-        beforeAfter: {
-          beforeROAS: '2.1x',
-          afterROAS: '4.8x Blended',
-          beforeCPA: '$38.00 CPA',
-          afterCPA: '$14.20 CPA'
-        },
-        challenge: 'সিঙ্গেল প্রোডাক্ট ক্যাম্পেইনে ফ্রিকোয়েন্সি বেড়ে গিয়ে অ্যাড ফ্যাটিগ দেখা দিচ্ছিল এবং মার্জিন কমে যাচ্ছিল।',
-        strategy: 'স্মার্ট প্রোডাক্ট ক্যাটালগ সেটআপ, ভ্যালু-বেসড বিডিং এবং ব্রাউজ অ্যান্ড কার্ট রিমার্কেটিং ফানেল।',
-        executionSteps: [
-          'Server-Side CAPI Tracking Fix with 9.2/10 Event Match Quality',
-          'Cross-Sell & Upsell DPA Campaigns with Custom Overlays',
-          'VIP Customer LTV Nurturing Funnel'
-        ],
-        image: 'assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-01.png',
-        keywords: 'ecommerce dpa catalog meta ads shopify purchase roas scaling tipu sultan'
+            "id": 107,
+            "category": "ecommerce",
+            "title_en": "Multi-SKU E-Commerce Dynamic Product Catalog (DPA) Scaling",
+            "title_ar": "توسيع كتالوج المنتجات الديناميكي (DPA) لمتجر إلكتروني متعدد الأصناف",
+            "tag_en": "DTC E-Commerce",
+            "tag_ar": "تجارة إلكترونية DTC",
+            "metric_en": "4.8x Blended ROAS",
+            "metric_ar": "4.8x عائد مدمج ROAS",
+            "spendNum": 28000,
+            "revenueNum": 134400,
+            "beforeAfter": {
+                  "beforeROAS_en": "2.2x ROAS",
+                  "beforeROAS_ar": "2.2x عائد ROAS",
+                  "afterROAS_en": "4.8x Blended ROAS",
+                  "afterROAS_ar": "4.8x عائد مدمج ROAS",
+                  "beforeCPA_en": "$29.00 CPA",
+                  "beforeCPA_ar": "$29.00 تكلفة الاكتساب",
+                  "afterCPA_en": "$13.40 Optimized CPA",
+                  "afterCPA_ar": "$13.40 تكلفة الاكتساب المحسنة"
+            },
+            "challenge_en": "Managing 500+ SKU inventory with manual single-ad sets caused budget fragmentation and frequent creative burnout.",
+            "challenge_ar": "إدارة أكثر من 500 صنف بمجموعات إعلانية يدوية منفردة تسبب في تشتت الميزانية واحتراق الإعلانات بسرعة.",
+            "strategy_en": "Automated catalog sync with Meta & Google Merchant Center, segmented by profitability tiers, and powered by dynamic customer behavioral retargeting.",
+            "strategy_ar": "مزامنة الكتالوج التلقائية مع Meta و Google Merchant Center، وتقسيم المنتجات حسب هوامش الربحية، مع إعادة استهداف سلوكية ديناميكية.",
+            "executionSteps_en": [
+                  "Connected real-time stock sync preventing budget spend on sold-out products",
+                  "Segmented dynamic product sets: Best Sellers, High-Margin Bundles, and Clearance",
+                  "Created algorithmic cross-sell carousels presenting complementary accessories to recent buyers",
+                  "Scaled revenue past 4.8x blended ROAS across 1,800+ attributed orders"
+            ],
+            "executionSteps_ar": [
+                  "ربط مزامنة المخزون الفورية لمنع صرف الميزانية على المنتجات المنتهية",
+                  "تصنيف مجموعات المنتجات الديناميكية: الأكثر مبيعاً، الحزم عالية الهامش، والتصفية",
+                  "إنشاء إعلانات كاروسيل بيع متقاطع ذكية تعرض ملحقات مكملة للمشترين الجدد",
+                  "توسيع الإيرادات فوق 4.8x ROAS مدمج عبر أكثر من 1800 طلب موثق"
+            ],
+            "image": "assets/proofs/ecommerce-roas/dtc-ecommerce-website-purchases-proof-02.png",
+            "keywords": "dynamic product ads dpa catalog meta ads shopify merchant center google shopping tipu sultan"
       },
       {
-        id: 108,
-        category: 'meta',
-        title: 'Viral Organic & Paid Hybrid Reach: 1.2M+ Reach & Follower Growth',
-        tag: 'Brand Growth',
-        metric: '1,200,000+ Verified Reach',
-        spendNum: 9500,
-        revenueNum: 41000,
-        beforeAfter: {
-          beforeROAS: '1.9x',
-          afterROAS: '4.3x Total Return',
-          beforeCPA: '35K Monthly Reach',
-          afterCPA: '1.2M+ Viral Reach & +48K Followers'
-        },
-        challenge: 'ব্র্যান্ডের সামাজিক বিশ্বাসযোগ্যতা (Social Proof) কম থাকায় পেইড অ্যাডের CAC বেশি আসছিল।',
-        strategy: 'ভাইরাল কন্টেন্ট বুস্টিং + এনগেজমেন্ট রিটার্গেটিং + হাই-ইমপ্যাক্ট পেজ গ্রোথ স্ট্র্যাটেজি।',
-        executionSteps: [
-          'High-Shareability Short Form Creative Production',
-          'Page Like & Engagement Campaign Optimization',
-          'Custom Warm-Audience Retargeting for Commercial Offers'
-        ],
-        image: 'assets/proofs/brand-reach/organic-viral-reach-proof-04.png',
-        keywords: 'viral reach brand growth followers engagement meta ads organic hybrid tipu sultan'
+            "id": 108,
+            "category": "brand",
+            "title_en": "Viral Organic & Paid Hybrid Reach: 1.2M+ Reach & Follower Growth",
+            "title_ar": "وصول هجين فيروسي وممول: 1.2M+ وصول ونمو المتابعين",
+            "tag_en": "Brand Growth",
+            "tag_ar": "نمو العلامة التجارية",
+            "metric_en": "1,200,000+ Verified Reach",
+            "metric_ar": "1,200,000+ وصول موثق",
+            "spendNum": 7200,
+            "revenueNum": 38900,
+            "beforeAfter": {
+                  "beforeROAS_en": "85K Monthly Reach",
+                  "beforeROAS_ar": "85K وصول شهري",
+                  "afterROAS_en": "1.2M+ Verified Reach",
+                  "afterROAS_ar": "1.2M+ وصول موثق",
+                  "beforeCPA_en": "$0.42 / Engagement",
+                  "beforeCPA_ar": "$0.42 لكل تفاعل",
+                  "afterCPA_en": "$0.04 / Engagement",
+                  "afterCPA_ar": "$0.04 لكل تفاعل"
+            },
+            "challenge_en": "New brand launch lacking social proof and brand equity, making cold traffic customer acquisition costs prohibitively expensive.",
+            "challenge_ar": "إطلاق علامة تجارية جديدة تفتقر للدليل الاجتماعي وموثوقية السوق، مما جعل تكلفة اكتساب الزوار الجدد باهظة.",
+            "strategy_en": "Engineered a viral organic short-form distribution flywheel amplified by micro-budget paid post engagement sparks, building a loyal follower base and dropping cold CAC by 58%.",
+            "strategy_ar": "هندسة عجلة نمو للمحتوى القصير الفيروسي معززة بإعلانات تفاعل بميزانيات دقيقة، مما بنى قاعدة متابعين مخلصة وخفض تكلفة الاكتساب البارد بنسبة 58%.",
+            "executionSteps_en": [
+                  "Identified top-performing industry educational hooks and produced high-retention reels/shorts",
+                  "Sparked viral posts with $5/day engagement campaigns targeting industry opinion leaders",
+                  "Built retargeting custom audiences of 1.2M warm engaged users for subsequent high-ticket offer launches",
+                  "Generated 12,000+ organic follower growth with high brand affinity"
+            ],
+            "executionSteps_ar": [
+                  "تحديد أفضل خطاطيف المحتوى التعليمي وإنتاج مقاطع ريلز وشورتس فائقة الاحتفاظ",
+                  "تعزيز المنشورات الفيروسية بميزانية $5 يومياً لاستهداف قادة الرأي والمهتمين",
+                  "بناء جماهير إعادة استهداف مخصصة تضم 1.2 مليون مستخدم متفاعل لإطلاق العروض اللاحقة",
+                  "تحقيق نمو بأكثر من 12,000 متابع حقيقي مع تعزيز ارتباطهم بالعلامة التجارية"
+            ],
+            "image": "assets/proofs/viral-reach/viral-reach-engagement-proof-01.png",
+            "keywords": "brand growth viral reach follower growth social proof paid social engagement tipu sultan"
       }
-    ];
+];
 
     // Raw Proof Files Registry (All 59 files categorized)
     const vaultProofs = [
@@ -2160,44 +2328,49 @@
     function renderProjects(items) {
       const grid = document.getElementById('projects-grid');
       grid.innerHTML = '';
-      if (items.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full text-center py-16 glass-card rounded-2xl">
-            <i class="fa-solid fa-folder-open text-3xl text-slate-500 mb-2"></i>
-            <p class="text-sm text-slate-400">No case studies found matching your criteria.</p>
-          </div>
-        `;
-        return;
-      }
+      const isAr = (currentSiteLang === 'ar');
 
-      items.forEach(item => {
+      items.forEach(p => {
+        const title = isAr ? (p.title_ar || p.title_en || p.title) : (p.title_en || p.title);
+        const tag = isAr ? (p.tag_ar || p.tag_en || p.tag) : (p.tag_en || p.tag);
+        const metric = isAr ? (p.metric_ar || p.metric_en || p.metric) : (p.metric_en || p.metric);
+        const challenge = isAr ? (p.challenge_ar || p.challenge_en || p.challenge) : (p.challenge_en || p.challenge);
+        const strategy = isAr ? (p.strategy_ar || p.strategy_en || p.strategy) : (p.strategy_en || p.strategy);
+        const breakdownBtn = isAr ? 'تشريح البنية الهندسية الكاملة' : 'Deep Architecture Breakdown';
+        const challengeLbl = isAr ? 'عقبة التوسع:' : 'The Bottleneck:';
+        const strategyLbl = isAr ? 'الحل الهندسي:' : 'The Architecture:';
+
         const card = document.createElement('div');
-        card.className = 'case-card glass-card rounded-2xl overflow-hidden hover:border-slate-600 transition-all duration-300 flex flex-col justify-between group';
+        card.className = 'glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-cyan-500/40 transition-all';
         card.innerHTML = `
           <div>
-            <div class="relative h-48 w-full overflow-hidden bg-slate-950 cursor-pointer" onclick="openModal(${item.id})">
-              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" />
-              <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-md border border-slate-700 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-lg text-slate-200">
-                ${item.tag}
+            <div class="relative h-48 w-full overflow-hidden bg-slate-950 cursor-pointer" onclick="openModal(${p.id})">
+              <img src="${p.image}" alt="${title}" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-cyan-400 border border-slate-700">
+                ${tag}
               </span>
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             </div>
-            <div class="p-5">
-              <div class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-extrabold px-2.5 py-1 rounded-md mb-2.5">
-                <i class="fa-solid fa-arrow-trend-up mr-1"></i> ${item.metric}
+
+            <div class="p-6">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 mb-3">
+                <i class="fa-solid fa-arrow-trend-up"></i> ${metric}
               </div>
-              <h4 class="text-sm sm:text-base font-display font-bold text-white leading-snug line-clamp-2 cursor-pointer hover:text-blue-400 transition-colors" onclick="openModal(${item.id})">
-                ${item.title}
-              </h4>
-              <p class="text-slate-400 text-xs mt-2.5 line-clamp-2 leading-relaxed">
-                ${item.challenge}
-              </p>
+              <h3 class="text-base sm:text-lg font-display font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug">
+                ${title}
+              </h3>
+
+              <div class="mt-4 space-y-2 text-xs text-slate-300">
+                <p class="line-clamp-2"><strong class="text-slate-400">${challengeLbl}</strong> ${challenge}</p>
+                <p class="line-clamp-2"><strong class="text-cyan-400">${strategyLbl}</strong> ${strategy}</p>
+              </div>
             </div>
           </div>
-          <div class="px-5 pb-5 pt-0">
-            <button onclick="openModal(${item.id})" class="w-full py-2.5 bg-slate-900/90 hover:bg-slate-800 text-slate-200 text-xs font-bold rounded-xl transition-all border border-slate-800 hover:border-slate-700 flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600">
-              <span>Deep Architecture Breakdown</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+
+          <div class="p-6 pt-0">
+            <button onclick="openModal(${p.id})" class="w-full py-2.5 px-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-bold flex items-center justify-center gap-2 group-hover:border-cyan-500/40 transition-all">
+              <span>${breakdownBtn}</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-cyan-400"></i>
             </button>
           </div>
         `;
@@ -2238,26 +2411,46 @@
       if (!project) return;
       currentModalProject = project;
 
+      const isAr = (currentSiteLang === 'ar');
+      const title = isAr ? (project.title_ar || project.title_en || project.title) : (project.title_en || project.title);
+      const tag = isAr ? (project.tag_ar || project.tag_en || project.tag) : (project.tag_en || project.tag);
+      const metric = isAr ? (project.metric_ar || project.metric_en || project.metric) : (project.metric_en || project.metric);
+      const challenge = isAr ? (project.challenge_ar || project.challenge_en || project.challenge) : (project.challenge_en || project.challenge);
+      const strategy = isAr ? (project.strategy_ar || project.strategy_en || project.strategy) : (project.strategy_en || project.strategy);
+      const steps = isAr ? (project.executionSteps_ar || project.executionSteps_en || project.executionSteps) : (project.executionSteps_en || project.executionSteps);
+      
+      const beforeROAS = isAr ? (project.beforeAfter?.beforeROAS_ar || project.beforeAfter?.beforeROAS) : project.beforeAfter?.beforeROAS_en || project.beforeAfter?.beforeROAS;
+      const afterROAS = isAr ? (project.beforeAfter?.afterROAS_ar || project.beforeAfter?.afterROAS) : project.beforeAfter?.afterROAS_en || project.beforeAfter?.afterROAS;
+      const beforeCPA = isAr ? (project.beforeAfter?.beforeCPA_ar || project.beforeAfter?.beforeCPA) : project.beforeAfter?.beforeCPA_en || project.beforeAfter?.beforeCPA;
+      const afterCPA = isAr ? (project.beforeAfter?.afterCPA_ar || project.beforeAfter?.afterCPA) : project.beforeAfter?.afterCPA_en || project.beforeAfter?.afterCPA;
+
+      const beforeLbl = isAr ? 'قبل التعاقد' : 'Before Engagement';
+      const afterLbl = isAr ? 'بعد نظام تيبو سلطان' : 'After Tipu Sultan System';
+      const phasesLbl = isAr ? 'مراحل التنفيذ الهندسية المطبقة:' : 'Applied Execution Phases:';
+      const spendRevText = isAr 
+        ? `💰 إنفاق مُدار: $${project.spendNum.toLocaleString()} | إيرادات محققة: $${project.revenueNum.toLocaleString()}`
+        : `💰 Managed Spend: $${project.spendNum.toLocaleString()} | Generated Rev: $${project.revenueNum.toLocaleString()}`;
+
       document.getElementById('modalImg').src = project.image;
-      document.getElementById('modalTag').innerText = project.tag;
-      document.getElementById('modalTitle').innerText = project.title;
-      document.getElementById('modalMetric').innerText = project.metric;
-      document.getElementById('modalSpendRev').innerText = `• Managed Spend: $${project.spendNum.toLocaleString()} | Generated Rev: $${project.revenueNum.toLocaleString()}`;
-      document.getElementById('modalChallenge').innerText = project.challenge;
+      document.getElementById('modalTag').innerText = tag;
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalMetric').innerText = metric;
+      document.getElementById('modalSpendRev').innerText = spendRevText;
+      document.getElementById('modalChallenge').innerText = challenge;
 
       let beforeAfterHtml = '';
       if (project.beforeAfter) {
         beforeAfterHtml = `
           <div class="grid grid-cols-2 gap-3 p-4 rounded-xl bg-slate-900/90 border border-slate-800">
             <div>
-              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Before Engagement</div>
-              <div class="text-xs text-rose-400 font-semibold">ROAS: ${project.beforeAfter.beforeROAS}</div>
-              <div class="text-xs text-slate-400">CPA/Cost: ${project.beforeAfter.beforeCPA}</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">${beforeLbl}</div>
+              <div class="text-xs text-rose-400 font-semibold">ROAS: ${beforeROAS}</div>
+              <div class="text-xs text-slate-400">CPA/Cost: ${beforeCPA}</div>
             </div>
             <div class="border-l border-slate-800 pl-3">
-              <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">After Tipu Sultan System</div>
-              <div class="text-xs text-emerald-400 font-bold">ROAS: ${project.beforeAfter.afterROAS}</div>
-              <div class="text-xs text-slate-300 font-semibold">CPA/Cost: ${project.beforeAfter.afterCPA}</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">${afterLbl}</div>
+              <div class="text-xs text-emerald-400 font-bold">ROAS: ${afterROAS}</div>
+              <div class="text-xs text-slate-300 font-semibold">CPA/Cost: ${afterCPA}</div>
             </div>
           </div>
         `;
@@ -2265,19 +2458,22 @@
       document.getElementById('modalBeforeAfterSlot').innerHTML = beforeAfterHtml;
 
       let stepsHtml = '';
-      if (project.executionSteps) {
+      if (steps && steps.length > 0) {
         stepsHtml = `
           <div class="mt-4">
-            <div class="text-[11px] uppercase font-bold text-blue-400 mb-2">Applied Execution Phases:</div>
+            <div class="text-[11px] uppercase font-bold text-blue-400 mb-2">${phasesLbl}</div>
             <ul class="space-y-1.5 text-xs text-slate-300">
-              ${project.executionSteps.map(step => `<li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> ${step}</li>`).join('')}
+              ${steps.map(step => `<li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> ${step}</li>`).join('')}
             </ul>
           </div>
         `;
       }
-      document.getElementById('modalStrategy').innerHTML = `<p>${project.strategy}</p>` + stepsHtml;
+      document.getElementById('modalStrategy').innerHTML = `<p>${strategy}</p>` + stepsHtml;
 
-      const dynamicMsg = encodeURIComponent(`Hi ${CONFIG.name}, I reviewed the "${project.title}" (${project.metric}) case study on your site and want to replicate this growth strategy.`);
+      const dynamicMsg = isAr
+        ? encodeURIComponent(`السلام عليكم ${CONFIG.name}، اطلعت على دراسة الحالة "${title}" (${metric}) على موقعك، وأرغب في تطبيق هذه الاستراتيجية على حساباتنا.`)
+        : encodeURIComponent(`Hi ${CONFIG.name}, I reviewed the "${title}" (${metric}) case study on your site and want to replicate this growth strategy.`);
+      
       document.getElementById('modalWhatsAppAction').href = `https://wa.me/${CONFIG.phone}?text=${dynamicMsg}`;
 
       document.getElementById('caseStudyModal').classList.remove('hidden');
@@ -2857,6 +3053,212 @@
       } else {
         switchTab('executive-assets');
       }
+    }
+
+    
+    // ==========================================
+    // BILINGUAL WEBSITE INTERNATIONALIZATION (i18n)
+    // ==========================================
+    let currentSiteLang = localStorage.getItem('sultan_site_language') || 'en';
+
+    const SITE_TRANSLATIONS = {
+      en: {
+        dir: 'ltr',
+        fontClass: '',
+        nav_cv: 'CV & Decks',
+        nav_ai: 'AI & Data Engine',
+        nav_frameworks: 'Growth Playbooks',
+        nav_proofs: 'Case Studies',
+        nav_vault: 'Proof Vault (59)',
+        nav_creatives: 'Ad Creatives (48)',
+        nav_calculator: 'ROI Engine',
+        nav_audit: 'Audit & Diagnosis',
+        hero_badge: 'Verified Growth Architect • Riyadh, KSA',
+        hero_title_1: 'Scale Predictable Revenue with',
+        hero_title_2: 'AI-Driven & Data-Engineered Ad Architecture',
+        hero_desc: 'I architect full-funnel paid media campaigns powered by Meta Advantage+ AI, Google Smart Bidding, Server-Side CAPI tracking, and Predictive Algorithmic Creative Testing — turning erratic ad spend into measurable, scalable pipeline revenue.',
+        hero_cta_cv: 'Explore Executive CV (EN/AR)',
+        hero_cta_decks: 'View 22-Slide Decks',
+        hero_cta_audit: 'Free Teardown Audit',
+        hero_trust_pill: 'Available for GCC (Riyadh, KSA) & Global High-Ticket Engagements',
+        hero_trust_bilingual: 'Bilingual Strategy (English & العربية)',
+        stat_spend_lbl: 'Managed Spend',
+        stat_spend_sub: 'Across Verified Accounts',
+        stat_rev_lbl: 'Tracked Revenue',
+        stat_rev_sub: 'Attributed Purchases',
+        stat_roas_lbl: 'Blended ROAS',
+        stat_roas_sub: 'Average Multiplier',
+        stat_proofs_lbl: 'Verified Proofs',
+        stat_proofs_sub: 'Screenshots & Case Studies',
+        view_active_lbl: 'Active View:',
+        view_single_btn: 'Single View',
+        view_all_btn: 'Show All',
+        exec_badge: 'Executive Assets & Bilingual Credentials',
+        exec_title: 'Executive CV & Growth Architecture Slide Decks',
+        exec_desc: 'Directly inspect and download Tipu Sultan\'s verified Curriculum Vitae (in English & Arabic) and comprehensive 22-slide strategic presentation decks — engineered for high-ticket GCC brands, DTC founders, and venture-backed companies.',
+        ai_badge: 'Next-Gen Performance Architecture',
+        ai_title: 'AI-Driven & Data-Engineered Acquisition Engine',
+        frameworks_badge: 'Algorithmic Growth Intelligence',
+        frameworks_title: 'Strategic Performance Playbooks',
+        proofs_badge: 'Performance Case Studies',
+        proofs_title: 'Verified Client Campaign Teardowns',
+        proofs_desc: 'Real accounts, real ad spend, real revenue. Each study includes the 3-layer architecture, CPA drops, and actual screenshots.',
+        vault_badge: 'Empirical Evidence Vault',
+        vault_title: 'Raw Proof Gallery (59 Verified Screenshots)',
+        creatives_badge: 'Creative Testing Engine',
+        creatives_title: 'Ad Creative Sandbox & Angle Matrix',
+        calculator_badge: 'Interactive Funnel Simulator',
+        calculator_title: 'Calculate Your Projected Revenue Lift with Optimized Ad Architecture',
+        audit_badge: 'Zero-Cost Opportunity Analysis',
+        audit_title: 'Request Your 10-Minute Ad Account Teardown',
+        audit_desc: 'Submit your brand or store URL. I will personally review your tracking setup, identify ad fatigue, and pinpoint where your budget is leaking — delivered via a private video teardown.',
+        audit_btn: 'Request My 10-Min Video Teardown',
+        case_challenge_title: 'The Scaling Bottleneck',
+        case_strategy_title: 'Engineering Architecture & Strategy',
+        case_results_title: 'Impact & Verified Dashboard Proof',
+        case_breakdown_btn: 'Deep Architecture Breakdown'
+      },
+      ar: {
+        dir: 'rtl',
+        fontClass: 'font-arabic',
+        nav_cv: 'السيرة والعروض',
+        nav_ai: 'محرك الذكاء والبيانات',
+        nav_frameworks: 'ملاعب النمو',
+        nav_proofs: 'دراسات الحالة',
+        nav_vault: 'خزنة البراهين (59)',
+        nav_creatives: 'صندوق الإبداع (48)',
+        nav_calculator: 'حاسبة العائد',
+        nav_audit: 'التدقيق والتشخيص',
+        hero_badge: 'مهندس نمو موثق • الرياض، المملكة العربية السعودية',
+        hero_title_1: 'مضاعفة الإيرادات المتوقعة عبر',
+        hero_title_2: 'هندسة إعلانات بالذكاء الاصطناعي والبيانات',
+        hero_desc: 'أقوم بهندسة حملات إعلانية مدفوعة كاملة القمع مدعومة بالذكاء الاصطناعي Meta Advantage+، ومزايدات Google الذكية، وتتبع Server-Side CAPI، واختبارات الإبداع التنبؤية — لتحويل الإنفاق الإعلاني العشوائي إلى إيرادات متوقعة وقابلة للتوسع.',
+        hero_cta_cv: 'استعراض السيرة الذاتية (EN/AR)',
+        hero_cta_decks: 'عرض الـ 22 شريحة الاستراتيجية',
+        hero_cta_audit: 'طلب تدقيق مجاني لحسابك',
+        hero_trust_pill: 'متاح للتعاقدات عالية القيمة في السوق الخليجي (الرياض) وعالمياً',
+        hero_trust_bilingual: 'استراتيجية ثنائية اللغة (الإنجليزية والعربية)',
+        stat_spend_lbl: 'إنفاق إعلاني مُدار',
+        stat_spend_sub: 'عبر حسابات موثقة',
+        stat_rev_lbl: 'إيرادات متتبعة',
+        stat_rev_sub: 'مبيعات مسندة بدقة',
+        stat_roas_lbl: 'عائد مدمج ROAS',
+        stat_roas_sub: 'متوسط المضاعف الربحي',
+        stat_proofs_lbl: 'براهين موثقة',
+        stat_proofs_sub: 'لقطات شاشة ودراسات حالة',
+        view_active_lbl: 'العرض النشط:',
+        view_single_btn: 'عرض منفرد',
+        view_all_btn: 'عرض الكل',
+        exec_badge: 'أصول تنفيذية ومؤهلات ثنائية اللغة',
+        exec_title: 'السيرة الذاتية التنفيذية وعروض استراتيجية النمو',
+        exec_desc: 'استعرض وحمل السيرة الذاتية الموثقة لتيبو سلطان وعروض الشرائح الاستراتيجية المكونة من 22 شريحة — المصممة خصيصاً للعلامات التجارية الخليجية، ورواد التجارة الإلكترونية، والشركات الكبرى.',
+        ai_badge: 'هندسة أداء من الجيل التالي',
+        ai_title: 'محرك الاكتساب المدفوع بالذكاء الاصطناعي والبيانات',
+        frameworks_badge: 'ذكاء النمو الخوارزمي',
+        frameworks_title: 'ملاعب الأداء الاستراتيجية',
+        proofs_badge: 'دراسات حالة الأداء',
+        proofs_title: 'تشريحات موثقة لحملات عملاء حقيقيين',
+        proofs_desc: 'حسابات حقيقية، إنفاق إعلاني حقيقي، وإيرادات فعلية. تشمل كل دراسة البنية ثلاثية الطبقات، انخفاض تكلفة الاكتساب، ولقطات الشاشة الفعلية.',
+        vault_badge: 'خزنة الأدلة والبراهين التجريبية',
+        vault_title: 'معرض البراهين الخام (59 لقطة شاشة موثقة)',
+        creatives_badge: 'محرك اختبار الإبداع',
+        creatives_title: 'صندوق الإبداع الإعلاني ومصفوفة الزوايا',
+        calculator_badge: 'محاكاة القمع التفاعلية',
+        calculator_title: 'احسب نمو الإيرادات المتوقع مع بنية إعلانية محسنة',
+        audit_badge: 'تحليل الفرص بلا مقابل',
+        audit_title: 'اطلب تشريح وتدقيق حسابك الإعلاني في 10 دقائق',
+        audit_desc: 'أرسل رابط متجرك أو موقعك. سأقوم شخصياً بمراجعة إعدادات التتبع لديك، وتحديد إجهاد الإعلانات، ونقاط تسرب الميزانية — عبر فيديو تشريحي خاص.',
+        audit_btn: 'اطلب تدقيق الفيديو الخاص بي (10 دقائق مجاناً)',
+        case_challenge_title: 'عقبة التوسع الرئيسية',
+        case_strategy_title: 'البنية الهندسية والاستراتيجية',
+        case_results_title: 'النتائج والبراهين الموثقة من لوحة التحكم',
+        case_breakdown_btn: 'تشريح البنية الهندسية الكاملة'
+      }
+    };
+
+    function setSiteLanguage(lang) {
+      currentSiteLang = (lang === 'ar') ? 'ar' : 'en';
+      localStorage.setItem('sultan_site_language', currentSiteLang);
+
+      const t = SITE_TRANSLATIONS[currentSiteLang];
+
+      // Update HTML root attributes
+      document.documentElement.lang = currentSiteLang;
+      document.documentElement.dir = t.dir;
+
+      // Toggle Arabic font class on body
+      if (currentSiteLang === 'ar') {
+        document.body.classList.add('font-arabic');
+      } else {
+        document.body.classList.remove('font-arabic');
+      }
+
+      // Update Desktop Navbar Language Buttons
+      const btnEn = document.getElementById('langBtnEn');
+      const btnAr = document.getElementById('langBtnAr');
+      if (btnEn && btnAr) {
+        if (currentSiteLang === 'en') {
+          btnEn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 bg-blue-600 text-white shadow-sm';
+          btnAr.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5';
+        } else {
+          btnAr.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 bg-emerald-600 text-white shadow-sm';
+          btnEn.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5';
+        }
+      }
+
+      // Update Mobile Drawer Language Buttons
+      const mobBtnEn = document.getElementById('mobLangBtnEn');
+      const mobBtnAr = document.getElementById('mobLangBtnAr');
+      const mobBadge = document.getElementById('mobCurrentLangBadge');
+      if (mobBtnEn && mobBtnAr) {
+        if (currentSiteLang === 'en') {
+          mobBtnEn.className = 'py-2 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all flex items-center justify-center gap-1.5 shadow-sm';
+          mobBtnAr.className = 'py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1.5';
+          if (mobBadge) mobBadge.innerText = 'Always English';
+        } else {
+          mobBtnAr.className = 'py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white transition-all flex items-center justify-center gap-1.5 shadow-sm';
+          mobBtnEn.className = 'py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1.5';
+          if (mobBadge) mobBadge.innerText = 'العربية (Arabic)';
+        }
+      }
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+          el.innerText = t[key];
+        }
+      });
+
+      // Update dynamic tabLabels
+      if (currentSiteLang === 'ar') {
+        tabLabels['executive-assets'] = 'السيرة الذاتية وعروض استراتيجية النمو';
+        tabLabels['ai-engine'] = 'محرك الذكاء والبيانات';
+        tabLabels['frameworks'] = 'ملاعب الأداء الاستراتيجية';
+        tabLabels['proofs'] = 'دراسات حالة الحملات الموثقة';
+        tabLabels['vault'] = 'خزنة البراهين الخام (59 لقطة شاشة)';
+        tabLabels['creatives'] = 'صندوق اختبار الإبداع الإعلاني';
+        tabLabels['calculator'] = 'محاكاة القمع التفاعلية';
+        tabLabels['audit'] = 'تدقيق الحساب الإعلاني في 10 دقائق';
+      } else {
+        tabLabels['executive-assets'] = 'Executive CV & Strategic Decks';
+        tabLabels['ai-engine'] = 'AI-Driven & Data-Engineered Engine';
+        tabLabels['frameworks'] = 'Strategic Performance Playbooks';
+        tabLabels['proofs'] = 'Verified Client Case Studies';
+        tabLabels['vault'] = 'Raw Proof Gallery (59 Verified Screenshots)';
+        tabLabels['creatives'] = 'Ad Creative Sandbox & Angle Matrix';
+        tabLabels['calculator'] = 'Interactive Funnel ROI Simulator';
+        tabLabels['audit'] = '10-Minute Ad Account Teardown Audit';
+      }
+
+      // Update Active View label
+      const activeLabel = document.getElementById('activeViewLabel');
+      if (activeLabel && tabLabels[currentActiveTab]) {
+        activeLabel.innerText = tabLabels[currentActiveTab];
+      }
+
+      // Re-render projects in selected language
+      renderProjects(projectsData);
     }
 
     // Initialize App
