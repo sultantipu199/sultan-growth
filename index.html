@@ -3,14 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tipu Sultan | AI-Driven & Data-Driven Growth Architect</title>
+    <title>Tipu Sultan | AI-Driven & Data-Driven Growth Architect (Riyadh, KSA)</title>
   
+  <!-- Primary Meta & SEO -->
+  <meta name="description" content="High-ticket performance marketing architect specializing in Meta Advantage+ ASC, Google Smart Bidding, and Server-Side CAPI systems across Saudi Arabia, GCC, and global DTC/SaaS brands. Verified $188K+ spend and 4.6x ROAS." />
+  <meta name="keywords" content="Tipu Sultan, Growth Architect, Performance Marketing Riyadh, Meta Ads Saudi Arabia, Google Ads Specialist GCC, Server-Side CAPI, Tabby Tamara Marketing" />
+  <meta name="author" content="Tipu Sultan" />
+  <link rel="canonical" href="https://sultantipu199.github.io/sultan-growth/" />
+  <link rel="icon" type="image/png" href="assets/tipu-sultan-profile.png" />
+  <meta name="theme-color" content="#070b14" />
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sultantipu199.github.io/sultan-growth/" />
+  <meta property="og:title" content="Tipu Sultan | AI-Driven & Data-Driven Growth Architect" />
+  <meta property="og:description" content="Scaled $869K+ in verified revenue at 4.6x ROAS with Meta Advantage+, CAPI 9.0+ Signal Engineering, and 3:2:2 Creative Testing. Explore Executive CV & 22-Slide Decks." />
+  <meta property="og:image" content="https://sultantipu199.github.io/sultan-growth/assets/documents/deck-cover-en-preview.png" />
+  <meta property="og:site_name" content="Tipu Sultan Growth Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tipu Sultan | Growth Architect Portfolio" />
+  <meta name="twitter:description" content="AI & Data-Engineered Paid Acquisition Architecture across Meta, Google & YouTube. Based in Riyadh, KSA." />
+  <meta name="twitter:image" content="https://sultantipu199.github.io/sultan-growth/assets/documents/deck-cover-en-preview.png" />
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Tipu Sultan — Growth Architect",
+    "image": "https://sultantipu199.github.io/sultan-growth/assets/tipu-sultan-profile.png",
+    "url": "https://sultantipu199.github.io/sultan-growth/",
+    "telephone": "+966566482865",
+    "email": "freelancersultan143@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Riyadh",
+      "addressCountry": "SA"
+    },
+    "description": "AI-Driven and Data-Driven Growth Architect specializing in full-funnel paid media architecture and signal resilience.",
+    "priceRange": "$$$$"
+  }
+  </script>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
@@ -36,6 +79,10 @@
       background-color: #070b14;
       color: #f1f5f9;
       font-family: 'Inter', sans-serif;
+    }
+    
+    .font-arabic {
+      font-family: 'Cairo', sans-serif;
     }
     .font-display { font-family: 'Outfit', sans-serif; }
     .glass {
@@ -2268,7 +2315,7 @@
       items.forEach(item => {
         const tile = document.createElement('div');
         tile.className = 'glass-card rounded-xl overflow-hidden cursor-zoom-in group border border-slate-800 hover:border-emerald-500/50 transition-all p-1.5 flex flex-col justify-between';
-        tile.onclick = () => openLightbox(item.file, item.title);
+        tile.onclick = () => openLightboxWithContext(items, items.indexOf(item));
         tile.innerHTML = `
           <div class="h-28 w-full bg-slate-950 rounded-lg overflow-hidden relative">
             <img src="${item.file}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
@@ -2599,11 +2646,14 @@
     document.addEventListener('keydown', (e) => {
       const isDeckOpen = !document.getElementById('deckModal').classList.contains('hidden');
       const isCvOpen = !document.getElementById('cvModal').classList.contains('hidden');
+      const isLightboxOpen = !document.getElementById('lightboxModal').classList.contains('hidden');
 
-      if (e.key === 'ArrowRight' && isDeckOpen) {
-        nextDeckSlide();
-      } else if (e.key === 'ArrowLeft' && isDeckOpen) {
-        prevDeckSlide();
+      if (e.key === 'ArrowRight') {
+        if (isDeckOpen) nextDeckSlide();
+        else if (isLightboxOpen) nextLightboxItem();
+      } else if (e.key === 'ArrowLeft') {
+        if (isDeckOpen) prevDeckSlide();
+        else if (isLightboxOpen) prevLightboxItem();
       } else if (e.key === 'Escape') {
         if (isDeckOpen) closeDeckModal();
         if (isCvOpen) closeCvModal();
@@ -2729,6 +2779,83 @@
       // Update URL hash without scrolling
       if (window.history && window.history.replaceState) {
         window.history.replaceState(null, null, '#' + tabId);
+      }
+    }
+
+    
+    // ==========================================
+    // ENHANCED LIGHTBOX & GALLERY NAVIGATION
+    // ==========================================
+    let activeLightboxList = [];
+    let activeLightboxIndex = 0;
+
+    function openLightboxWithContext(list, index) {
+      activeLightboxList = list;
+      activeLightboxIndex = index;
+      renderLightboxItem();
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderLightboxItem() {
+      if (!activeLightboxList || activeLightboxList.length === 0) return;
+      const item = activeLightboxList[activeLightboxIndex];
+      const img = document.getElementById('lightboxImg');
+      const caption = document.getElementById('lightboxCaption');
+      const counter = document.getElementById('lightboxCounter');
+
+      img.src = item.file || item.src;
+      caption.innerText = item.title || item.caption || 'Verified Campaign Evidence';
+      counter.innerText = `Item ${activeLightboxIndex + 1} of ${activeLightboxList.length}`;
+    }
+
+    function nextLightboxItem() {
+      if (activeLightboxList.length > 0) {
+        activeLightboxIndex = (activeLightboxIndex + 1) % activeLightboxList.length;
+        renderLightboxItem();
+      }
+    }
+
+    function prevLightboxItem() {
+      if (activeLightboxList.length > 0) {
+        activeLightboxIndex = (activeLightboxIndex - 1 + activeLightboxList.length) % activeLightboxList.length;
+        renderLightboxItem();
+      }
+    }
+
+    function downloadActiveLightboxImage() {
+      if (activeLightboxList.length > 0) {
+        const item = activeLightboxList[activeLightboxIndex];
+        const link = document.createElement('a');
+        link.href = item.file || item.src;
+        link.download = (item.title ? item.title.replace(/[^a-zA-Z0-9_-]/g, '_') : 'proof') + '.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    }
+
+    // Context-Aware Arabic WhatsApp Trigger
+    function triggerArabicWhatsApp() {
+      const msg = encodeURIComponent("السلام عليكم تيبو سلطان، اطلعت على محفظة أعمالك وعروضك الاستراتيجية، وأرغب في مناقشة تدقيق وتوسيع حملاتنا الإعلانية في الخليج.");
+      window.open(`https://wa.me/${CONFIG.phone}?text=${msg}`, '_blank');
+    }
+
+    // Two-Way URL Hash Routing for Browser Back / Forward
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && tabLabels[hash]) {
+        switchTab(hash);
+      }
+    });
+
+    // Check Initial URL Hash on Page Load
+    function handleInitialHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && tabLabels[hash]) {
+        switchTab(hash);
+      } else {
+        switchTab('executive-assets');
       }
     }
 

@@ -402,3 +402,4 @@ def update_html():
 
 if __name__ == '__main__':
     update_html()
+
