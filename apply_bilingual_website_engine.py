@@ -393,3 +393,4 @@ def update_portfolio_bilingual():
 
 if __name__ == '__main__':
     update_portfolio_bilingual()
+
