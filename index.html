@@ -160,22 +160,20 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
 
-  <!-- Independent Floating Glass Language Switcher (Always Accessible, No Header Clutter) -->
-  <aside aria-label="Language Selector" id="floatingLangSwitcher" class="fixed top-3.5 right-3.5 sm:top-4 sm:right-6 z-50 flex items-center p-1 rounded-full bg-slate-950/90 backdrop-blur-xl border border-slate-700/80 shadow-2xl shadow-blue-500/10 transition-all duration-300">
-    <button id="langBtnEn" onclick="setSiteLanguage('en')" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 bg-blue-600 text-white shadow-sm" title="Always English Mode">
-      <i class="fa-solid fa-globe text-xs"></i>
-      <span class="hidden sm:inline">English</span>
-      <span class="sm:hidden font-black">EN</span>
+  <!-- Independent Floating Glass Language Switcher (Always Accessible, Zero Header Collision) -->
+  <aside aria-label="Language Selector" id="floatingLangSwitcher" class="fixed top-[64px] right-3 sm:top-[70px] sm:right-6 z-50 flex items-center gap-1 p-1 rounded-full bg-slate-950/95 backdrop-blur-xl border border-slate-700/90 shadow-2xl shadow-blue-500/20 ring-1 ring-white/10 transition-all duration-300">
+    <button id="langBtnEn" onclick="setSiteLanguage('en')" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all flex items-center gap-1.5 bg-blue-600 text-white shadow-sm whitespace-nowrap" title="Always English Mode">
+      <i class="fa-solid fa-globe text-[11px]"></i>
+      <span>Always English</span>
     </button>
-    <button id="langBtnAr" onclick="setSiteLanguage('ar')" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-1.5" title="الوضع العربي المباشر">
-      <span class="hidden sm:inline">العربية</span>
-      <span class="sm:hidden font-black">ع</span>
+    <button id="langBtnAr" onclick="setSiteLanguage('ar')" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1.5 whitespace-nowrap" title="الوضع العربي الكامل">
+      <span>العربية</span>
     </button>
   </aside>
 
 
   <!-- Sticky Navbar -->
-  <nav class="sticky top-0 z-40 glass border-b border-slate-800/80 px-3 sm:px-6 py-3 transition-all pr-28 sm:pr-36 xl:pr-44">
+  <nav class="sticky top-0 z-40 glass border-b border-slate-800/80 px-3 sm:px-6 py-3 transition-all">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="javascript:void(0)" onclick="switchTab('about-me'); window.scrollTo({top:0, behavior:'smooth'});" class="flex items-center gap-3 group">
         <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-emerald-400 p-0.5 shadow-lg shadow-blue-500/20 flex items-center justify-center overflow-hidden">
@@ -192,44 +190,44 @@
       </a>
 
       <!-- Desktop Nav Links (Ordered Hierarchy) -->
-      <div id="desktopNavTabs" class="hidden lg:flex items-center gap-2 xl:gap-3 text-xs font-semibold text-slate-300">
-        <button onclick="switchTab('about-me')" data-tab="about-me" class="nav-tab-btn hover:text-amber-300 transition-all flex items-center gap-1.5 text-amber-300 font-bold px-2.5 xl:px-3 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 shadow-sm shadow-amber-500/15">
+      <div id="desktopNavTabs" class="hidden lg:flex items-center gap-1.5 xl:gap-2.5 text-xs font-semibold text-slate-300">
+        <button onclick="switchTab('about-me')" data-tab="about-me" class="nav-tab-btn whitespace-nowrap hover:text-amber-300 transition-all flex items-center gap-1.5 text-amber-300 font-bold px-2.5 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 shadow-sm shadow-amber-500/15">
           <i class="fa-solid fa-user-tie text-xs text-amber-400"></i>
           <span data-i18n="nav_about">About Me</span>
-          <span class="px-1.5 py-0.2 rounded bg-amber-400 text-slate-950 text-[9px] font-black uppercase tracking-wider">Bio & CV</span>
+          <span class="px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 text-[9px] font-black uppercase tracking-wider" data-i18n="nav_about_badge">Bio & CV</span>
         </button>
 
-        <button onclick="switchTab('ai-engine')" data-tab="ai-engine" class="nav-tab-btn hover:text-cyan-400 transition-all flex items-center gap-1.5 px-2 xl:px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
+        <button onclick="switchTab('ai-engine')" data-tab="ai-engine" class="nav-tab-btn whitespace-nowrap hover:text-cyan-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-microchip text-[11px] text-cyan-400"></i>
-          <span data-i18n="nav_ai">AI & Engine</span>
+          <span data-i18n="nav_ai">AI & Data Engine</span>
         </button>
 
-        <button onclick="switchTab('frameworks')" data-tab="frameworks" class="nav-tab-btn hover:text-purple-400 transition-all flex items-center gap-1.5 px-2 xl:px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
+        <button onclick="switchTab('frameworks')" data-tab="frameworks" class="nav-tab-btn whitespace-nowrap hover:text-purple-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-brain text-[11px] text-purple-400"></i>
-          <span data-i18n="nav_frameworks">Playbooks</span>
+          <span data-i18n="nav_frameworks">Growth Playbooks</span>
         </button>
 
-        <button onclick="switchTab('proofs')" data-tab="proofs" class="nav-tab-btn hover:text-emerald-400 transition-all flex items-center gap-1.5 px-2 xl:px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
+        <button onclick="switchTab('proofs')" data-tab="proofs" class="nav-tab-btn whitespace-nowrap hover:text-emerald-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-trophy text-[11px] text-emerald-400"></i>
           <span data-i18n="nav_proofs">Case Studies</span>
         </button>
 
-        <button onclick="switchTab('vault')" data-tab="vault" class="nav-tab-btn hover:text-blue-400 transition-all flex items-center gap-1.5 px-2 xl:px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
+        <button onclick="switchTab('vault')" data-tab="vault" class="nav-tab-btn whitespace-nowrap hover:text-blue-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-images text-[11px] text-blue-400"></i>
-          <span data-i18n="nav_vault">Vault (59)</span>
+          <span data-i18n="nav_vault">Proof Vault (59)</span>
         </button>
 
-        <button onclick="switchTab('creatives')" data-tab="creatives" class="nav-tab-btn hover:text-indigo-400 transition-all flex items-center gap-1.5 px-2 xl:px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
+        <button onclick="switchTab('creatives')" data-tab="creatives" class="nav-tab-btn whitespace-nowrap hover:text-indigo-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-wand-magic-sparkles text-[11px] text-indigo-400"></i>
-          <span data-i18n="nav_creatives">Creatives (48)</span>
+          <span data-i18n="nav_creatives">Ad Creatives (48)</span>
         </button>
 
-        <button onclick="switchTab('calculator')" data-tab="calculator" class="nav-tab-btn hover:text-teal-400 transition-all flex items-center gap-1.5 px-2 xl:px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
+        <button onclick="switchTab('calculator')" data-tab="calculator" class="nav-tab-btn whitespace-nowrap hover:text-teal-400 transition-all flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-transparent text-slate-300 font-semibold">
           <i class="fa-solid fa-calculator text-[11px] text-teal-400"></i>
           <span data-i18n="nav_calculator">ROI Engine</span>
         </button>
 
-        <button onclick="switchTab('audit')" data-tab="audit" class="nav-tab-btn text-emerald-400 hover:text-emerald-300 transition-all font-bold px-2.5 xl:px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5">
+        <button onclick="switchTab('audit')" data-tab="audit" class="nav-tab-btn whitespace-nowrap text-emerald-400 hover:text-emerald-300 transition-all font-bold px-2.5 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5">
           <i class="fa-solid fa-bolt text-xs text-emerald-400"></i>
           <span data-i18n="nav_audit">Free Audit</span>
         </button>
@@ -249,14 +247,14 @@
           <span class="hidden sm:inline">Email</span>
         </button>
         <!-- Mobile Menu Toggle Button (Visible on Mobile) -->
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="md:hidden w-9 h-9 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-cyan-400 border border-slate-700/80 flex items-center justify-center transition-all focus:outline-none">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="lg:hidden w-9 h-9 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-cyan-400 border border-slate-700/80 flex items-center justify-center transition-all focus:outline-none">
           <i id="mobileMenuIcon" class="fa-solid fa-bars text-sm"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navigation Drawer / Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden pt-3 pb-2 border-t border-slate-800/80 mt-3 space-y-2 animate-slide-down">
+    <div id="mobileMenu" class="hidden lg:hidden pt-3 pb-2 border-t border-slate-800/80 mt-3 space-y-2 animate-slide-down">
       <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold px-2 pt-1 flex items-center justify-between">
         <span>Portfolio Navigation</span>
         <span class="text-cyan-400 font-medium">Tipu Sultan</span>
@@ -504,15 +502,15 @@
       </div>
 
       <!-- Quick Tab View Switcher Buttons (Desktop & Tablet) -->
-      <div class="hidden lg:flex items-center gap-1.5 overflow-x-auto max-w-2xl py-0.5 custom-scrollbar" id="viewBarTabs">
-        <button onclick="switchTab('executive-assets')" data-vtab="executive-assets" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">CV & Decks</button>
-        <button onclick="switchTab('ai-engine')" data-vtab="ai-engine" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800">AI Engine</button>
-        <button onclick="switchTab('frameworks')" data-vtab="frameworks" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800">Playbooks</button>
-        <button onclick="switchTab('proofs')" data-vtab="proofs" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800">Case Studies</button>
-        <button onclick="switchTab('vault')" data-vtab="vault" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800">Vault (59)</button>
-        <button onclick="switchTab('creatives')" data-vtab="creatives" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800">Creatives (48)</button>
-        <button onclick="switchTab('calculator')" data-vtab="calculator" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800">ROI Engine</button>
-        <button onclick="switchTab('audit')" data-vtab="audit" class="view-pill px-2.5 py-1 rounded-lg text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30">Audit</button>
+      <div class="hidden lg:flex items-center gap-1.5 overflow-x-auto max-w-3xl py-0.5 custom-scrollbar" id="viewBarTabs">
+        <button onclick="switchTab('about-me')" data-vtab="about-me" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40" data-i18n="nav_about">About Me</button>
+        <button onclick="switchTab('ai-engine')" data-vtab="ai-engine" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800" data-i18n="nav_ai">AI & Data Engine</button>
+        <button onclick="switchTab('frameworks')" data-vtab="frameworks" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800" data-i18n="nav_frameworks">Growth Playbooks</button>
+        <button onclick="switchTab('proofs')" data-vtab="proofs" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800" data-i18n="nav_proofs">Case Studies</button>
+        <button onclick="switchTab('vault')" data-vtab="vault" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800" data-i18n="nav_vault">Proof Vault (59)</button>
+        <button onclick="switchTab('creatives')" data-vtab="creatives" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800" data-i18n="nav_creatives">Ad Creatives (48)</button>
+        <button onclick="switchTab('calculator')" data-vtab="calculator" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-400 hover:text-white bg-slate-900 border border-slate-800" data-i18n="nav_calculator">ROI Engine</button>
+        <button onclick="switchTab('audit')" data-vtab="audit" class="view-pill whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30" data-i18n="nav_audit">Free Audit</button>
       </div>
 
       <!-- Mode Toggle: Focused Tab View vs Show All -->
@@ -552,14 +550,17 @@
       </div>
 
       <!-- Quick Action Shortcuts -->
-      <div class="flex flex-wrap items-center gap-2.5">
-        <button onclick="filterAssets('all', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30">
-          All Credentials (4)
+      <div id="asset-filter-buttons" class="flex flex-wrap items-center gap-2">
+        <button onclick="filterAssets('all', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30" data-i18n="about_filter_all">
+          All Credentials & Assets
         </button>
-        <button onclick="filterAssets('cv', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all">
+        <button onclick="filterAssets('articles', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 transition-all" data-i18n="about_filter_articles">
+          Leadership Articles (3)
+        </button>
+        <button onclick="filterAssets('cv', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 transition-all" data-i18n="about_filter_cv">
           Curriculum Vitae (2)
         </button>
-        <button onclick="filterAssets('deck', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all">
+        <button onclick="filterAssets('deck', this)" class="asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 transition-all" data-i18n="about_filter_decks">
           Slide Decks (2)
         </button>
       </div>
@@ -582,20 +583,20 @@
           </div>
 
           <h3 class="text-xl font-display font-black text-white">Tipu Sultan</h3>
-          <p class="text-xs font-semibold text-cyan-400 mt-0.5">High-Ticket Growth Architect & AI Strategist</p>
+          <p class="text-xs font-semibold text-cyan-400 mt-0.5" data-i18n="about_role_sub">High-Ticket Growth Architect & AI Strategist</p>
           
           <div class="mt-4 flex flex-col gap-2 w-full text-xs text-slate-300">
             <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
               <i class="fa-solid fa-location-dot text-rose-400 text-xs"></i>
-              <span>Riyadh, Saudi Arabia (GCC & Global)</span>
+              <span data-i18n="about_loc">Riyadh, Saudi Arabia (GCC & Global)</span>
             </div>
             <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
               <i class="fa-solid fa-briefcase text-amber-400 text-xs"></i>
-              <span>5+ Years Scaling DTC & High-Ticket</span>
+              <span data-i18n="about_exp">5+ Years Scaling DTC & High-Ticket</span>
             </div>
             <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
               <i class="fa-solid fa-language text-cyan-400 text-xs"></i>
-              <span>English (Bilingual) & Arabic Localization</span>
+              <span data-i18n="about_langs">English (Bilingual) & Arabic Localization</span>
             </div>
           </div>
 
@@ -614,16 +615,16 @@
         <div class="lg:col-span-8 flex flex-col justify-between">
           <div>
             <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
-              <i class="fa-solid fa-shield-halved"></i> Strategic Philosophy & Mission
+              <i class="fa-solid fa-shield-halved"></i> <span data-i18n="about_phil_badge">Strategic Philosophy & Mission</span>
             </div>
-            <h4 class="text-lg sm:text-2xl font-display font-bold text-white mb-3">
+            <h4 class="text-lg sm:text-2xl font-display font-bold text-white mb-3" data-i18n="about_quote">
               "Traditional media buying relies on guesswork. We build data-engineered acquisition pipelines that scale predictably."
             </h4>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-              Over the past 5+ years, I have architected high-volume media campaigns across the GCC (Saudi Arabia, UAE, Kuwait, Qatar) and international markets, managing over <span class="text-white font-bold">$188,400+</span> in direct ad capital and engineering <span class="text-emerald-400 font-bold">$869,200+</span> in verified gross client revenue at an average <span class="text-amber-400 font-bold">4.6x Blended ROAS</span>.
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="about_bio_p1">
+              Over the past 5+ years, I have architected high-volume media campaigns across the GCC (Saudi Arabia, UAE, Kuwait, Qatar) and international markets, managing over $188,400+ in direct ad capital and engineering $869,200+ in verified gross client revenue at an average 4.6x Blended ROAS.
             </p>
-            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-              My core differentiation lies at the intersection of <strong class="text-slate-200">Algorithmic Ad Optimization</strong> (Meta Advantage+ Shopping Campaigns, Google Smart Bidding), <strong class="text-slate-200">First-Party Server-Side CAPI Signals</strong> (achieving 9.4/10 Event Match Quality via Stape.io/GTM), and <strong class="text-slate-200">GCC-Tailored Conversion Architecture</strong> — seamlessly solving high Cash-on-Delivery (COD) friction with automated WhatsApp verification bots, Tabby/Tamara BNPL integration, and localized Khaleeji creative hooks.
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="about_bio_p2">
+              My core differentiation lies at the intersection of Algorithmic Ad Optimization (Meta Advantage+ Shopping Campaigns, Google Smart Bidding), First-Party Server-Side CAPI Signals (achieving 9.4/10 Event Match Quality via Stape.io/GTM), and GCC-Tailored Conversion Architecture — seamlessly solving high Cash-on-Delivery (COD) friction with automated WhatsApp verification bots, Tabby/Tamara BNPL integration, and localized Khaleeji creative hooks.
             </p>
           </div>
 
@@ -655,13 +656,13 @@
     </div>
 
     <!-- 3 Strategic Leadership Articles & Deep Architectural Frameworks -->
-    <div class="mb-14">
+    <div id="about-articles-block" class="mb-14">
       <div class="flex items-center justify-between mb-6">
         <div>
           <span class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider block mb-1">
             <i class="fa-solid fa-newspaper text-cyan-400"></i> Executive Thought Leadership & Methodologies
           </span>
-          <h3 class="text-xl sm:text-2xl font-display font-bold text-white">
+          <h3 class="text-xl sm:text-2xl font-display font-bold text-white" data-i18n="about_articles_title">
             Strategic Articles: Scaling High-Ticket Brands in Saudi Arabia & GCC
           </h3>
         </div>
@@ -679,16 +680,16 @@
               <span class="text-[10px] text-slate-500 font-semibold"><i class="fa-regular fa-clock"></i> 6 Min Read</span>
             </div>
             <h4 class="text-base font-display font-bold text-white group-hover:text-amber-300 transition-colors mb-2.5">
-              The GCC High-Ticket Acquisition Blueprint: Why Western Playbooks Bleed Margins in Saudi Arabia & UAE
+              <span data-i18n="art1_title">The GCC High-Ticket Acquisition Blueprint: Why Western Playbooks Bleed Margins in Saudi Arabia & UAE</span>
             </h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+            <p class="text-slate-400 text-xs leading-relaxed mb-4" data-i18n="art1_desc">
               Western media buying models assume frictionless credit card checkouts and low delivery return rates. In Saudi Arabia and the Gulf, ignoring Cash-on-Delivery (COD) dynamics and failing to automate WhatsApp delivery confirmations creates a 35%+ cancellation rate. Learn how integrating Tabby/Tamara BNPL widgets and WhatsApp automated reconciliation loops cuts return friction while doubling Average Order Value (AOV).
             </p>
           </div>
           <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
             <span class="text-[11px] text-slate-400 font-medium">By <strong>Tipu Sultan</strong> • Riyadh</span>
             <button onclick="openArticleModal(1)" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <span>Read Full Breakdown</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <span data-i18n="art_read_btn">Read Full Breakdown</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
         </article>
@@ -703,16 +704,16 @@
               <span class="text-[10px] text-slate-500 font-semibold"><i class="fa-regular fa-clock"></i> 8 Min Read</span>
             </div>
             <h4 class="text-base font-display font-bold text-white group-hover:text-cyan-300 transition-colors mb-2.5">
-              Algorithmic Paid Media in the Advantage+ Era: How First-Party Server-Side CAPI Guarantees 9.4/10 EMQ
+              <span data-i18n="art2_title">Algorithmic Paid Media in the Advantage+ Era: How First-Party Server-Side CAPI Guarantees 9.4/10 EMQ</span>
             </h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+            <p class="text-slate-400 text-xs leading-relaxed mb-4" data-i18n="art2_desc">
               With browser cookies dying and iOS privacy tightening, client-side Meta pixels miss up to 32% of conversion telemetry. This article details our server-side Google Tag Manager and Stape.io cloud deployment, hashing customer telemetry on custom subdomains, enriching CRM repeat-purchase data, and feeding high-intent conversion signals back into Meta ASC and Google Smart Bidding algorithms.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
             <span class="text-[11px] text-slate-400 font-medium">Data Infrastructure • CAPI 9.4</span>
             <button onclick="openArticleModal(2)" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <span>Read Full Breakdown</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <span data-i18n="art_read_btn">Read Full Breakdown</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
         </article>
@@ -727,16 +728,16 @@
               <span class="text-[10px] text-slate-500 font-semibold"><i class="fa-regular fa-clock"></i> 5 Min Read</span>
             </div>
             <h4 class="text-base font-display font-bold text-white group-hover:text-purple-300 transition-colors mb-2.5">
-              The 48-Angle Creative Testing Sandbox: How Creative Velocity Dictates Scale in Modern Paid Media
+              <span data-i18n="art3_title">The 48-Angle Creative Testing Sandbox: How Creative Velocity Dictates Scale in Modern Paid Media</span>
             </h4>
-            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+            <p class="text-slate-400 text-xs leading-relaxed mb-4" data-i18n="art3_desc">
               Modern AI algorithms do not respond to micromanaged interest targeting; the creative itself is your targeting filter. This guide outlines the 3:2:2 Dynamic Creative Testing framework across 4 psychological angles (Pain Agitation, Direct Logic, Social Proof, Risk-Reversal), engineering creative resilience that consistently maintains 4.5x+ ROAS even as spend doubles.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
             <span class="text-[11px] text-slate-400 font-medium">Creative Sandbox • 48 Angles</span>
             <button onclick="openArticleModal(3)" class="text-xs font-bold text-purple-400 hover:text-purple-300 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <span>Read Full Breakdown</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <span data-i18n="art_read_btn">Read Full Breakdown</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
         </article>
@@ -751,7 +752,7 @@
           <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider block mb-1">
             <i class="fa-solid fa-certificate text-emerald-400"></i> Core Competencies & Verification
           </span>
-          <h3 class="text-xl sm:text-2xl font-display font-bold text-white">
+          <h3 class="text-xl sm:text-2xl font-display font-bold text-white" data-i18n="about_skills_title">
             6 Specialized Growth Capabilities Engineered for Enterprise Scale
           </h3>
         </div>
@@ -809,13 +810,13 @@
     </div>
 
     <!-- Official Executive CVs & 22-Slide Strategic Decks Cards -->
-    <div class="mb-4">
+    <div id="about-assets-header" class="mb-4">
       <div class="flex items-center justify-between mb-6">
         <div>
           <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider block mb-1">
             <i class="fa-solid fa-folder-open text-amber-400"></i> Verified Executive Documentation & Downloads
           </span>
-          <h3 class="text-xl sm:text-2xl font-display font-bold text-white">
+          <h3 class="text-xl sm:text-2xl font-display font-bold text-white" data-i18n="about_assets_title">
             Curriculum Vitae (EN/AR) & 22-Slide Strategic Growth Presentations
           </h3>
         </div>
@@ -1102,7 +1103,7 @@
 
 
   <!-- Dedicated AI-Driven & Data-Driven Marketing Engine Section -->
-  <section id="ai-engine" class="portfolio-tab-content transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full">
+  <section id="ai-engine" class="portfolio-tab-content hidden transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full">
     <div class="glass-card rounded-3xl p-6 sm:p-10 border border-cyan-500/30 shadow-2xl relative overflow-hidden">
       <div class="absolute -right-24 -top-24 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -left-24 -bottom-24 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -1188,7 +1189,7 @@
   </section>
 
   <!-- Algorithmic Growth Intelligence & Strategic Playbooks Suite -->
-  <section id="frameworks" class="portfolio-tab-content transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
+  <section id="frameworks" class="portfolio-tab-content hidden transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
       <div>
         <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-400 mb-2">
@@ -1429,8 +1430,143 @@
     </div>
   </section>
 
+  
+
+  <!-- Verified Case Studies Section -->
+  <section id="proofs" class="portfolio-tab-content hidden transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-800/80 pb-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-400 mb-2">
+          <i class="fa-solid fa-layer-group"></i> Performance Case Studies
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Verified Client Campaign Teardowns
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-xl">
+          Real accounts, real ad spend, real revenue. Click any study for the 3-layer architecture, CPA drops, and actual screenshots.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-1.5" id="filter-buttons">
+        <button onclick="filterCategory('all', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30">
+          All Case Studies
+        </button>
+        <button onclick="filterCategory('ai', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-cyan-300 hover:bg-slate-800 border border-slate-800 flex items-center gap-1.5">
+          <i class="fa-solid fa-microchip text-cyan-400 text-[10px]"></i> AI & Data-Driven
+        </button>
+        <button onclick="filterCategory('meta', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Meta / FB Ads
+        </button>
+        <button onclick="filterCategory('google', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Google PPC
+        </button>
+        <button onclick="filterCategory('ecommerce', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          E-Commerce
+        </button>
+        <button onclick="filterCategory('leadgen', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Lead Gen
+        </button>
+        <button onclick="filterCategory('messaging', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Direct DM
+        </button>
+        <button onclick="filterCategory('video', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          YouTube / Video
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-8 max-w-md">
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+        <input id="searchInput" type="text" placeholder="Search by keyword (e.g. ROAS, CPA, SaaS, DTC)..." oninput="handleSearch(this.value)" class="w-full bg-slate-900 border border-slate-800 text-xs rounded-xl pl-9 pr-4 py-2.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Proof Vault / 59 Campaign Screenshots Gallery -->
+  <section id="vault" class="portfolio-tab-content hidden transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
+          <i class="fa-solid fa-shield-halved"></i> Empirical Evidence Vault
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Raw Proof Gallery (59 Verified Screenshots)
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
+          Uncut dashboard screenshots across Meta Ads Manager, Google Ads conversion metrics, Shopify purchase receipts, Messenger closes, and video retention.
+        </p>
+      </div>
+
+      <!-- Vault Category Filter -->
+      <div class="flex flex-wrap gap-1.5" id="vault-filter-buttons">
+        <button onclick="filterVault('all', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-md shadow-emerald-600/30">
+          All Proofs (59)
+        </button>
+        <button onclick="filterVault('meta', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Meta Ads (6)
+        </button>
+        <button onclick="filterVault('google', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Google PPC (5)
+        </button>
+        <button onclick="filterVault('ecommerce', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          DTC Purchases (5)
+        </button>
+        <button onclick="filterVault('leadgen', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Lead Gen (2)
+        </button>
+        <button onclick="filterVault('messaging', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Direct Chat (7)
+        </button>
+        <button onclick="filterVault('video', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          YouTube / Video (9)
+        </button>
+        <button onclick="filterVault('reach', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
+          Viral Reach (22)
+        </button>
+      </div>
+    </div>
+
+    <!-- Vault Grid -->
+    <div id="vault-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Creative Deliverables Showcase (Project Facebook A to Z) -->
+  <section id="creatives" class="portfolio-tab-content hidden transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2">
+          <i class="fa-solid fa-paintbrush"></i> Creative Testing Engine
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
+          Ad Creative Sandbox & Angle Matrix
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
+          Sample high-converting creatives engineered for thumb-stopping feed disruption, social proof reinforcement, and objection resolution.
+        </p>
+      </div>
+      <div class="text-xs text-slate-400 font-semibold">
+        Showing 48 Top Performing Campaign Hooks
+      </div>
+    </div>
+
+    <div id="creatives-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Free 10-Minute Ad Account Teardown Form with Architect Profile -->
   <!-- Interactive ROI & Revenue Lift Engine -->
-  <section id="calculator" class="portfolio-tab-content transition-all duration-300 max-w-5xl mx-auto my-10 px-4 sm:px-6 w-full">
+  <section id="calculator" class="portfolio-tab-content hidden transition-all duration-300 max-w-5xl mx-auto my-10 px-4 sm:px-6 w-full">
     <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden">
       <div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-600/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -1491,140 +1627,8 @@
     </div>
   </section>
 
-  <!-- Verified Case Studies Section -->
-  <section id="proofs" class="portfolio-tab-content transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-800/80 pb-6">
-      <div>
-        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-400 mb-2">
-          <i class="fa-solid fa-layer-group"></i> Performance Case Studies
-        </div>
-        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
-          Verified Client Campaign Teardowns
-        </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-xl">
-          Real accounts, real ad spend, real revenue. Click any study for the 3-layer architecture, CPA drops, and actual screenshots.
-        </p>
-      </div>
 
-      <!-- Category Filter Pills -->
-      <div class="flex flex-wrap gap-1.5" id="filter-buttons">
-        <button onclick="filterCategory('all', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/30">
-          All Case Studies
-        </button>
-        <button onclick="filterCategory('ai', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-cyan-300 hover:bg-slate-800 border border-slate-800 flex items-center gap-1.5">
-          <i class="fa-solid fa-microchip text-cyan-400 text-[10px]"></i> AI & Data-Driven
-        </button>
-        <button onclick="filterCategory('meta', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Meta / FB Ads
-        </button>
-        <button onclick="filterCategory('google', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Google PPC
-        </button>
-        <button onclick="filterCategory('ecommerce', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          E-Commerce
-        </button>
-        <button onclick="filterCategory('leadgen', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Lead Gen
-        </button>
-        <button onclick="filterCategory('messaging', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Direct DM
-        </button>
-        <button onclick="filterCategory('video', this)" class="filter-btn px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          YouTube / Video
-        </button>
-      </div>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="mb-8 max-w-md">
-      <div class="relative">
-        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-        <input id="searchInput" type="text" placeholder="Search by keyword (e.g. ROAS, CPA, SaaS, DTC)..." oninput="handleSearch(this.value)" class="w-full bg-slate-900 border border-slate-800 text-xs rounded-xl pl-9 pr-4 py-2.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors" />
-      </div>
-    </div>
-
-    <!-- Projects Grid -->
-    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Injected via JavaScript -->
-    </div>
-  </section>
-
-  <!-- Proof Vault / 59 Campaign Screenshots Gallery -->
-  <section id="vault" class="portfolio-tab-content transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-      <div>
-        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
-          <i class="fa-solid fa-shield-halved"></i> Empirical Evidence Vault
-        </div>
-        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
-          Raw Proof Gallery (59 Verified Screenshots)
-        </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
-          Uncut dashboard screenshots across Meta Ads Manager, Google Ads conversion metrics, Shopify purchase receipts, Messenger closes, and video retention.
-        </p>
-      </div>
-
-      <!-- Vault Category Filter -->
-      <div class="flex flex-wrap gap-1.5" id="vault-filter-buttons">
-        <button onclick="filterVault('all', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-md shadow-emerald-600/30">
-          All Proofs (59)
-        </button>
-        <button onclick="filterVault('meta', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Meta Ads (6)
-        </button>
-        <button onclick="filterVault('google', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Google PPC (5)
-        </button>
-        <button onclick="filterVault('ecommerce', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          DTC Purchases (5)
-        </button>
-        <button onclick="filterVault('leadgen', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Lead Gen (2)
-        </button>
-        <button onclick="filterVault('messaging', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Direct Chat (7)
-        </button>
-        <button onclick="filterVault('video', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          YouTube / Video (9)
-        </button>
-        <button onclick="filterVault('reach', this)" class="vault-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800">
-          Viral Reach (22)
-        </button>
-      </div>
-    </div>
-
-    <!-- Vault Grid -->
-    <div id="vault-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-      <!-- Injected via JavaScript -->
-    </div>
-  </section>
-
-  <!-- Creative Deliverables Showcase (Project Facebook A to Z) -->
-  <section id="creatives" class="portfolio-tab-content transition-all duration-300 max-w-7xl mx-auto py-12 px-4 sm:px-6 w-full border-t border-slate-800/80">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-      <div>
-        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-indigo-400 mb-2">
-          <i class="fa-solid fa-paintbrush"></i> Creative Testing Engine
-        </div>
-        <h2 class="text-2xl sm:text-4xl font-display font-black text-white tracking-tight">
-          Ad Creative Sandbox & Angle Matrix
-        </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
-          Sample high-converting creatives engineered for thumb-stopping feed disruption, social proof reinforcement, and objection resolution.
-        </p>
-      </div>
-      <div class="text-xs text-slate-400 font-semibold">
-        Showing 48 Top Performing Campaign Hooks
-      </div>
-    </div>
-
-    <div id="creatives-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
-      <!-- Injected via JavaScript -->
-    </div>
-  </section>
-
-  <!-- Free 10-Minute Ad Account Teardown Form with Architect Profile -->
-  <section id="audit" class="portfolio-tab-content transition-all duration-300 max-w-5xl mx-auto my-14 px-4 sm:px-6 w-full">
+  <section id="audit" class="portfolio-tab-content hidden transition-all duration-300 max-w-5xl mx-auto my-14 px-4 sm:px-6 w-full">
     <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
       <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
         <!-- Photo & Badge -->
@@ -1764,7 +1768,7 @@
     </div>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-900 py-10 px-4 sm:px-8 text-center text-xs text-slate-500">
+  <footer class="border-t border-slate-900 pt-10 pb-24 px-4 sm:px-8 text-center text-xs text-slate-500">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -1939,6 +1943,344 @@
   </div>
 
   <!-- JavaScript Application Logic -->
+  
+  <!-- Interactive CV Viewer Modal (Bilingual: English 2 Pages & Arabic 3 Pages) -->
+  <div id="cvModal" onclick="if(event.target === this) closeCvModal()" class="fixed inset-0 z-50 glass bg-slate-950/90 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="relative w-full max-w-6xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-auto flex flex-col max-h-[95vh]">
+      
+      <!-- Modal Top Header -->
+      <div class="px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4 bg-slate-950/80">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-base">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-bold text-sm text-white" id="cvModalTitle">Tipu Sultan — Executive CV</span>
+              <span id="cvLangBadge" class="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 text-[10px] font-black uppercase">English</span>
+            </div>
+            <p class="text-[11px] text-slate-400" id="cvModalSubtitle">AI-Driven & Data-Driven Growth Architect | Riyadh, KSA</p>
+          </div>
+        </div>
+
+        <!-- Controls: Language Toggle & Page Selector -->
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Language Switcher -->
+          <div class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
+            <button id="cvLangEnBtn" onclick="switchCvLang('en')" class="px-3 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all">
+              English (2P)
+            </button>
+            <button id="cvLangArBtn" onclick="switchCvLang('ar')" class="px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+              العربية (3 صفحات)
+            </button>
+          </div>
+
+          <!-- Page Navigation Tabs -->
+          <div id="cvPageTabs" class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
+            <!-- Dynamically injected -->
+          </div>
+
+          <!-- Download Action Dropdown/Buttons -->
+          <div class="flex items-center gap-1.5" id="cvDownloadActions">
+            <!-- Dynamically populated according to active language -->
+          </div>
+
+          <!-- Close Button -->
+          <button onclick="closeCvModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all ml-1">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Two-Column on Desktop: Viewer + Executive Snapshot) -->
+      <div class="flex-1 overflow-y-auto flex flex-col lg:flex-row">
+        <!-- Main Document Visual Viewer -->
+        <div class="flex-1 bg-slate-950 p-4 sm:p-6 flex flex-col items-center justify-start overflow-auto min-h-[500px]">
+          <div class="relative max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-white group">
+            <img width="600" height="400" loading="lazy" id="cvViewerImg" src="assets/documents/cv-preview-page-1.webp" alt="CV Page Preview" class="w-full h-auto object-contain transition-transform duration-200" />
+          </div>
+          <!-- Bottom Page Controls inside Viewer -->
+          <div class="flex items-center gap-3 mt-4">
+            <button onclick="prevCvPage()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition-all">
+              <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous Page
+            </button>
+            <span id="cvPageIndicator" class="text-xs font-bold text-slate-400 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">
+              Page 1 of 2
+            </span>
+            <button onclick="nextCvPage()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition-all">
+              Next Page <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar Snapshot & Verified Highlights -->
+        <div class="w-full lg:w-80 border-t lg:border-t-0 lg:border-l border-slate-800 bg-slate-900/90 p-5 flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-emerald-400"></i> Executive Highlights
+            </div>
+
+            <!-- Stats Mini Grid -->
+            <div class="grid grid-cols-2 gap-2 mb-4">
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Managed Spend</span>
+                <span class="text-sm font-bold text-white">$188K+</span>
+              </div>
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Tracked Revenue</span>
+                <span class="text-sm font-bold text-white">$869K+</span>
+              </div>
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Blended ROAS</span>
+                <span class="text-sm font-bold text-emerald-400">4.6x</span>
+              </div>
+              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
+                <span class="text-[10px] text-slate-400 block">Verified Proofs</span>
+                <span class="text-sm font-bold text-blue-400">59 Proofs</span>
+              </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="space-y-2 mb-4">
+              <div class="text-[11px] font-bold text-slate-300">Core Architecture:</div>
+              <ul class="text-[11px] text-slate-400 space-y-1.5">
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>Predictive AI Bidding:</strong> Meta Advantage+ Shopping (ASC) & Google Smart Bidding</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-cyan-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>Signal Engineering:</strong> Server-Side CAPI Gateway with 9.0+ EMQ & SHA-256</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-purple-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>3:2:2 Creative Sandbox:</strong> 48-Angle dynamic testing before scaling</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-check text-amber-400 mt-0.5 text-[10px]"></i>
+                  <span><strong>GCC Specialization:</strong> Tabby/Tamara BNPL & WhatsApp COD automation</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Location & Availability -->
+            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-slate-400 mb-4">
+              <div class="font-bold text-slate-300 mb-1 flex items-center gap-1.5">
+                <i class="fa-solid fa-location-dot text-cyan-400"></i> Riyadh, Saudi Arabia
+              </div>
+              <p>Available for 10-minute video audits, full-funnel buildouts, and scaling retainers worldwide.</p>
+            </div>
+          </div>
+
+          <!-- Direct Inquiries CTA -->
+          <div class="pt-3 border-t border-slate-800 space-y-2">
+            <button onclick="triggerGlobalWhatsApp()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition-all">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Inquire via WhatsApp
+            </button>
+            <button onclick="closeCvModal(); switchTab('audit'); window.scrollTo({top:0, behavior:'smooth'});" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs border border-slate-700 flex items-center justify-center gap-1.5 transition-all">
+              <i class="fa-solid fa-bolt text-emerald-400 text-[10px]"></i> Request Ad Account Audit
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive Presentation Deck Viewer Modal (22 Slides Bilingual: EN & AR) -->
+  <div id="deckModal" onclick="if(event.target === this) closeDeckModal()" class="fixed inset-0 z-50 glass bg-slate-950/95 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div class="relative w-full max-w-6xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-auto flex flex-col max-h-[96vh]">
+      
+      <!-- Deck Modal Top Bar -->
+      <div class="px-5 py-3.5 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4 bg-slate-950/90">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-base">
+            <i class="fa-solid fa-presentation-screen"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-bold text-sm text-white" id="deckHeaderTitle">Growth Architecture Deck</span>
+              <span id="deckSlideCounterBadge" class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-black">Slide 01 / 22</span>
+            </div>
+            <p class="text-[11px] text-slate-400" id="deckHeaderSubtitle">Tipu Sultan • Next-Gen AI & Data Performance Architecture</p>
+          </div>
+        </div>
+
+        <!-- Controls: Language Toggle, Download PPTX, Fullscreen, Close -->
+        <div class="flex items-center gap-2">
+          <!-- Language Switcher -->
+          <div class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
+            <button id="deckLangEnBtn" onclick="switchDeckLang('en')" class="px-3 py-1 rounded-lg text-xs font-bold bg-cyan-600 text-slate-950 transition-all">
+              English [EN]
+            </button>
+            <button id="deckLangArBtn" onclick="switchDeckLang('ar')" class="px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+              العربية [AR]
+            </button>
+          </div>
+
+          <!-- Download PPTX button -->
+          <a id="deckDownloadBtn" href="assets/documents/tipu-sultan-portfolio-en.pptx" download class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-file-powerpoint text-amber-400"></i>
+            <span class="hidden sm:inline">Download Deck</span>
+          </a>
+
+          <!-- Close Modal -->
+          <button onclick="closeDeckModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all ml-1">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide Presentation Stage Canvas (16:9 ratio) -->
+      <div class="flex-1 bg-slate-950 p-4 sm:p-8 flex items-center justify-center overflow-y-auto min-h-[460px]">
+        <div id="deckSlideCard" class="relative w-full max-w-4xl aspect-[16/9] min-h-[400px] rounded-3xl p-6 sm:p-10 border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-2xl flex flex-col justify-between overflow-hidden">
+          
+          <!-- Decorative Background Blur -->
+          <div class="absolute -right-20 -top-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-60 h-60 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Slide Category & Counter -->
+          <div class="relative z-10 flex items-center justify-between">
+            <span id="deckSlideCategory" class="px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold uppercase tracking-wider">
+              PORTFOLIO PRESENTATION
+            </span>
+            <span id="deckSlideNumberText" class="text-xs font-display font-bold text-slate-500">
+              01 / 22
+            </span>
+          </div>
+
+          <!-- Slide Core Content Area -->
+          <div class="relative z-10 my-auto py-4">
+            <h2 id="deckSlideTitle" class="text-xl sm:text-3xl lg:text-4xl font-display font-black text-white tracking-tight leading-tight">
+              Scale Predictable Revenue with AI-Driven & Data-Engineered Ad Architecture
+            </h2>
+            <div id="deckSlideSubtitle" class="text-sm sm:text-base text-cyan-400 font-semibold mt-2">
+              Next-Gen Growth Architecture
+            </div>
+
+            <!-- Bullet Points / Breakdown List -->
+            <div id="deckSlideBullets" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-5">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Optional Slide Image Thumbnail -->
+            <div id="deckSlideImageContainer" class="mt-4 hidden">
+              <img width="600" height="400" loading="lazy" id="deckSlideImage" src="" alt="Slide Evidence" class="h-28 rounded-xl object-contain border border-slate-800 bg-slate-950 p-1" />
+            </div>
+          </div>
+
+          <!-- Slide Footer inside Card -->
+          <div class="relative z-10 flex items-center justify-between pt-3 border-t border-slate-800/80 text-[11px] text-slate-400">
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i> Tipu Sultan • Empirical Evidence Vault
+            </span>
+            <span class="text-slate-500">Riyadh, KSA • sultantipu199.github.io/sultan-growth</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide Navigation Bottom Controller -->
+      <div class="px-5 py-3 border-t border-slate-800 bg-slate-950 flex flex-wrap items-center justify-between gap-4">
+        <!-- Prev Slide Button -->
+        <button onclick="prevDeckSlide()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-chevron-left text-[10px]"></i>
+          <span>Previous</span>
+        </button>
+
+        <!-- Slide Number Quick Selector Strip -->
+        <div id="deckSlideSelectorStrip" class="flex items-center gap-1 overflow-x-auto max-w-md py-1 custom-scrollbar">
+          <!-- 22 buttons injected by JS -->
+        </div>
+
+        <!-- Next Slide Button -->
+        <button onclick="nextDeckSlide()" class="px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-black text-xs flex items-center gap-2 shadow-lg shadow-cyan-600/20 transition-all">
+          <span>Next</span>
+          <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Master Unified Floating Action Dock (Optimized for Mobile, Tablet, Laptop & Desktop - ZERO Overlap) -->
+  <aside aria-label="Quick Actions" id="masterFloatingDock" class="fixed bottom-3 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:bottom-5 sm:right-6 z-40 flex items-center justify-between sm:justify-start gap-1.5 sm:gap-2 p-1.5 rounded-full bg-slate-950/95 backdrop-blur-2xl border border-slate-700/90 shadow-2xl shadow-emerald-500/15 ring-1 ring-white/10 w-[calc(100%-1.25rem)] max-w-md sm:w-auto sm:max-w-none transition-all duration-300">
+    
+    <!-- 1. WhatsApp Direct Action -->
+    <button onclick="triggerGlobalWhatsApp()" class="group flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] sm:text-xs shadow-lg shadow-emerald-600/30 transition-all transform hover:scale-105 whitespace-nowrap" title="Direct WhatsApp Chat with Tipu Sultan">
+      <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
+      <span data-i18n="dock_whatsapp">WhatsApp</span>
+    </button>
+
+    <!-- 2. Quick Email Modal Trigger -->
+    <button onclick="triggerGlobalEmail()" class="group flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-full bg-slate-800/95 hover:bg-slate-700 text-blue-300 hover:text-white border border-slate-700 font-bold text-[11px] sm:text-xs shadow-md transition-all transform hover:scale-105 whitespace-nowrap" title="Email Tipu Sultan (freelancersultan143@gmail.com)">
+      <i class="fa-solid fa-envelope text-xs text-blue-400"></i>
+      <span data-i18n="dock_email">Email</span>
+    </button>
+
+    <!-- 3. 10-Min Free Audit Action -->
+    <button onclick="switchTab('audit'); window.scrollTo({top:0, behavior:'smooth'});" class="group flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-[11px] sm:text-xs shadow-lg shadow-cyan-600/30 transition-all transform hover:scale-105 whitespace-nowrap" title="Request 10-Minute Ad Account Teardown">
+      <i class="fa-solid fa-bolt text-xs text-amber-300"></i>
+      <span data-i18n="dock_audit">10-Min Audit</span>
+    </button>
+
+    <!-- 4. Back To Top Smooth Trigger -->
+    <button onclick="window.scrollTo({top:0, behavior:'smooth'});" aria-label="Back to Top" class="w-8 h-8 sm:w-9 sm:h-9 shrink-0 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-700/80 flex items-center justify-center text-xs transition-transform hover:scale-110 shadow-md" title="Back to Top">
+      <i class="fa-solid fa-arrow-up text-[11px]"></i>
+    </button>
+
+  </aside>
+
+
+
+
+  <!-- Strategic Leadership Article Reader Modal -->
+  <div id="articleModal" onclick="if(event.target === this) closeArticleModal()" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-3 sm:p-6 transition-all duration-300 opacity-0 pointer-events-none">
+    <div class="relative w-full max-w-3xl max-h-[90vh] bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 bg-slate-950/70">
+        <div class="flex items-center gap-2.5">
+          <span id="articleModalCategory" class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">
+            Strategic Article
+          </span>
+          <span id="articleModalReadTime" class="text-xs text-slate-400">5 Min Read</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="inline-flex rounded-lg bg-slate-950 border border-slate-800 p-0.5">
+            <button id="artLangEnBtn" onclick="switchArticleLang('en')" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-600 text-white transition-all">English</button>
+            <button id="artLangArBtn" onclick="switchArticleLang('ar')" class="px-2.5 py-1 rounded-md text-[11px] font-semibold text-slate-400 hover:text-white transition-all">العربية</button>
+          </div>
+          <button onclick="closeArticleModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Scrollable Article Content) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-4 text-slate-300 text-xs sm:text-sm leading-relaxed custom-scrollbar" id="articleModalContent">
+        <!-- Content dynamically injected via openArticleModal(id) -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-slate-800 bg-slate-950/60 flex flex-wrap items-center justify-between gap-3">
+        <div class="text-[11px] text-slate-400">
+          Authored by <strong>Tipu Sultan</strong> • Riyadh, Saudi Arabia
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="triggerGlobalWhatsApp()" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md shadow-emerald-600/20">
+            <i class="fa-brands fa-whatsapp"></i> <span>Discuss Framework</span>
+          </button>
+          <button onclick="closeArticleModal()" class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all border border-slate-700">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
   <script>
     const CONFIG = {
       name: "Tipu Sultan",
@@ -2185,7 +2527,7 @@
                   "ربط إشعارات Webhook للـ CRM الفوري لتوجيه المشترين المؤهلين لخبراء الإغلاق",
                   "خفض رفض طلبات الدفع عند الاستلام COD إلى 7% فقط"
             ],
-            "image": "assets/proofs/direct-dm/page-direct-inbox-conversion-proof-01.png",
+            "image": "assets/proofs/direct-messaging/page-direct-inbox-conversion-proof-06.png",
             "keywords": "whatsapp business messenger conversational commerce crm automation gcc saudi ecommerce tipu sultan"
       },
       {
@@ -2305,7 +2647,7 @@
                   "بناء جماهير إعادة استهداف مخصصة تضم 1.2 مليون مستخدم متفاعل لإطلاق العروض اللاحقة",
                   "تحقيق نمو بأكثر من 12,000 متابع حقيقي مع تعزيز ارتباطهم بالعلامة التجارية"
             ],
-            "image": "assets/proofs/viral-reach/viral-reach-engagement-proof-01.png",
+            "image": "assets/proofs/brand-reach/organic-viral-reach-proof-01.png",
             "keywords": "brand growth viral reach follower growth social proof paid social engagement tipu sultan"
       }
 ];
@@ -2616,7 +2958,9 @@
     function runRoiCalculator() {
       const budget = parseFloat(document.getElementById('budgetRange').value);
       const currentRoas = parseFloat(document.getElementById('currentRoasRange').value);
-      const sym = currentCurrency === 'SAR' ? '﷼ ' : '$';
+      const sym = (typeof CURRENCY_RATES !== 'undefined' && CURRENCY_RATES[currentCurrency])
+        ? CURRENCY_RATES[currentCurrency].symbol
+        : (currentCurrency === 'SAR' ? 'SAR ' : currentCurrency === 'AED' ? 'AED ' : '$');
 
       document.getElementById('budgetLabel').innerText = sym + budget.toLocaleString();
       document.getElementById('currentRoasLabel').innerText = currentRoas.toFixed(1) + 'x';
@@ -3128,9 +3472,30 @@
     // Filter executive assets
     function filterAssets(cat, btn) {
       document.querySelectorAll('#asset-filter-buttons .asset-btn').forEach(b => {
-        b.className = 'asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800';
+        b.className = 'asset-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 transition-all';
       });
-      btn.className = 'asset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30';
+      if (btn) {
+        btn.className = 'asset-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30';
+      }
+
+      const articlesBlock = document.getElementById('about-articles-block');
+      const assetsHeader = document.getElementById('about-assets-header');
+      const assetsGrid = document.getElementById('assets-grid');
+
+      if (cat === 'articles') {
+        if (articlesBlock) articlesBlock.classList.remove('hidden');
+        if (assetsHeader) assetsHeader.classList.add('hidden');
+        if (assetsGrid) assetsGrid.classList.add('hidden');
+        if (articlesBlock) articlesBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      if (articlesBlock) {
+        if (cat === 'all') articlesBlock.classList.remove('hidden');
+        else articlesBlock.classList.add('hidden');
+      }
+      if (assetsHeader) assetsHeader.classList.remove('hidden');
+      if (assetsGrid) assetsGrid.classList.remove('hidden');
 
       const cards = document.querySelectorAll('#assets-grid .asset-card');
       cards.forEach(card => {
@@ -3157,6 +3522,7 @@
       } else if (e.key === 'Escape') {
         if (isDeckOpen) closeDeckModal();
         if (isCvOpen) closeCvModal();
+        closeArticleModal();
       }
     });
 
@@ -3372,6 +3738,35 @@
         dir: 'ltr',
         fontClass: '',
         nav_about: 'About Me',
+        nav_about_badge: 'Bio & CV',
+        about_badge: 'About Tipu Sultan • AI & Data-Driven Growth Architect',
+        about_title: 'Architecting Scalable Acquisition Engines for High-Ticket GCC Brands',
+        about_desc: 'Senior performance marketing strategist, server-side data engineer, and conversion systems architect based in Riyadh, Saudi Arabia — bridging algorithmic bidding with hyper-localized GCC consumer psychology.',
+        about_filter_all: 'All Credentials & Assets',
+        about_filter_articles: 'Leadership Articles (3)',
+        about_filter_cv: 'Curriculum Vitae (2)',
+        about_filter_decks: 'Slide Decks (2)',
+        about_role_sub: 'High-Ticket Growth Architect & AI Strategist',
+        about_loc: 'Riyadh, Saudi Arabia (GCC & Global)',
+        about_exp: '5+ Years Scaling DTC & High-Ticket',
+        about_langs: 'English (Bilingual) & Arabic Localization',
+        about_phil_badge: 'Strategic Philosophy & Mission',
+        about_quote: '"Traditional media buying relies on guesswork. We build data-engineered acquisition pipelines that scale predictably."',
+        about_articles_title: 'Strategic Articles: Scaling High-Ticket Brands in Saudi Arabia & GCC',
+        art1_title: 'The GCC High-Ticket Acquisition Blueprint: Why Western Playbooks Bleed Margins in Saudi Arabia & UAE',
+        art2_title: 'Algorithmic Paid Media in the Advantage+ Era: How First-Party Server-Side CAPI Guarantees 9.4/10 EMQ',
+        art3_title: 'The 48-Angle Creative Testing Sandbox: How Creative Velocity Dictates Scale in Modern Paid Media',
+        art_read_btn: 'Read Full Breakdown',
+        about_skills_title: '6 Specialized Growth Capabilities Engineered for Enterprise Scale',
+        about_assets_title: 'Curriculum Vitae (EN/AR) & 22-Slide Strategic Growth Presentations',
+        dock_whatsapp: 'WhatsApp',
+        dock_email: 'Email',
+        dock_audit: '10-Min Audit',
+        about_bio_p1: 'Over the past 5+ years, I have architected high-volume media campaigns across the GCC (Saudi Arabia, UAE, Kuwait, Qatar) and international markets, managing over $188,400+ in direct ad capital and engineering $869,200+ in verified gross client revenue at an average 4.6x Blended ROAS.',
+        about_bio_p2: 'My core differentiation lies at the intersection of Algorithmic Ad Optimization (Meta Advantage+ Shopping Campaigns, Google Smart Bidding), First-Party Server-Side CAPI Signals (achieving 9.4/10 Event Match Quality via Stape.io/GTM), and GCC-Tailored Conversion Architecture — seamlessly solving high Cash-on-Delivery (COD) friction with automated WhatsApp verification bots, Tabby/Tamara BNPL integration, and localized Khaleeji creative hooks.',
+        art1_desc: 'Western media buying models assume frictionless credit card checkouts and low delivery return rates. In Saudi Arabia and the Gulf, ignoring Cash-on-Delivery (COD) dynamics and failing to automate WhatsApp delivery confirmations creates a 35%+ cancellation rate. Learn how integrating Tabby/Tamara BNPL widgets and WhatsApp automated reconciliation loops cuts return friction while doubling Average Order Value (AOV).',
+        art2_desc: 'With browser cookies dying and iOS privacy tightening, client-side Meta pixels miss up to 32% of conversion telemetry. This article details our server-side Google Tag Manager and Stape.io cloud deployment, hashing customer telemetry on custom subdomains, enriching CRM repeat-purchase data, and feeding high-intent conversion signals back into Meta ASC and Google Smart Bidding algorithms.',
+        art3_desc: 'Modern AI algorithms do not respond to micromanaged interest targeting; the creative itself is your targeting filter. This guide outlines the 3:2:2 Dynamic Creative Testing framework across 4 psychological angles (Pain Agitation, Direct Logic, Social Proof, Risk-Reversal), engineering creative resilience that consistently maintains 4.5x+ ROAS even as spend doubles.',
         nav_cv: 'CV & Decks',
         nav_ai: 'AI & Data Engine',
         nav_frameworks: 'Growth Playbooks',
@@ -3453,6 +3848,35 @@
         dir: 'rtl',
         fontClass: 'font-arabic',
         nav_about: 'عني وسيرتي',
+        nav_about_badge: 'نبذة و CV',
+        about_badge: 'عن تيبو سلطان • مهندس نمو بالذكاء الاصطناعي والبيانات',
+        about_title: 'هندسة محركات اكتساب عملاء قابلة للتوسع للعلامات الخليجية الكبرى',
+        about_desc: 'استراتيجي تسويق أداء أول، ومهندس بيانات Server-Side CAPI، ومصمم أنظمة تحويل مقيم في الرياض، المملكة العربية السعودية — يربط خوارزميات المزايدة الذكية بسلوك المستهلك الخليجي.',
+        about_filter_all: 'جميع المؤهلات والأصول',
+        about_filter_articles: 'مقالات استراتيجية (3)',
+        about_filter_cv: 'السيرة الذاتية (2)',
+        about_filter_decks: 'العروض التقديمية (2)',
+        about_role_sub: 'مهندس نمو للعلامات الكبرى وخبير ذكاء اصطناعي',
+        about_loc: 'الرياض، المملكة العربية السعودية (الخليج والعالم)',
+        about_exp: '+5 سنوات في توسيع المتاجر والعلامات الكبرى',
+        about_langs: 'الإنجليزية والعربية (ثنائي اللغة)',
+        about_phil_badge: 'الفلسفة الاستراتيجية والرسالة',
+        about_quote: '"شراء الإعلانات التقليدي يعتمد على التخمين. نحن نبني قنوات اكتساب مهندسة بالبيانات تتوسع بشكل مضمون وقابل للقياس."',
+        about_articles_title: 'مقالات قيادية: توسيع العلامات التجارية الكبرى في السعودية والخليج',
+        art1_title: 'مخطط النمو في الخليج: لماذا تفشل استراتيجيات الإعلانات الغربية في السعودية والإمارات',
+        art2_title: 'الإعلانات الخوارزمية في عصر Advantage+: كيف يضمن تتبع Server-Side CAPI جودة تطابق 9.4/10',
+        art3_title: 'مختبر الإبداع بـ 48 زاوية: كيف تتحكم سرعة اختبار الإعلانات في التوسع الربحي',
+        art_read_btn: 'اقرأ التحليل الكامل',
+        about_skills_title: '6 قدرات نمو متخصصة مصممة للتوسع المؤسسي',
+        about_assets_title: 'السيرة الذاتية (EN/AR) وعروض استراتيجيات النمو (22 شريحة)',
+        dock_whatsapp: 'واتساب',
+        dock_email: 'بريد إلكتروني',
+        dock_audit: 'فحص مجاني 10د',
+        about_bio_p1: 'على مدار أكثر من 5 سنوات، قمت بهندسة وإدارة حملات إعلانية ضخمة في دول الخليج (السعودية، الإمارات، الكويت، قطر) والأسواق العالمية، بإدارة أكثر من $188,400+ من الإنفاق الإعلاني المباشر وتحقيق أكثر من $869,200+ من الإيرادات الموثقة بمتوسط عائد 4.6x ROAS.',
+        about_bio_p2: 'يكمن تميزي الأساسي في الدمج بين تحسين الإعلانات بالذكاء الاصطناعي (Meta Advantage+ وGoogle Smart Bidding)، وهندسة بيانات الطرف الأول عبر Server-Side CAPI (بجودة تطابق 9.4/10 عبر Stape.io/GTM)، وهندسة التحويل المخصصة للسوق الخليجي — لحل تحديات الدفع عند الاستلام (COD) عبر أتمتة واتساب ودمج تابي وتمارا وتصميم إعلانات باللهجة الخليجية.',
+        art1_desc: 'تفترض استراتيجيات التسويق الغربية الدفع بالبطاقات الائتمانية وانخفاض المرتجعات. في السعودية والخليج، يؤدي تجاهل ديناميكيات الدفع عند الاستلام (COD) وعدم أتمتة تأكيد الطلبات عبر واتساب إلى إلغاء أكثر من 35% من الطلبات. اكتشف كيف يضاعف دمج تابي وتمارا وأتمتة واتساب قيمة السلة ويقلل المرتجعات.',
+        art2_desc: 'مع انتهاء ملفات تعريف الارتباط وتشديد الخصوصية في iOS، يفقد البيكسل التقليدي حتى 32% من بيانات المبيعات. يشرح هذا المقال بنيتنا السحابية عبر Google Tag Manager Server وStape.io لتشفير بيانات العملاء وتغذية خوارزميات ميتا وجوجل بإشارات تحويل عالية الدقة.',
+        art3_desc: 'خوارزميات الذكاء الاصطناعي الحديثة لا تعتمد على الاستهداف اليدوي الضيق؛ بل الإعلان نفسه هو أداة الاستهداف. يستعرض هذا الدليل إطار الاختبار الديناميكي 3:2:2 عبر 4 زوايا نفسية للحفاظ على عائد يتجاوز 4.5x حتى عند مضاعفة الميزانية.',
         nav_cv: 'السيرة والعروض',
         nav_ai: 'محرك الذكاء والبيانات',
         nav_frameworks: 'ملاعب النمو',
@@ -3588,7 +4012,8 @@
 
       // Update dynamic tabLabels
       if (currentSiteLang === 'ar') {
-        tabLabels['executive-assets'] = 'السيرة الذاتية وعروض استراتيجية النمو';
+        tabLabels['about-me'] = 'عني والسيرة الذاتية وعروض النمو';
+        tabLabels['executive-assets'] = 'عني والسيرة الذاتية وعروض النمو';
         tabLabels['ai-engine'] = 'محرك الذكاء والبيانات';
         tabLabels['frameworks'] = 'ملاعب الأداء الاستراتيجية';
         tabLabels['proofs'] = 'دراسات حالة الحملات الموثقة';
@@ -3597,7 +4022,8 @@
         tabLabels['calculator'] = 'محاكاة القمع التفاعلية';
         tabLabels['audit'] = 'تدقيق الحساب الإعلاني في 10 دقائق';
       } else {
-        tabLabels['executive-assets'] = 'Executive CV & Strategic Decks';
+        tabLabels['about-me'] = 'About Me & Executive Credentials';
+        tabLabels['executive-assets'] = 'About Me & Executive Credentials';
         tabLabels['ai-engine'] = 'AI-Driven & Data-Engineered Engine';
         tabLabels['frameworks'] = 'Strategic Performance Playbooks';
         tabLabels['proofs'] = 'Verified Client Case Studies';
@@ -3740,7 +4166,7 @@
         // [1-8] switches tabs
         else if (e.key >= '1' && e.key <= '8') {
           const tabMap = {
-            '1': 'executive-assets',
+            '1': 'about-me',
             '2': 'ai-engine',
             '3': 'frameworks',
             '4': 'proofs',
@@ -3761,17 +4187,24 @@
     renderProjects(projectsData);
     renderVault(vaultProofs);
     renderCreatives();
+    setSiteLanguage(currentSiteLang);
+    handleInitialHash();
+    animateCounters();
   
 
     // ==========================================
-    // Strategic Leadership Articles Data & Modal
+    // Strategic Leadership Articles Data & Modal (Bilingual EN & AR)
     // ==========================================
+    let currentArticleId = 1;
+    let currentArticleLang = 'en';
+
     const STRATEGIC_ARTICLES = {
       1: {
-        category: 'GCC E-Commerce Architecture',
-        readTime: '6 Min Read',
-        title: 'The GCC High-Ticket Acquisition Blueprint: Why Western Playbooks Bleed Margins in Saudi Arabia & UAE',
-        html: `
+        category_en: 'GCC E-Commerce Architecture',
+        category_ar: 'هندسة التجارة الإلكترونية الخليجية',
+        readTime_en: '6 Min Read',
+        readTime_ar: '6 دقائق قراءة',
+        html_en: `
           <h3 class="text-xl font-display font-black text-white mb-3">The Realities of Scaling E-Commerce in the Gulf</h3>
           <p>Most digital agencies enter the Saudi and UAE markets applying standard US or UK media buying strategies: run standard traffic or purchase conversion campaigns, rely on credit card checkouts, and anticipate a 95%+ order delivery fulfillment rate.</p>
           <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 my-4 text-xs">
@@ -3784,13 +4217,28 @@
           <p>For high-ticket products (AOV &gt; 450 SAR), integrating Tabby and Tamara split-payment widgets directly on the product detail page and in ad copy transforms conversion velocity. Customers split payments into 4 interest-free installments, while the merchant receives 100% upfront settlement from the provider. Our campaigns leveraging Tabby/Tamara badge overlays witnessed an immediate <strong>42% increase in checkout completions</strong>.</p>
           <h4 class="text-base font-bold text-white mt-4 mb-2">3. Cultural Dialect & Creative Authenticity</h4>
           <p>Running standard Modern Standard Arabic (MSA) voiceovers recorded by generic voice talent yields poor engagement in Riyadh and Jeddah. Authentic Gulf campaigns require conversational Khaleeji or Najdi dialect scripting, highlighting local lifestyle values, same-day Riyadh courier delivery, and Mada/Apple Pay express checkout badges.</p>
+        `,
+        html_ar: `
+          <h3 class="text-xl font-display font-black text-white mb-3">حقائق توسيع المتاجر الإلكترونية في السوق السعودي والخليجي</h3>
+          <p>تدخل معظم وكالات التسويق السوق السعودي والإماراتي باستراتيجيات غربية تقليدية تفترض الدفع بالبطاقات الائتمانية فقط وتجاهل ديناميكيات الدفع عند الاستلام (COD) وسلوك المشتري المحلي.</p>
+          <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 my-4 text-xs">
+            <strong>الحقيقة الحاسمة:</strong> في المملكة العربية السعودية، ما بين 35% إلى 55% من الطلبات في قطاعات العطور، التجميل، الأزياء، والإلكترونيات تتم عبر <strong>الدفع عند الاستلام (COD)</strong>. بدون أتمتة تأكيد الطلبات، ترتفع نسب المرتجعات وتدمر هامش الربح.
+          </div>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">1. محرك تأكيد الطلبات الآلي عبر واتساب</h4>
+          <p>لتحقيق توسع ربحي في السعودية، قمنا ببناء ربط برمجي (Webhook) بين متاجر سلة/زد/شوبيفاي وواجهة WhatsApp Business Cloud API الرسمية. فور تسجيل طلب COD، يتلقى العميل رسالة تفاعلية فورية تتضمن زرين: <em>[تأكيد الطلب الآن]</em> و<em>[تعديل العنوان أو الإلغاء]</em>.</p>
+          <p>خفض هذا النظام وحده نسبة المرتجعات غير المستلمة من <strong>38.4% إلى 9.2% فقط</strong>، مما وفر أكثر من 90,000 ريال شهرياً من خسائر الشحن المهدر.</p>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">2. مضاعفة قيمة السلة عبر تابي وتمارا (Tabby & Tamara)</h4>
+          <p>للمنتجات ذات القيمة العالية (أكثر من 450 ريال)، فإن إبراز تقسيط تابي وتمارا على 4 دفعات بدون فوائد داخل الإعلانات وفي صفحة المنتج يرفع معدل إتمام الشراء بنسبة <strong>42% فورية</strong>.</p>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">3. التوطين الثقافي واللهجة الخليجية البيضاء</h4>
+          <p>الإعلانات المصممة باللهجة السعودية/الخليجية الأصيلة مع إبراز خيارات الدفع السريع (مدى، Apple Pay) والتوصيل السريع داخل الرياض وجدة والدمام تحقق تفاعلاً وعائداً يفوق الإعلانات العامة بـ 3 أضعاف.</p>
         `
       },
       2: {
-        category: 'Signal Engineering & CAPI',
-        readTime: '8 Min Read',
-        title: 'Algorithmic Paid Media in the Advantage+ Era: How First-Party Server-Side CAPI Guarantees 9.4/10 EMQ',
-        html: `
+        category_en: 'Signal Engineering & CAPI',
+        category_ar: 'هندسة الإشارات وتتبع CAPI',
+        readTime_en: '8 Min Read',
+        readTime_ar: '8 دقائق قراءة',
+        html_en: `
           <h3 class="text-xl font-display font-black text-white mb-3">The Demise of Client-Side Tracking & The Rise of CAPI</h3>
           <p>Since Apple introduced App Tracking Transparency (ATT) with iOS 14.5 and browsers began aggressive cookie deprecation, client-side browser pixels lose between 25% to 35% of conversion events due to ad blockers, Safari ITP, and network drops.</p>
           <div class="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 my-4 text-xs">
@@ -3801,13 +4249,25 @@
           <p>By capturing first-party parameters on the server — including SHA-256 hashed email, phone number (with +966 KSA country codes), first/last name, client IP address, and <code>fbp</code>/<code>fbc</code> click identifiers — we consistently achieve <strong>9.2 to 9.6 EMQ scores</strong>.</p>
           <h4 class="text-base font-bold text-white mt-4 mb-2">2. Offline CRM Lifecycle Conversions</h4>
           <p>E-commerce success is not measured by initial purchases alone; it is determined by 60-day Lifetime Value (LTV). Our architecture feeds offline CRM events — such as repeat subscriptions, delivered COD settlements, and B2B contract signings — back into Meta CAPI and Google Enhanced Conversions, training smart bidding algorithms to find whale customers rather than one-time bargain hunters.</p>
+        `,
+        html_ar: `
+          <h3 class="text-xl font-display font-black text-white mb-3">نهاية التتبع التقليدي وصعود Server-Side CAPI</h3>
+          <p>منذ تحديثات الخصوصية في iOS وحظر ملفات تعريف الارتباط في متصفح سفاري، يفقد البيكسل العادي ما بين 25% إلى 35% من بيانات المبيعات الفعلية، مما يجعل خوارزميات الإعلانات تعمل بشكل أعمى.</p>
+          <div class="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 my-4 text-xs">
+            <strong>الحل الهندسي:</strong> بناء بوابة تتبع Server-Side Conversion API على نطاق فرعي خاص بالعلامة التجارية عبر حاويات Google Tag Manager السحابية وStape.io.
+          </div>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">1. معيار جودة تطابق الأحداث 9.4/10 (EMQ)</h4>
+          <p>تمنح خوارزميات ميتا وجوجل أولوية المزاد للحسابات ذات جودة الإشارة المرتفعة. من خلال تشفير بيانات الطرف الأول (البريد الإلكتروني، رقم الجوال بصيغة +966، عنوان IP، ومعرفات النقر) بتشفير SHA-256، نحقق تقييم <strong>9.2 إلى 9.6 من 10 في EMQ</strong>.</p>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">2. تغذية الخوارزمية بمبيعات CRM الفعلية</h4>
+          <p>لا نكتفي بإرسال حدث الشراء الأولي، بل نربط نظام CRM لإرسال أحداث "الطلبات المستلمة فعلياً" و"العملاء المتكررين" إلى ميتا وجوجل، لتدريب الذكاء الاصطناعي على استهداف المشترين الأكثر ربحية.</p>
         `
       },
       3: {
-        category: 'Creative Testing Matrix',
-        readTime: '5 Min Read',
-        title: 'The 48-Angle Creative Testing Sandbox: How Creative Velocity Dictates Scale',
-        html: `
+        category_en: 'Creative Testing Matrix',
+        category_ar: 'مصفوفة اختبار الإعلانات الإبداعية',
+        readTime_en: '5 Min Read',
+        readTime_ar: '5 دقائق قراءة',
+        html_en: `
           <h3 class="text-xl font-display font-black text-white mb-3">The Creative IS the Targeting in Modern Paid Media</h3>
           <p>In 2026, broad targeting with Meta Advantage+ and Google Demand Gen has made manual interest stacking obsolete. The machine learning auction analyzes video frames, audio transcripts, and OCR text to determine exactly who should see the ad.</p>
           <div class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-300 my-4 text-xs">
@@ -3823,19 +4283,61 @@
             <li><strong>Social Proof & Authority:</strong> Influencer unboxings, dermatologists/experts, customer review montages.</li>
             <li><strong>Risk-Reversal:</strong> Free GCC exchanges, money-back guarantees, Cash-on-Delivery with inspection before payment.</li>
           </ul>
+        `,
+        html_ar: `
+          <h3 class="text-xl font-display font-black text-white mb-3">الإعلان الإبداعي هو الاستهداف الحقيقي في عصر الذكاء الاصطناعي</h3>
+          <p>مع تطور خوارزميات Meta Advantage+ وGoogle PMax، لم يعد الاستهداف اليدوي للاهتمامات هو العامل الحاسم؛ بل يقوم الذكاء الاصطناعي بتحليل المشاهد المرئية والنصوص الصوتية داخل الإعلان لتوجيهه للمشتري المناسب.</p>
+          <div class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-300 my-4 text-xs">
+            <strong>القاعدة الذهبية:</strong> لا يمكنك مضاعفة المبيعات بالاعتماد على إعلان واحد ناجح فقط؛ فسرعان ما يصاب بالإجهاد الإعلاني. التوسع المستدام يتطلب <strong>مصفوفة اختبار مستمرة بـ 48 زاوية</strong>.
+          </div>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">1. بروتوكول الاختبار الديناميكي 3:2:2</h4>
+          <p>نطلق حملات اختبار معزولة تتضمن: <strong>3 خطاطيف مرئية (Hooks)</strong>، <strong>نسختين من النص التسويقي</strong>، و<strong>دعوتين لاتخاذ إجراء (CTAs)</strong>، مما يولد 12 تركيبة خوارزمية تختار منها المنصة الفائز تلقائياً.</p>
+          <h4 class="text-base font-bold text-white mt-4 mb-2">2. الزوايا النفسية الأربع للإقناع</h4>
+          <ul class="list-disc pr-5 space-y-1 text-slate-300 text-xs">
+            <li><strong>إثارة المشكلة والحل:</strong> التركيز على المعاناة اليومية التي يحلها المنتج فوراً.</li>
+            <li><strong>المنطق والفائدة المباشرة:</strong> إبراز المواصفات والنتائج الرقمية الملموسة.</li>
+            <li><strong>الإثبات الاجتماعي والموثوقية:</strong> تجارب العملاء الحقيقية ومراجعات الخبراء.</li>
+            <li><strong>إزالة المخاطر:</strong> ضمان الاسترجاع، الاستبدال المجاني، وخيارات التقسيط الميسرة.</li>
+          </ul>
         `
       }
     };
 
-    function openArticleModal(articleId) {
-      const art = STRATEGIC_ARTICLES[articleId];
+    function renderArticleModalContent() {
+      const art = STRATEGIC_ARTICLES[currentArticleId];
       if (!art) return;
-      document.getElementById('articleModalCategory').innerText = art.category;
-      document.getElementById('articleModalReadTime').innerText = art.readTime;
-      document.getElementById('articleModalContent').innerHTML = art.html;
+      const isAr = (currentArticleLang === 'ar');
+      document.getElementById('articleModalCategory').innerText = isAr ? art.category_ar : art.category_en;
+      document.getElementById('articleModalReadTime').innerText = isAr ? art.readTime_ar : art.readTime_en;
+      const contentEl = document.getElementById('articleModalContent');
+      contentEl.dir = isAr ? 'rtl' : 'ltr';
+      contentEl.innerHTML = isAr ? art.html_ar : art.html_en;
+
+      const enBtn = document.getElementById('artLangEnBtn');
+      const arBtn = document.getElementById('artLangArBtn');
+      if (enBtn && arBtn) {
+        if (isAr) {
+          arBtn.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-600 text-white transition-all';
+          enBtn.className = 'px-2.5 py-1 rounded-md text-[11px] font-semibold text-slate-400 hover:text-white transition-all';
+        } else {
+          enBtn.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-600 text-white transition-all';
+          arBtn.className = 'px-2.5 py-1 rounded-md text-[11px] font-semibold text-slate-400 hover:text-white transition-all';
+        }
+      }
+    }
+
+    function openArticleModal(articleId) {
+      currentArticleId = articleId;
+      currentArticleLang = (typeof currentSiteLang !== 'undefined') ? currentSiteLang : 'en';
+      renderArticleModalContent();
       const modal = document.getElementById('articleModal');
       modal.classList.remove('opacity-0', 'pointer-events-none');
       document.body.style.overflow = 'hidden';
+    }
+
+    function switchArticleLang(lang) {
+      currentArticleLang = (lang === 'ar') ? 'ar' : 'en';
+      renderArticleModalContent();
     }
 
     function closeArticleModal() {
@@ -3845,333 +4347,5 @@
     }
 
 </script>
-  <!-- Interactive CV Viewer Modal (Bilingual: English 2 Pages & Arabic 3 Pages) -->
-  <div id="cvModal" class="fixed inset-0 z-50 glass bg-slate-950/90 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-    <div class="relative w-full max-w-6xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-auto flex flex-col max-h-[95vh]">
-      
-      <!-- Modal Top Header -->
-      <div class="px-5 py-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4 bg-slate-950/80">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-base">
-            <i class="fa-solid fa-file-pdf"></i>
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="font-display font-bold text-sm text-white" id="cvModalTitle">Tipu Sultan — Executive CV</span>
-              <span id="cvLangBadge" class="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 text-[10px] font-black uppercase">English</span>
-            </div>
-            <p class="text-[11px] text-slate-400" id="cvModalSubtitle">AI-Driven & Data-Driven Growth Architect | Riyadh, KSA</p>
-          </div>
-        </div>
-
-        <!-- Controls: Language Toggle & Page Selector -->
-        <div class="flex flex-wrap items-center gap-2">
-          <!-- Language Switcher -->
-          <div class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
-            <button id="cvLangEnBtn" onclick="switchCvLang('en')" class="px-3 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white transition-all">
-              English (2P)
-            </button>
-            <button id="cvLangArBtn" onclick="switchCvLang('ar')" class="px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
-              العربية (3 صفحات)
-            </button>
-          </div>
-
-          <!-- Page Navigation Tabs -->
-          <div id="cvPageTabs" class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
-            <!-- Dynamically injected -->
-          </div>
-
-          <!-- Download Action Dropdown/Buttons -->
-          <div class="flex items-center gap-1.5" id="cvDownloadActions">
-            <!-- Dynamically populated according to active language -->
-          </div>
-
-          <!-- Close Button -->
-          <button onclick="closeCvModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all ml-1">
-            <i class="fa-solid fa-xmark text-sm"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Modal Body (Two-Column on Desktop: Viewer + Executive Snapshot) -->
-      <div class="flex-1 overflow-y-auto flex flex-col lg:flex-row">
-        <!-- Main Document Visual Viewer -->
-        <div class="flex-1 bg-slate-950 p-4 sm:p-6 flex flex-col items-center justify-start overflow-auto min-h-[500px]">
-          <div class="relative max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-white group">
-            <img width="600" height="400" loading="lazy" id="cvViewerImg" src="assets/documents/cv-preview-page-1.webp" alt="CV Page Preview" class="w-full h-auto object-contain transition-transform duration-200" />
-          </div>
-          <!-- Bottom Page Controls inside Viewer -->
-          <div class="flex items-center gap-3 mt-4">
-            <button onclick="prevCvPage()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition-all">
-              <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous Page
-            </button>
-            <span id="cvPageIndicator" class="text-xs font-bold text-slate-400 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">
-              Page 1 of 2
-            </span>
-            <button onclick="nextCvPage()" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1.5 transition-all">
-              Next Page <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Sidebar Snapshot & Verified Highlights -->
-        <div class="w-full lg:w-80 border-t lg:border-t-0 lg:border-l border-slate-800 bg-slate-900/90 p-5 flex flex-col justify-between">
-          <div>
-            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-shield-halved text-emerald-400"></i> Executive Highlights
-            </div>
-
-            <!-- Stats Mini Grid -->
-            <div class="grid grid-cols-2 gap-2 mb-4">
-              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
-                <span class="text-[10px] text-slate-400 block">Managed Spend</span>
-                <span class="text-sm font-bold text-white">$188K+</span>
-              </div>
-              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
-                <span class="text-[10px] text-slate-400 block">Tracked Revenue</span>
-                <span class="text-sm font-bold text-white">$869K+</span>
-              </div>
-              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
-                <span class="text-[10px] text-slate-400 block">Blended ROAS</span>
-                <span class="text-sm font-bold text-emerald-400">4.6x</span>
-              </div>
-              <div class="bg-slate-950/80 p-2.5 rounded-xl border border-slate-800 text-center">
-                <span class="text-[10px] text-slate-400 block">Verified Proofs</span>
-                <span class="text-sm font-bold text-blue-400">59 Proofs</span>
-              </div>
-            </div>
-
-            <!-- Core Competencies -->
-            <div class="space-y-2 mb-4">
-              <div class="text-[11px] font-bold text-slate-300">Core Architecture:</div>
-              <ul class="text-[11px] text-slate-400 space-y-1.5">
-                <li class="flex items-start gap-1.5">
-                  <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-[10px]"></i>
-                  <span><strong>Predictive AI Bidding:</strong> Meta Advantage+ Shopping (ASC) & Google Smart Bidding</span>
-                </li>
-                <li class="flex items-start gap-1.5">
-                  <i class="fa-solid fa-check text-cyan-400 mt-0.5 text-[10px]"></i>
-                  <span><strong>Signal Engineering:</strong> Server-Side CAPI Gateway with 9.0+ EMQ & SHA-256</span>
-                </li>
-                <li class="flex items-start gap-1.5">
-                  <i class="fa-solid fa-check text-purple-400 mt-0.5 text-[10px]"></i>
-                  <span><strong>3:2:2 Creative Sandbox:</strong> 48-Angle dynamic testing before scaling</span>
-                </li>
-                <li class="flex items-start gap-1.5">
-                  <i class="fa-solid fa-check text-amber-400 mt-0.5 text-[10px]"></i>
-                  <span><strong>GCC Specialization:</strong> Tabby/Tamara BNPL & WhatsApp COD automation</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Location & Availability -->
-            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-slate-400 mb-4">
-              <div class="font-bold text-slate-300 mb-1 flex items-center gap-1.5">
-                <i class="fa-solid fa-location-dot text-cyan-400"></i> Riyadh, Saudi Arabia
-              </div>
-              <p>Available for 10-minute video audits, full-funnel buildouts, and scaling retainers worldwide.</p>
-            </div>
-          </div>
-
-          <!-- Direct Inquiries CTA -->
-          <div class="pt-3 border-t border-slate-800 space-y-2">
-            <button onclick="triggerGlobalWhatsApp()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition-all">
-              <i class="fa-brands fa-whatsapp text-sm"></i> Inquire via WhatsApp
-            </button>
-            <button onclick="closeCvModal(); document.getElementById('audit').scrollIntoView({behavior: 'smooth'});" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs border border-slate-700 flex items-center justify-center gap-1.5 transition-all">
-              <i class="fa-solid fa-bolt text-emerald-400 text-[10px]"></i> Request Ad Account Audit
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Interactive Presentation Deck Viewer Modal (22 Slides Bilingual: EN & AR) -->
-  <div id="deckModal" class="fixed inset-0 z-50 glass bg-slate-950/95 backdrop-blur-2xl hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
-    <div class="relative w-full max-w-6xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-auto flex flex-col max-h-[96vh]">
-      
-      <!-- Deck Modal Top Bar -->
-      <div class="px-5 py-3.5 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4 bg-slate-950/90">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-base">
-            <i class="fa-solid fa-presentation-screen"></i>
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="font-display font-bold text-sm text-white" id="deckHeaderTitle">Growth Architecture Deck</span>
-              <span id="deckSlideCounterBadge" class="px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-black">Slide 01 / 22</span>
-            </div>
-            <p class="text-[11px] text-slate-400" id="deckHeaderSubtitle">Tipu Sultan • Next-Gen AI & Data Performance Architecture</p>
-          </div>
-        </div>
-
-        <!-- Controls: Language Toggle, Download PPTX, Fullscreen, Close -->
-        <div class="flex items-center gap-2">
-          <!-- Language Switcher -->
-          <div class="inline-flex rounded-xl bg-slate-950 border border-slate-800 p-1">
-            <button id="deckLangEnBtn" onclick="switchDeckLang('en')" class="px-3 py-1 rounded-lg text-xs font-bold bg-cyan-600 text-slate-950 transition-all">
-              English [EN]
-            </button>
-            <button id="deckLangArBtn" onclick="switchDeckLang('ar')" class="px-3 py-1 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
-              العربية [AR]
-            </button>
-          </div>
-
-          <!-- Download PPTX button -->
-          <a id="deckDownloadBtn" href="assets/documents/tipu-sultan-portfolio-en.pptx" download class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-1.5 transition-all">
-            <i class="fa-solid fa-file-powerpoint text-amber-400"></i>
-            <span class="hidden sm:inline">Download Deck</span>
-          </a>
-
-          <!-- Close Modal -->
-          <button onclick="closeDeckModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all ml-1">
-            <i class="fa-solid fa-xmark text-sm"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Slide Presentation Stage Canvas (16:9 ratio) -->
-      <div class="flex-1 bg-slate-950 p-4 sm:p-8 flex items-center justify-center overflow-y-auto min-h-[460px]">
-        <div id="deckSlideCard" class="relative w-full max-w-4xl aspect-[16/9] min-h-[400px] rounded-3xl p-6 sm:p-10 border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-2xl flex flex-col justify-between overflow-hidden">
-          
-          <!-- Decorative Background Blur -->
-          <div class="absolute -right-20 -top-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-          <div class="absolute -left-20 -bottom-20 w-60 h-60 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
-
-          <!-- Slide Category & Counter -->
-          <div class="relative z-10 flex items-center justify-between">
-            <span id="deckSlideCategory" class="px-3 py-1 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold uppercase tracking-wider">
-              PORTFOLIO PRESENTATION
-            </span>
-            <span id="deckSlideNumberText" class="text-xs font-display font-bold text-slate-500">
-              01 / 22
-            </span>
-          </div>
-
-          <!-- Slide Core Content Area -->
-          <div class="relative z-10 my-auto py-4">
-            <h2 id="deckSlideTitle" class="text-xl sm:text-3xl lg:text-4xl font-display font-black text-white tracking-tight leading-tight">
-              Scale Predictable Revenue with AI-Driven & Data-Engineered Ad Architecture
-            </h2>
-            <div id="deckSlideSubtitle" class="text-sm sm:text-base text-cyan-400 font-semibold mt-2">
-              Next-Gen Growth Architecture
-            </div>
-
-            <!-- Bullet Points / Breakdown List -->
-            <div id="deckSlideBullets" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-5">
-              <!-- Dynamically populated -->
-            </div>
-
-            <!-- Optional Slide Image Thumbnail -->
-            <div id="deckSlideImageContainer" class="mt-4 hidden">
-              <img width="600" height="400" loading="lazy" id="deckSlideImage" src="" alt="Slide Evidence" class="h-28 rounded-xl object-contain border border-slate-800 bg-slate-950 p-1" />
-            </div>
-          </div>
-
-          <!-- Slide Footer inside Card -->
-          <div class="relative z-10 flex items-center justify-between pt-3 border-t border-slate-800/80 text-[11px] text-slate-400">
-            <span class="flex items-center gap-1.5">
-              <i class="fa-solid fa-circle-check text-emerald-400"></i> Tipu Sultan • Empirical Evidence Vault
-            </span>
-            <span class="text-slate-500">Riyadh, KSA • sultantipu199.github.io/sultan-growth</span>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Slide Navigation Bottom Controller -->
-      <div class="px-5 py-3 border-t border-slate-800 bg-slate-950 flex flex-wrap items-center justify-between gap-4">
-        <!-- Prev Slide Button -->
-        <button onclick="prevDeckSlide()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 transition-all">
-          <i class="fa-solid fa-chevron-left text-[10px]"></i>
-          <span>Previous</span>
-        </button>
-
-        <!-- Slide Number Quick Selector Strip -->
-        <div id="deckSlideSelectorStrip" class="flex items-center gap-1 overflow-x-auto max-w-md py-1 custom-scrollbar">
-          <!-- 22 buttons injected by JS -->
-        </div>
-
-        <!-- Next Slide Button -->
-        <button onclick="nextDeckSlide()" class="px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-black text-xs flex items-center gap-2 shadow-lg shadow-cyan-600/20 transition-all">
-          <span>Next</span>
-          <i class="fa-solid fa-chevron-right text-[10px]"></i>
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- Master Unified Floating Action Dock (Optimized for Mobile, Tablet, Laptop, Desktop - ZERO Overlap) -->
-  <aside aria-label="Quick Actions" id="masterFloatingDock" class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40 flex items-center gap-1.5 sm:gap-2 p-1.5 rounded-full bg-slate-950/95 backdrop-blur-xl border border-slate-700/80 shadow-2xl shadow-emerald-500/10 transition-all duration-300">
-    
-    <!-- WhatsApp Direct Action -->
-    <button onclick="triggerGlobalWhatsApp()" class="group flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/30 transition-all transform hover:scale-105" title="Direct WhatsApp Chat with Tipu Sultan">
-      <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
-      <span class="text-[11px] sm:text-xs">WhatsApp</span>
-    </button>
-
-    <!-- 10-Min Free Audit Action -->
-    <button onclick="switchTab('audit'); window.scrollTo({top:0, behavior:'smooth'});" class="group flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-xs shadow-lg shadow-cyan-600/30 transition-all transform hover:scale-105" title="Request 10-Minute Ad Account Teardown">
-      <i class="fa-solid fa-bolt text-xs text-amber-300"></i>
-      <span class="text-[11px] sm:text-xs">10-Min Audit</span>
-    </button>
-
-    <!-- Quick Email Trigger -->
-    <button onclick="triggerGlobalEmail()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-blue-400 hover:text-blue-300 border border-slate-700 flex items-center justify-center text-xs sm:text-sm transition-transform hover:scale-110 shadow-md" title="Email Tipu Sultan (freelancersultan143@gmail.com)">
-      <i class="fa-solid fa-envelope"></i>
-    </button>
-
-    <!-- Back To Top Smooth Trigger -->
-    <button onclick="window.scrollTo({top:0, behavior:'smooth'});" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/80 flex items-center justify-center text-xs transition-transform hover:scale-110 shadow-md" title="Back to Top">
-      <i class="fa-solid fa-arrow-up text-[11px]"></i>
-    </button>
-
-  </aside>
-
-
-
-
-  <!-- Strategic Leadership Article Reader Modal -->
-  <div id="articleModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 backdrop-blur-md p-3 sm:p-6 transition-all duration-300 opacity-0 pointer-events-none">
-    <div class="relative w-full max-w-3xl max-h-[90vh] bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
-      <!-- Modal Header -->
-      <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
-        <div class="flex items-center gap-2.5">
-          <span id="articleModalCategory" class="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">
-            Strategic Article
-          </span>
-          <span id="articleModalReadTime" class="text-xs text-slate-400">5 Min Read</span>
-        </div>
-        <button onclick="closeArticleModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all">
-          <i class="fa-solid fa-xmark text-sm"></i>
-        </button>
-      </div>
-
-      <!-- Modal Body (Scrollable Article Content) -->
-      <div class="p-6 sm:p-8 overflow-y-auto space-y-4 text-slate-300 text-xs sm:text-sm leading-relaxed" id="articleModalContent">
-        <!-- Content dynamically injected via openArticleModal(id) -->
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="p-4 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between">
-        <div class="text-[11px] text-slate-400">
-          Authored by <strong>Tipu Sultan</strong> • Riyadh, Saudi Arabia
-        </div>
-        <div class="flex items-center gap-2">
-          <button onclick="triggerGlobalWhatsApp()" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-md shadow-emerald-600/20">
-            <i class="fa-brands fa-whatsapp"></i> Discuss Framework
-          </button>
-          <button onclick="closeArticleModal()" class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all border border-slate-700">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
