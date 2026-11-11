@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sultantipu199.github.io/sultan-growth/sitemap.xml
